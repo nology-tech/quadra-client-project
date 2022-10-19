@@ -1,0 +1,25 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Should render layout with children 1`] = `
+<div>
+  <div
+    class="layout"
+  >
+    <p>
+      some content
+    </p>
+  </div>
+</div>
+`;
+
+exports[`Should render without navbar when showNavbar is false 1`] = `
+<div>
+  <div
+    class="layout"
+  >
+    <p>
+      some content
+    </p>
+  </div>
+</div>
+`;
