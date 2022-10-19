@@ -20,10 +20,10 @@ jobs:
           git config --local user.email "${{ github.actor }}@users.noreply.github.com"
           git config --local user.name "${{ github.actor }}"
           git commit -m "Automated Code Formatting" -a
-      - name: Push changes
+      - name: Push to a protected branch
         if: steps.git-check.outputs.modified == 'true'
-        uses: ad-m/github-push-action@master
+        uses: colmose/push-bot@v1.0.0
         with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          branch: ${{ github.ref }}
-          force_with_lease: true
+          token: ${{ secrets.GITHUB_TOKEN }}
+          branch_name: ${{ github.ref }}
+          bot_name: "auto-bot"
