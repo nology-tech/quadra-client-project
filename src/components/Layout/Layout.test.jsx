@@ -11,7 +11,6 @@ it("Should render layout with children", () => {
   expect(container).toMatchSnapshot();
 });
 
-
 it("Should render without navbar when showNavbar is false", () => {
   const { container } = customRender(
     <Layout showNavbar={false}>
@@ -21,4 +20,3 @@ it("Should render without navbar when showNavbar is false", () => {
 
   expect(container).toMatchSnapshot();
 });
-
