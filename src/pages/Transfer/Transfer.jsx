@@ -1,9 +1,7 @@
 import "./Transfer.scss";
 
-const Transfer = ({  }) => {
-    return (
-        <></>
-    );
+const Transfer = () => {
+    
 }
 
 export default Transfer;
