@@ -1,0 +1,38 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit&display=swap');
+
+.input-container{
+    font-family: 'Outfit';
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 20px;
+
+    &__title{
+        color: #5B6D7D;
+        
+    }
+    &__input{
+        color: #A6AFBD;
+        background: #FBFBFC;
+        border: 1px solid #E2E2E2;
+        border-radius: 6px;
+    }
+
+    &__message{
+        font-size: 10px;
+        line-height: 13px;
+        
+
+        &--error{
+            color: #DF1C1C;
+        }
+
+        &--success{
+            color: #57E141;
+        }
+    }
+}
+
+
