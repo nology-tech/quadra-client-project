@@ -1,6 +1,6 @@
 @use "../../styles/typography" as *;
 
-.nav-container {
+.nav {
   position: absolute;
   width: 20%;
   border: 2px solid;
@@ -15,7 +15,7 @@
   }
 
   height: 100vh;
-  .nav-container__header {
+  .nav__header {
     // top: 0px;
     // position: fixed;
     display: flex;
@@ -23,7 +23,7 @@
     font-size: 1.6rem;
     margin-bottom: 5rem;
   }
-  .nav-container__menu {
+  .nav__menu {
     margin-left: 10%;
     display: flex;
     flex-direction: column;

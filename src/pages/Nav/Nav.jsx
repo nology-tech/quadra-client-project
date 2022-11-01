@@ -1,18 +1,18 @@
 import "./Nav.scss";
 import Logo from "../../assets/images/logo.png";
-import Contacts from "../../assets/images/non-focus/contacts.png";
-import Wallet from "../../assets/images/non-focus/wallet.png";
-import LiveRate from "../../assets/images/non-focus/graph.png";
-import Convert from "../../assets/images/non-focus/convert.png";
+import Contacts from "../../assets/images/non-focus-contacts.png";
+import Wallet from "../../assets/images/non-focus-wallet.png";
+import LiveRate from "../../assets/images/non-focus-graph.png";
+import Convert from "../../assets/images/non-focus-convert.png";
 const Nav = () => {
   return (
-    <div className="nav-container">
-      <div className="nav-container__header">
+    <div className="nav">
+      <div className="nav__header">
         <img src={Logo} alt="logo"></img>
         <h1>Synergy</h1>
       </div>
 
-      <div className="nav-container__menu">
+      <div className="nav__menu">
         <h1>Menu</h1>
         <div className="menu__button-row">
           <img src={Contacts} alt="contacts"></img>
