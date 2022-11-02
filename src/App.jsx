@@ -5,9 +5,10 @@ import "./styles/main.scss";
 
 const App = () => {
   return (
-    <Routes>
-      <Route path="*" element={<Home />} />
-    </Routes>
+    <Nav />
+    // <Routes>
+    //   <Route path="*" element={<Home />} />
+    // </Routes>
   );
 };
 

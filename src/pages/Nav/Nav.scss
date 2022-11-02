@@ -2,7 +2,7 @@
 
 .nav {
   position: absolute;
-  width: 20%;
+  width: 15%;
   border: 2px solid;
   border-right-color: gray;
   h1 {
@@ -10,6 +10,7 @@
   }
   img {
     margin-top: 8px;
+    margin-right: 25px;
     height: 50px;
     width: auto;
   }
@@ -28,13 +29,15 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
-
+    .nav__menu-header {
+      color: #343c49;
+      font-size: 20px;
+      padding-left: 15px;
+    }
     .menu__button-row {
       display: flex;
       flex-direction: row;
-
-      text-align: end;
-
+      justify-content: space-evenly;
       width: 70%;
       p {
         color: #a6afbd;

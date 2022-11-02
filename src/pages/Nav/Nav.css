@@ -1,0 +1,89 @@
+* {
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
+  color: #f3f2e8;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin: 0.5rem 0;
+  display: inline-block;
+  width: 100%;
+}
+
+button {
+  font-size: 1rem;
+}
+
+h1 {
+  font-size: 2.1rem;
+}
+
+h2 {
+  font-size: 1.65rem;
+}
+
+h3 {
+  font-size: 1.25rem;
+}
+
+@media screen and (min-width: 768px) {
+  :root {
+    font-size: 110%;
+  }
+}
+@media screen and (min-width: 1024px) {
+  :root {
+    font-size: 120%;
+  }
+}
+.nav {
+  position: absolute;
+  width: 15%;
+  border: 2px solid;
+  border-right-color: gray;
+  height: 100vh;
+}
+.nav h1 {
+  color: #343c49;
+}
+.nav img {
+  margin-top: 8px;
+  margin-right: 25px;
+  height: 50px;
+  width: auto;
+}
+.nav .nav__header {
+  display: flex;
+  width: auto;
+  font-size: 1.6rem;
+  margin-bottom: 5rem;
+}
+.nav .nav__menu {
+  margin-left: 10%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.nav .nav__menu .nav__menu-header {
+  color: #343c49;
+  font-size: 20px;
+  padding-left: 15px;
+}
+.nav .nav__menu .menu__button-row {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  width: 70%;
+}
+.nav .nav__menu .menu__button-row p {
+  color: #a6afbd;
+}
+.nav .nav__menu .menu__button-row img {
+  height: 20px;
+  width: auto;
+}/*# sourceMappingURL=Nav.css.map */
