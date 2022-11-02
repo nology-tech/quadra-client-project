@@ -1,0 +1,21 @@
+@use "../../styles/variables"as *;
+@use "../../styles/typography" as *;
+
+.contacts{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    color: $color-text;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 20px;
+    font-family: $font-heading;
+    &__bankImage{
+        width: 39px;
+        height: 39px;
+    }
+    &__deleteIcon{
+        width: 19.5px;
+        height: 21.45px;
+    }
+}
