@@ -1,8 +1,10 @@
 import Layout from "../../components/Layout/Layout";
+import ModalWindow from "../../pages/ModalWindow/ModalWindow";
 
 const Home = () => {
   return (
     <Layout>
+      <ModalWindow title={"test"}/>
       <h1>Page Heading</h1>
       <h2>Section Heading</h2>
       <h3>Panel Heading</h3>
