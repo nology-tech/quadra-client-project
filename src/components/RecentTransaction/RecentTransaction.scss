@@ -18,22 +18,22 @@ h1 {
     
     &__header {
         font-family: $font-heading;
-        color: #5B6D7D;
+        color: $color-text;
         font-size: 16px;
         padding: 10px;
 
     }
     &__item {
         font-family: $font-heading;
-        color: #5B6D7D;
+        color: $color-text;
         font-size: 12px;
-        border-bottom: 1px solid #E7E7E7;
+        border-bottom: 1px solid $color-background;
         padding: 10px;
     }
 }
 
 .transactions {
-    background-color: #FBFBFC;
+    background-color: $color-currency-background;
     padding: 50px;
     width: 804px;
     height: 371px;
