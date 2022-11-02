@@ -11,7 +11,6 @@ const Nav = () => {
         <img src={Logo} alt="logo"></img>
         <h1>Synergy</h1>
       </div>
-
       <div className="nav__menu">
         <h1>Menu</h1>
         <div className="menu__button-row">
