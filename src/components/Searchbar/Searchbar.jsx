@@ -1,10 +1,10 @@
 import "./Searchbar.scss";
-import searchIcon from "../../"
+import searchIcon from "../../assets/images/searchIcon.png"
 
 const Searchbar = () => {
     return(
         <div className="searchBar">
-            <img src={searchIcon} alt="Icon" />
+            <img src={searchIcon} alt="Icon" className="searchBar__image"/>
             <input 
                 type="search" 
                 name="Searchbar" 

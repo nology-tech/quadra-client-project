@@ -1,8 +1,17 @@
 .searchBar {
     display: flex;
+    align-items: center;
     height: 51px;
     width: 221px;
+    border-radius: 10px;
+    background-color: #FBFBFC;
+    .searchBar__image {
+        margin: 10px;
+        height: 22px;
+        width: 22px;
+    }
     input {
+        width: 175px;
         border: none;
         border-radius: 10px;
         background-color: #FBFBFC;
