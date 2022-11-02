@@ -11,11 +11,11 @@ const RecentTransaction = ({ transactionId, senderAmount, payeeAmount, rate, dat
                 <div className="transactions-grid__header">Payee Amount</div>
                 <div className="transactions-grid__header">Rate</div>
                 <div className="transactions-grid__header">Date</div>
-                <div className="transactions-grid__item"></div>
-                <div className="transactions-grid__item"></div>
-                <div className="transactions-grid__item"></div>
-                <div className="transactions-grid__item"></div>
-                <div className="transactions-grid__item"></div>
+                <div className="transactions-grid__item">{transactionId}</div>
+                <div className="transactions-grid__item">{senderAmount}</div>
+                <div className="transactions-grid__item">{payeeAmount}</div>
+                <div className="transactions-grid__item">{rate}</div>
+                <div className="transactions-grid__item">{date}</div>
             </div>
         </div>
     )
