@@ -40,4 +40,85 @@
 
 
     }
+
+}
+
+.bank-section{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 461px;
+    text-align: center;
+
+    &__title{
+        font-family: $font-heading;
+        font-size: 32px;
+        color: $color-heading;
+        font-weight: 500;
+        padding: 50px;
+    }
+}
+
+.award-section{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    height: 561px;
+    background-color: $color-background-light;
+    &__title{
+        font-weight: 500;
+        font-family: $font-heading;
+        font-size: 28px;
+    }
+}
+
+.conversion-section{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    height: 561px;
+
+    background: linear-gradient(to bottom, $color-primary 0% 60%, #ffffff 60% 100%);
+    &__title{
+        font-weight: 500;
+        font-family: $font-heading;
+        font-size: 40px;
+        color: #ffffff;
+    }
+    &__text{
+        font-weight: 400;
+        font-family: $font-login-text;
+        font-size: 18px;
+        color: #ffffff;
+    }
+}
+
+.rates-section{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    height: 700px;
+
+    &__title{
+        font-weight: 400;
+        font-family: $font-heading;
+        font-size: 32px;
+        color: $color-heading;
+        height: 40px;
+    }
+    &__text{
+        font-weight: 400;
+        font-family: $font-main;
+        font-size: 16px;
+        color: #8896A3;
+        height: 100px;
+        width: 556px;
+    }
 }
