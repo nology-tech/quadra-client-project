@@ -1,0 +1,43 @@
+@use "../../styles/typography" as *;
+@use "../../styles/variables" as *;
+
+h1 {
+    font-family: $font-main;
+    font-size: 24px;
+    line-height: 29px;
+    padding-bottom: 30px;
+    padding-left: 10px;
+}
+
+.transactions__grid {
+    display: grid;
+    grid-template-columns: repeat(5, 150px);
+    grid-template-rows: repeat(auto, 50px);
+    justify-content: center;
+    overflow: hidden;
+    padding-left: 35px;
+    
+}
+
+.transactions {
+    background-color: $color-currency-background;
+    padding: 50px;
+    width: 804px;
+    height: 371px;
+    border-radius: 8px;
+
+    &__header {
+        font-family: $font-heading;
+        color: $color-text;
+        font-size: 16px;
+        padding: 10px;
+
+    }
+    &__item {
+        font-family: $font-heading;
+        color: $color-text;
+        font-size: 12px;
+        border-bottom: 1px solid $color-background;
+        padding: 10px;
+    }
+}
