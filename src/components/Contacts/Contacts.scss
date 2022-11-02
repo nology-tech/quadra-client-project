@@ -1,20 +1,28 @@
 @use "../../styles/variables"as *;
-@use "../../styles/typography" as *;
+@use "../../styles/typography"as *;
 
-.contacts{
+.contacts {
     display: flex;
     flex-direction: row;
     justify-content: center;
+    text-align: center;
+    margin: auto;
     color: $color-text;
     font-weight: 400;
     font-size: 16px;
     line-height: 20px;
+    width: 1200px;
+    height: 58px;
     font-family: $font-heading;
-    &__bankImage{
+    background: $color-background-light;
+    padding: 10px;
+
+    &__bankImage {
         width: 39px;
         height: 39px;
     }
-    &__deleteIcon{
+
+    &__deleteIcon {
         width: 19.5px;
         height: 21.45px;
     }
