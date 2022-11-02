@@ -1,0 +1,41 @@
+@use "../../styles/typography" as *;
+
+h1 {
+    font-family: $font-main;
+    font-size: 24px;
+    line-height: 29px;
+    padding-bottom: 30px;
+    padding-left: 10px;
+}
+
+.transactions-grid {
+    display: grid;
+    grid-template-columns: repeat(5, 150px);
+    grid-template-rows: repeat(auto, 50px);
+    justify-content: center;
+    overflow: hidden;
+    padding-left: 35px;
+    
+    &__header {
+        font-family: $font-heading;
+        color: #5B6D7D;
+        font-size: 16px;
+        padding: 10px;
+
+    }
+    &__item {
+        font-family: $font-heading;
+        color: #5B6D7D;
+        font-size: 12px;
+        border-bottom: 1px solid #E7E7E7;
+        padding: 10px;
+    }
+}
+
+.transactions {
+    background-color: #FBFBFC;
+    padding: 50px;
+    width: 804px;
+    height: 371px;
+    border-radius: 8px;
+}
