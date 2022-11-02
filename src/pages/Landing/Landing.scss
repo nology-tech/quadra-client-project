@@ -1,7 +1,43 @@
+@use "../../styles/variables" as *;
+@use "../../styles/typography" as *;
+
 .top-section{
     background-image: url("../../assets/background-images/landing-bg.png");
     min-width: 100vw;
     min-height: 100vh;
     background-size: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
     
+    &__title{
+        width: 744px;
+        font-family: $font-heading;
+        font-style: normal;
+        font-weight: 600;
+        font-size: 48px;
+        line-height: 110%;
+        color: #0B2251;
+ 
+    }
+    &__highlight{
+        color:$color-primary;
+    }
+    &__text{
+        width: 611px;
+        font-family: $font-login-text;
+        font-style: normal;
+        font-weight: 400;
+        font-size: 18px;
+        line-height: 150%;
+        color: $color-footer-text;
+    }
+
+    &__screenshot{
+        width: 872px;
+
+
+    }
 }
