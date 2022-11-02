@@ -5,13 +5,14 @@
   width: 15%;
   border: 2px solid;
   border-right-color: gray;
+  height: 100vh;
   h1 {
     color: #343c49;
   }
   img {
-    margin-top: 8px;
-    margin-right: 25px;
-    height: 50px;
+    margin-top: 0.5rem;
+    margin-right: 1.75rem;
+    height: 3.5rem;
     width: auto;
   }
 
@@ -24,17 +25,17 @@
     font-size: 1.6rem;
     margin-bottom: 5rem;
   }
-  .nav__menu {
-    margin-left: 10%;
+  &__menu {
+    margin-left: 2.5rem;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    .nav__menu-header {
+    &__title {
       color: #343c49;
-      font-size: 20px;
-      padding-left: 15px;
+      font-size: 1.4rem;
+      padding-left: 1rem;
     }
-    .menu__button-row {
+    .menu__button {
       display: flex;
       flex-direction: row;
       justify-content: space-evenly;
@@ -43,7 +44,7 @@
         color: #a6afbd;
       }
       img {
-        height: 20px;
+        height: 1.2rem;
         width: auto;
       }
     }
