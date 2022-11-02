@@ -1,0 +1,46 @@
+@use "../../styles/variables" as *;
+
+.login {
+    display:flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 601px;
+    height: 589px;
+    border-radius: 8px;
+    aspect-ratio: 1 / 1;
+    background-color: #FFFFFF;
+
+    .login__welcome {
+
+        .login__welcome__wrapper {
+            display: flex;
+        }
+    }
+
+    .login__reg {
+        display: flex;
+        justify-content: space-between;
+        font-size: 16px;
+        width: 100%;
+
+        .login__reg__signup {
+            margin-left: 2%;
+
+            .login__reg__signup--btn {
+                color:#00ffff;
+            }
+        }
+
+        .login__reg__reset {
+            align-self: center;
+            margin-right: 3%;
+            .login__reg__reset--btn {
+                color:aqua;
+            }
+        }
+    }
+
+    &__email__missing, &__password__missing {
+        color: red;
+    }
+}
