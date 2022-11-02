@@ -18,17 +18,21 @@ const Nav = () => {
           <img src={Contacts} alt="contacts"></img>
           <p>Contacts</p>
         </div>
-        <div className="menu__button-row">
+        <div className="menu__button">
           <img src={Wallet} alt="wallet"></img>
           <p>Wallet</p>
         </div>
-        <div className="menu__button-row">
+        <div className="menu__button">
           <img src={LiveRate} alt="graph"></img>
           <p>Live rates</p>
         </div>
-        <div className="menu__button-row">
+        <div className="menu__button">
           <img src={Convert} alt="convert"></img>
           <p>Convert</p>
+        </div>
+        <div className="menu__button">
+          <img src={Transfer} alt="transfer"></img>
+          <p>Transfer</p>
         </div>
       </div>
     </div>
