@@ -1,0 +1,18 @@
+@use "../../styles/variables" as *;
+@use "../../styles/typography" as *;
+
+.navlist{
+    list-style: none;
+    padding-top: 52px;
+
+}
+.navlist li{
+    display: inline;
+    color: #839AAF;
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 19px;
+    padding: 10px;
+}
