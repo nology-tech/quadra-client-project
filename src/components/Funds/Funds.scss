@@ -1,0 +1,20 @@
+@use "../../styles/variables" as *;
+@use "../../styles/typography" as *;
+
+.funds{
+    position: absolute;
+    width: 263px;
+    height: 252px;
+    left: 0px;
+    top: 0px;
+    background-image: url("../../assets/background-images/funds-background.png");
+    border-radius: 25px 0 25px 25px;
+    font-family: $font-main;
+
+    &__title{
+        font-size: 20px;
+    }
+    &__amount{
+        font-size: 48px;
+    }
+}
