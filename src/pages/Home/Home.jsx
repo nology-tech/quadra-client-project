@@ -1,4 +1,5 @@
 import Layout from "../../components/Layout/Layout";
+import Login from "../Login/Login";
 
 const Home = () => {
   return (
@@ -14,6 +15,7 @@ const Home = () => {
       </p>
       <p>Ollie change to test auto deployment</p>
       <p>Showing PR request example</p>
+      <Login/>
     </Layout>
   );
 };
