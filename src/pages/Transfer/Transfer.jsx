@@ -1,5 +1,6 @@
 import "./Transfer.scss";
 
+
 const Transfer = ({ currencyFlag, currencyName, amount, rate, isActive }) => {
     return (
         <div className={isActive?"transfer transfer__active" : "transfer"}>
