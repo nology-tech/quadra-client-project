@@ -8,11 +8,26 @@
 }
 .navlist li{
     display: inline;
-    color: #839AAF;
+    
     font-family: 'Roboto';
     font-style: normal;
     font-weight: 400;
     font-size: 16px;
     line-height: 19px;
     padding: 10px;
+}
+
+.navlist li a {
+    text-decoration: none;
+}
+
+.unselected{
+    color: #839AAF;
+}
+.footer-selected{
+    color: #ffffff;
+}
+
+.header-selected{
+    color: #06020A;
 }

@@ -4,10 +4,10 @@ const LandingNav = ({isFooter}) => {
 
     return(
         <ul className="navlist">
-            <li href="" className={isFooter ? "footer-selected" : "header-selected" }>Home</li>
-            <li href="">Features</li>
-            <li href="">About</li>
-            <li href="">Contact Us</li>
+            <li><a href="" className={isFooter ? "footer-selected" : "header-selected" }>Home</a></li>
+            <li><a href="" className="unselected">Features</a></li>
+            <li><a href="" className="unselected">About</a></li>
+            <li><a href="" className="unselected">Contact Us</a></li>
         </ul>
      
     )

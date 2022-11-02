@@ -3,7 +3,7 @@ import LandingNav from "../../components/LandingNav/LandingNav";
 const Home = () => {
   return (
     <Layout>
-      <LandingNav/>
+      <LandingNav isFooter={false}/>
       <h1>Page Heading</h1>
       <h2>Section Heading</h2>
       <h3>Panel Heading</h3>
