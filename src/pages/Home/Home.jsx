@@ -1,9 +1,7 @@
 import Layout from "../../components/Layout/Layout";
-import Funds from "../../components/Funds/Funds";
 const Home = () => {
   return (
     <Layout>
-      <Funds amount="15,210" isManage={true}></Funds>
       <h1>Page Heading</h1>
       <h2>Section Heading</h2>
       <h3>Panel Heading</h3>
