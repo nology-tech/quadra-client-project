@@ -4,12 +4,13 @@ import Contacts from "../../assets/images/non-focus-contacts.png";
 import Wallet from "../../assets/images/non-focus-wallet.png";
 import LiveRate from "../../assets/images/non-focus-graph.png";
 import Convert from "../../assets/images/non-focus-convert.png";
+import Transfer from "../../assets/images/transfer-focus.png"
 const Nav = () => {
   return (
     <div className="nav">
       <Logo />
       <div className="nav__menu">
-        <h1>Menu</h1>
+        <h3>Menu</h3>
         <div className="menu__button-row">
           <img src={Contacts} alt="contacts"></img>
           <p>Contacts</p>
