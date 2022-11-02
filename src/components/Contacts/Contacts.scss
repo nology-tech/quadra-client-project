@@ -9,21 +9,15 @@
     margin: auto;
     color: $color-text;
     font-weight: 400;
-    font-size: 16px;
-    line-height: 20px;
-    width: 1200px;
-    height: 58px;
+    font-size: 0.8rem;
+    line-height: 1.25rem;
+    width: 65rem;
+    height: 3.63rem;
     font-family: $font-heading;
     background: $color-background-light;
-    padding: 10px;
-
-    &__bankImage {
-        width: 39px;
-        height: 39px;
-    }
-
-    &__deleteIcon {
-        width: 19.5px;
-        height: 21.45px;
+    padding: 0.63rem;
+    &__Image{
+        width: 1.8rem;
+        height: 1.8rem;
     }
 }
