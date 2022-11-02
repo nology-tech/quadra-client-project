@@ -1,7 +1,8 @@
-@import url('https://fonts.googleapis.com/css2?family=Outfit&display=swap');
 
-.input-container{
-    font-family: 'Outfit';
+@use "../../styles/variables" as *;
+@use "../../styles/typography" as *;
+.input{
+    font-family: $font-heading;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
@@ -10,13 +11,13 @@
     line-height: 20px;
 
     &__title{
-        color: #5B6D7D;
+        color: $color-text;
         
     }
     &__input{
-        color: #A6AFBD;
-        background: #FBFBFC;
-        border: 1px solid #E2E2E2;
+        color: $color-input-text;
+        background: $color-input-background;
+        border: 1px solid $color-input-border;
         border-radius: 6px;
     }
 
@@ -26,11 +27,11 @@
         
 
         &--error{
-            color: #DF1C1C;
+            color: $color-error-input;
         }
 
         &--success{
-            color: #57E141;
+            color: $color-success-input;
         }
     }
 }
