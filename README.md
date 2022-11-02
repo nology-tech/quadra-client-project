@@ -9,7 +9,7 @@
 
 - Components contains all generic components that are shared across pages. They should be generic and reusable, and testable in isolation.
 
-- Pages/containers contains our different application views. Generally any requests should be activated here so that any children components don't have to, e.g. If we have a 'User Details' view, we should dispatch our network requests for user information from here.
+- Pages contains our different application views. Generally any requests should be activated here so that any children components don't have to, e.g. If we have a 'User Details' view, we should dispatch our network requests for user information from here.
 
 - Styles consists global style files that should be made available across our application.
 
