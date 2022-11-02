@@ -1,10 +1,11 @@
 @use "../../styles/typography" as *;
+@use "../../styles/variables" as *;
 
 .nav {
   position: absolute;
   width: 15%;
   border: 2px solid;
-  border-right-color: gray;
+  border-right-color: $color-currency;
   height: 100vh;
   h1 {
     color: #343c49;
@@ -31,7 +32,7 @@
     flex-direction: column;
     justify-content: center;
     &__title {
-      color: #343c49;
+      color: $color-logo-header;
       font-size: 1.4rem;
       padding-left: 1rem;
     }
@@ -41,11 +42,13 @@
       justify-content: space-evenly;
       width: 70%;
       p {
-        color: #a6afbd;
+        color: $color-menu-unselected;
       }
       img {
         height: 1.2rem;
         width: auto;
+        margin-top: 0.5rem;
+        margin-right: 0.7rem;
       }
     }
   }

@@ -7,10 +7,7 @@ import Convert from "../../assets/images/non-focus-convert.png";
 const Nav = () => {
   return (
     <div className="nav">
-      <div className="nav__header">
-        <img src={Logo} alt="logo"></img>
-        <h1>Synergy</h1>
-      </div>
+      <Logo />
       <div className="nav__menu">
         <h1>Menu</h1>
         <div className="menu__button-row">
