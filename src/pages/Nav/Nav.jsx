@@ -30,6 +30,10 @@ const Nav = () => {
           <img src={Transfer} alt="transfer"></img>
           <p>Transfer</p>
         </div>
+        <div className="menu__button">
+          <img src={Contacts} alt="contacts"></img>
+          <p>Contacts</p>
+        </div>
       </div>
     </div>
   );
