@@ -1,33 +1,35 @@
 @use "../../styles/variables" as *;
 @use "../../styles/typography" as *;
 
-.navlist{
+.navList{
     list-style: none;
-    padding-top: 52px;
+    padding-top: 3.2rem;
+    &__listItem {
+        display: inline;
+        font-family: $font-link;
+        font-style: normal;
+        font-weight: 400;
+        font-size: 1rem;
+        line-height: 1.2rem;
+        padding: 0.6rem;
+    }
+    &__anchor{
+        text-decoration: none;
+        &--unselected{
+            color: $color-footer-text;
+        }
+        &--footer-selected{
+            color: $color-funds-text;
+            text-decoration: none;
+        }
+        
+        &--header-selected{
+            color: $color-heading;
+            text-decoration: none;
+        }
+    }
+}
 
-}
-.navlist li{
-    display: inline;
-    
-    font-family: 'Roboto';
-    font-style: normal;
-    font-weight: 400;
-    font-size: 16px;
-    line-height: 19px;
-    padding: 10px;
-}
 
-.navlist li a {
-    text-decoration: none;
-}
 
-.unselected{
-    color: #839AAF;
-}
-.footer-selected{
-    color: #ffffff;
-}
 
-.header-selected{
-    color: #06020A;
-}
