@@ -1,7 +1,6 @@
 @use "../../styles/_variables.scss" as *; 
 
 .logo {
-
     display: flex;
     align-items: center;
     justify-content: center;
@@ -9,22 +8,15 @@
     font-size: 1rem;
 
     &__logo {
-
         height: 80%;
         aspect-ratio: 1 / 1;
-
     }
 
     &__darkText {
-
         color: $color-logo-header;
-
     }
 
     &__lightText {
-
         color: $color-funds-text;
-
     }
-
 }
