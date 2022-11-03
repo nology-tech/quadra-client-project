@@ -1,7 +1,10 @@
 import "./SignIn.scss";
 import logo from "../../assets/images/logo.png";
 import Button from "../../components/Button/Button";
-const SignIn = ({ buttonText }) => {
+import SignUp from "../../pages/SignUp/SignUp";
+import Login from "../Login/Login";
+
+const SignIn = ({ buttonText, isLogin }) => {
     return (
         <div className="signIn">
             <div className="signIn__nav">
@@ -17,7 +20,7 @@ const SignIn = ({ buttonText }) => {
                 </div>
             </div>
             <div className="signIn__main">
-
+                {isLogin? <Login/> : <SignUp/>}
             </div>
         </div>
     )
