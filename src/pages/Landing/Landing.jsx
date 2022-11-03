@@ -9,7 +9,19 @@ import Button from "../../components/Button/Button";
 const Landing = () => {
     return(
         <>
-        <header></header>
+        <header className='landing-header'>
+            <h1 className='landing-header__logo'>LOGO</h1>
+            <div>
+                <span>dummy</span>
+                <span>dummy</span>
+                <span>dummy</span>
+                <span>dummy</span>
+                </div>
+            <div>
+            <a href=''>Sign In</a>
+            <Button buttonText={"Sign Up"}/>
+            </div>
+        </header>
         <section className='top-section'>
             <h1 className='top-section__title'>Lorem ipsum dolor sit amet, consectetur <span className='top-section__highlight'>adipiscing elit.</span></h1>
             <p className='top-section__text'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore, quas ad explicabo.</p>
@@ -34,8 +46,17 @@ const Landing = () => {
             <img className='rates-section__screenshot' src={ratesScreenshot} alt="Rates screenshot"/>
         
         </section>
-        <footer>
-
+        <footer className='landing-footer'>
+        <h1 className='landing-header__logo'>LOGO</h1>
+            <div>
+                <span>dummy</span>
+                <span>dummy</span>
+                <span>dummy</span>
+                <span>dummy</span>
+                </div>
+            <div>
+            <Button buttonText={"Sign Up"}/>
+            </div>
         </footer>
         </>
     )
