@@ -7,45 +7,37 @@
   border: 0.2rem solid;
   border-right-color: $color-currency;
   height: 100vh;
-  h1 {
-    color: $color-logo-header;
+
+  &__logo {
+    margin-left: 2rem;
   }
-  img {
-    margin-top: 0.5rem;
-    margin-right: 1.75rem;
-    height: 3.5rem;
-    width: auto;
-  }
-  .nav__header {
-    display: flex;
-    width: auto;
-    font-size: 1.6rem;
-    margin-bottom: 5rem;
-  }
+
   &__menu {
-    margin-left: 2.5rem;
+    margin: 3rem 0 0 2.5rem;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    &__title {
-      color: $color-logo-header;
-      font-size: 1.4rem;
-      padding-left: 1rem;
+    
+    h3 {
+    color: $color-logo-header;
     }
-    .menu__button {
-      display: flex;
-      flex-direction: row;
-      justify-content: space-evenly;
-      width: 70%;
-      p {
-        color: $color-menu-unselected;
-      }
-      img {
-        height: 1.2rem;
-        width: auto;
-        margin-top: 0.5rem;
-        margin-right: 0.7rem;
-      }
+  }
+
+  &__button {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    width: 70%;
+    
+    img {
+      height: 1.2rem;
+      width: auto;
+      margin-top: 0.5rem;
+      margin-right: 0.7rem;
+    }
+
+    p {
+      color: $color-menu-unselected;
     }
   }
 }
