@@ -12,19 +12,20 @@
         font-size: 1rem;
         line-height: 1.2rem;
         padding: 0.6rem;
-
-        &__anchor{
+    }
+    &__anchor{
+        text-decoration: none;
+        &--unselected{
+            color: $color-footer-text;
+        }
+        &--footer-selected{
+            color: $color-funds-text;
             text-decoration: none;
-            &--unselected{
-                color: $color-footer-text;
-            }
-            &--footer-selected{
-                color: $color-funds-text;
-            }
-            
-            &--header-selected{
-                color: $color-heading;
-            }
+        }
+        
+        &--header-selected{
+            color: $color-heading;
+            text-decoration: none;
         }
     }
 }
