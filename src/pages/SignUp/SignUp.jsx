@@ -1,6 +1,6 @@
 import "./SignUp.scss";
 import Button from "../../components/Button/Button";
-import logo from "../../assets/images/logo.png";
+import logo from "../../assets/images/logoImage.png";
 import InputBox from "../../components/InputBox/InputBox";
 
 import {
@@ -8,50 +8,84 @@ import {
   createUserWithEmailAndPassword
 } from "firebase/auth";
 import app from "../../firebase";
-import { useState } from "react";
+import {
+  useState,
+  useEffect
+} from "react";
 
 const SignUp = ({ login }) => {
   const [registerEmail, setRegisterEmail] = useState("");
   const [registerPassword, setRegisterPassword] = useState("");
   const [confirmPassword, setConfirmPassword] = useState("");
-
-  const auth = getAuth(app);
-
-  const passRegex = /^(?=.*[0-9])(?=.*[!@#$%^&*])[a-zA-Z0-9!@#$%^&*]{6,16}$/
-
   const [emailError, setEmailError] = useState("");
   const [emailSuccess, setEmailSuccess] = useState("");
   const [password1Error, setPassword1Error] = useState("");
   const [password1Success, setPassword1Success] = useState("");
   const [password2Error, setPassword2Error] = useState("");
   const [password2Success, setPassword2Success] = useState("");
-//"Successful email entered"
-//"Error - your email must contain an '@' symbol"
-//"Successful email entered"
 
-//"Error- Passwords must contain at least 8 characters & one uppercase letter"
-//"Error - Passwords do not match!"
-// "Passwords match"
+  
+  const passRegex = /^(?=.*[0-9])(?=.*[!@#$%^&*])[a-zA-Z0-9!@#$%^&*]{6,16}$/
+  const emailRegex = /^\w+@[a-zA-Z_]+?\.[a-zA-Z]{2,3}$/
+
+  const auth = getAuth(app);
+
+const validateInputs = () => {
+  let result = true;
+  setEmailError("");
+  setEmailSuccess("");
+  setPassword1Error("");
+  setPassword1Success("");
+  setPassword2Error("");
+  setPassword2Success("");
+  if (!emailRegex.test(registerEmail)) {
+    setEmailError("Error - Your email must contain an @ symbol");
+    result = false;
+  } else {
+    setEmailSuccess("Successful email entered");
+  }
+  if (confirmPassword != registerPassword) {
+    setPassword2Error("Error - passwords do not match!");
+    result = false;
+  } else {
+    setPassword2Success("Passwords Match");
+  }
+  if (!passRegex.test(registerPassword)) {
+    setPassword1Error("Error - password must contain at least 8 characters, 1 uppercase letter, and 1 symbol");
+    result = false;
+  }
+  if (confirmPassword === registerPassword && passRegex.test(registerPassword)) {
+    setPassword1Success("Password meets requirements.")
+    result = false;
+  }
+  if (registerEmail == "") {
+    setEmailError("");
+  }
+  if (registerPassword == "" && confirmPassword == "") {
+    setPassword1Error("");
+    setPassword1Success("");
+    setPassword2Error("");
+    setPassword2Success("");
+  }
+  return result;
+}
+
+useEffect(() => {
+  validateInputs()
+}, [registerEmail, registerPassword, confirmPassword])
+
+
+
   const register = () => {
-    if (confirmPassword != registerPassword) {
-      alert("password does not match");
-      setPassword1Error("passwords do not match");
-    } else if (!passRegex.test(registerPassword)) {
-      alert("password needs to contain");
-    } else {
+    if (validateInputs()) {
       createUserWithEmailAndPassword(auth, registerEmail, registerPassword)
       .then((userCredential) => {
-        // Signed in 
           const user = userCredential.user;
           console.log(user);
-          alert("user has been created");
       })
-
       .catch((error) => {
         const errorCode = error.code;
-        // const errorMessage = error.message;
-        // // ..
-        alert(errorCode);
+        console.log(errorCode);
       });
   }};
 

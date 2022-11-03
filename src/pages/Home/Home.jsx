@@ -60,6 +60,7 @@ const Home = () => {
   });
 
   return (
+    
     <Layout>
       <label>
         Email Address
