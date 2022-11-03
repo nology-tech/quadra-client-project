@@ -2,7 +2,7 @@
 @use "../../styles/typography" as *;
 
 .landing-header{
-    background-color: #f1ffff;
+    background-color: $color-background-light;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -12,8 +12,8 @@
         width: 2rem;
     }
 }
-.landing-header{
-    background-color: #f1ffff;
+.landing-footer{
+    background-color: $color-footer;
     display: flex;
     justify-content: space-between;
     align-items: center;

@@ -4,13 +4,14 @@ import bankLogos from "../../assets/images/bank-logos.png";
 import convertAmountScreenshot from "../../assets/images/convert-amount-screenshot.png";
 import ratesScreenshot from "../../assets/images/rates-screenshot.png"
 import Button from "../../components/Button/Button";
+import Logo from "../../components/Logo/Logo.jsx";
 
 
 const Landing = () => {
     return(
         <>
         <header className='landing-header'>
-            <h1 className='landing-header__logo'>LOGO</h1>
+            <Logo isTextDark={true} />
             <div>
                 <span>dummy</span>
                 <span>dummy</span>
@@ -47,7 +48,7 @@ const Landing = () => {
         
         </section>
         <footer className='landing-footer'>
-        <h1 className='landing-header__logo'>LOGO</h1>
+        <Logo isTextDark={false} />
             <div>
                 <span>dummy</span>
                 <span>dummy</span>
