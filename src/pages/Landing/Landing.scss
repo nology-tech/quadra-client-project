@@ -41,7 +41,6 @@
     justify-content: center;
     align-items: center;
     text-align: center;
-    
     &__title{
         width: 46.5rem;
         font-family: $font-heading;
@@ -50,7 +49,7 @@
         font-size: 3rem;
         line-height: 110%;
         color: #0B2251;
- 
+        padding-bottom: 1rem;
     }
     &__highlight{
         color:$color-primary;
@@ -63,6 +62,7 @@
         font-size: 1.1rem;
         line-height: 150%;
         color: $color-footer-text;
+        padding-bottom: 1rem;
     }
 
     &__screenshot{
@@ -87,6 +87,9 @@
         color: $color-heading;
         font-weight: 500;
         padding: 3.1rem;
+    }
+    &__logos {
+        width: 80vw;
     }
 }
 
@@ -119,7 +122,6 @@
     align-items: center;
     text-align: center;
     height: 35rem;
-
     background: linear-gradient(to bottom, $color-primary 0% 60%, $color-funds-text 60% 100%);
     &__title{
         font-weight: 500;
@@ -132,6 +134,9 @@
         font-family: $font-login-text;
         font-size: 1.1rem;
         color: $color-funds-text;
+    }
+    &__screenshoot {
+        width: 67.4rem;
     }
 }
 
@@ -157,5 +162,8 @@
         color: #8896A3;
         height: 6.3rem;
         width: 34.8rem;
+    }
+    &__screenshot {
+        width: 85.3rem;
     }
 }

@@ -26,7 +26,7 @@ const Landing = () => {
         </section>
         <section className='bank-section'>
             <h2 className='bank-section__title'>Trusted by over 3,000 banks worldwide</h2>
-            <img className='blank-section__logos' src={bankLogos} alt="bank logo" />
+            <img className='bank-section__logos' src={bankLogos} alt="bank logo" />
         </section>
         <section className='award-section'>
             <h2  className='award-section__title'>Our Award-Winning Features</h2>
