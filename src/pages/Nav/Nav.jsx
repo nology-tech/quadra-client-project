@@ -11,7 +11,7 @@ const Nav = () => {
       <Logo />
       <div className="nav__menu">
         <h3>Menu</h3>
-        <div className="menu__button-row">
+        <div className="menu__button">
           <img src={Contacts} alt="contacts"></img>
           <p>Contacts</p>
         </div>
