@@ -1,7 +1,9 @@
 import Layout from "../../components/Layout/Layout";
+import InputBox from "../../components/InputBox/InputBox";
 const Home = () => {
   return (
     <Layout>
+      <InputBox title={"Test"} inputType={"text"}errorMessage={"error"}/>
       <h1>Page Heading</h1>
       <h2>Section Heading</h2>
       <h3>Panel Heading</h3>

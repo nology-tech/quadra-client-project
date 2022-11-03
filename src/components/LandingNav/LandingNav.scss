@@ -3,15 +3,15 @@
 
 .navList{
     list-style: none;
-    padding-top: 3.25rem;
+    padding-top: 3.2rem;
     &__listItem {
         display: inline;
         font-family: $font-link;
         font-style: normal;
         font-weight: 400;
         font-size: 1rem;
-        line-height: 1.188rem;
-        padding: 0.625rem;
+        line-height: 1.2rem;
+        padding: 0.6rem;
 
         &__anchor{
             text-decoration: none;
