@@ -7,6 +7,7 @@ import Button from "../../components/Button/Button";
 import Logo from "../../components/Logo/Logo.jsx";
 import LandingNav from '../../components/LandingNav/LandingNav';
 import Feature from "../../components/Feature/Feature.jsx";
+import {Link} from "react-router-dom";
 
 const Landing = () => {
     return(
@@ -15,8 +16,11 @@ const Landing = () => {
             <Logo isTextDark={true} />
             <LandingNav isFooter={false}/>
             <div>
-            <a className='landing-header__sign-in' href=''>Sign In</a>
-            <Button buttonText={"Sign Up"}/>
+            <Link className='landing-header__sign-in' to={'/login'}>Sign In</Link>
+            <Link to={`/signup`}>
+                <Button buttonText={"Sign Up"}/>
+            </Link>
+            
             </div>
         </header>
         <section className='top-section'>
@@ -31,10 +35,10 @@ const Landing = () => {
         <section className='award-section'>
             <h2  className='award-section__title'>Our Award-Winning Features</h2>
             <div className='award-section__features-container'>
-            <Feature title={"Lorem ipsum dolor sit amet."} desc={"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cursus nibh sit eu sagittis."} />
-            <Feature title={"Lorem ipsum dolor sit amet."} desc={"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cursus nibh sit eu sagittis."} />
-            <Feature title={"Lorem ipsum dolor sit amet."} desc={"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cursus nibh sit eu sagittis."} />
-            <Feature title={"Lorem ipsum dolor sit amet."} desc={"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cursus nibh sit eu sagittis."} />
+                <Feature title={"Lorem ipsum dolor sit amet."} desc={"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cursus nibh sit eu sagittis."} />
+                <Feature title={"Lorem ipsum dolor sit amet."} desc={"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cursus nibh sit eu sagittis."} />
+                <Feature title={"Lorem ipsum dolor sit amet."} desc={"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cursus nibh sit eu sagittis."} />
+                <Feature title={"Lorem ipsum dolor sit amet."} desc={"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cursus nibh sit eu sagittis."} />
             </div>
             <Button buttonText={"Find out More"}/>
         </section>
@@ -50,11 +54,11 @@ const Landing = () => {
         
         </section>
         <footer className='landing-footer'>
-        <Logo isTextDark={false} />
-        <LandingNav isFooter={true}/>
-            <div>
-            <Button buttonText={"Sign Up"}/>
-            </div>
+            <Logo isTextDark={false} />
+            <LandingNav isFooter={true}/>
+            <Link to={`/signup`}>
+                <Button buttonText={"Sign Up"}/>
+            </Link>
         </footer>
         </>
     )
