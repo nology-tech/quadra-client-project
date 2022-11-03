@@ -1,0 +1,71 @@
+@use "../../styles/variables" as *;
+@use "../../styles/typography" as *;
+
+.signUp {
+  padding: 0.5rem;
+  margin-left: 8rem;
+
+  padding-left: 1rem;
+  width: 40rem;
+  margin-top: 10rem;
+  background-color: white;
+
+  &__company {
+    display: flex;
+
+    &--name {
+      font-family: $font-heading;
+      font-size: 1.25rem;
+      line-height: 1.6rem;
+      color: $color-text;
+    }
+    &--logo {
+      width: 3rem;
+      height: 2.5rem;
+    }
+  }
+
+  &__header {
+    color: $color-heading;
+    font-family: $font-heading;
+    font-weight: 500;
+    font-size: 2rem;
+    line-height: 2.5rem;
+    font-style: normal;
+    margin-top: 0.6rem;
+    margin-bottom: -2rem;
+  }
+
+  &__headerText {
+    font-family: $font-login-text;
+    color: $color-text;
+    font-weight: 400;
+    font-size: 1rem;
+    line-height: 1.18rem;
+  }
+
+  &__text {
+    font-family: $font-login-text;
+    color: $color-text;
+    display: flex;
+
+    &--login {
+      margin-left: -27rem;
+      padding-top: 0.5rem;
+      color: $color-primary;
+      border-bottom: 0.2rem dotted;
+    }
+  }
+
+  &__continue {
+    margin-left: 33rem;
+    margin-top: 2rem;
+    width: 10rem;
+  }
+
+
+&__input--password{
+    height: 50rem;
+}
+
+}

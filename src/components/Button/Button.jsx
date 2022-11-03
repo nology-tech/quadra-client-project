@@ -1,9 +1,11 @@
 import "./Button.scss";
 
-const Button = ({buttonText}) =>{
-    return (<>
-    <button className="largeButton">{buttonText}</button>
-    </>)
+const Button = ({buttonText, handleClick}) =>{
+    return (
+        <>
+            <button className="largeButton" onClick={handleClick}>{buttonText}</button>
+        </>
+    );
 
 }
 

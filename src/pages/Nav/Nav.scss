@@ -1,48 +1,43 @@
 @use "../../styles/typography" as *;
+@use "../../styles/variables" as *;
 
 .nav {
   position: absolute;
-  width: 20%;
-  border: 2px solid;
-  border-right-color: gray;
-  h1 {
-    color: #343c49;
-  }
-  img {
-    margin-top: 8px;
-    height: 50px;
-    width: auto;
+  width: 15%;
+  border: 0.2rem solid;
+  border-right-color: $color-currency;
+  height: 100vh;
+
+  &__logo {
+    margin-left: 2rem;
   }
 
-  height: 100vh;
-  .nav__header {
-    // top: 0px;
-    // position: fixed;
-    display: flex;
-    width: auto;
-    font-size: 1.6rem;
-    margin-bottom: 5rem;
-  }
-  .nav__menu {
-    margin-left: 10%;
+  &__menu {
+    margin: 3rem 0 0 2.5rem;
     display: flex;
     flex-direction: column;
     justify-content: center;
+    
+    h3 {
+    color: $color-logo-header;
+    }
+  }
 
-    .menu__button-row {
-      display: flex;
-      flex-direction: row;
+  &__button {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    width: 70%;
+    
+    img {
+      height: 1.2rem;
+      width: auto;
+      margin-top: 0.5rem;
+      margin-right: 0.7rem;
+    }
 
-      text-align: end;
-
-      width: 70%;
-      p {
-        color: #a6afbd;
-      }
-      img {
-        height: 20px;
-        width: auto;
-      }
+    p {
+      color: $color-menu-unselected;
     }
   }
 }

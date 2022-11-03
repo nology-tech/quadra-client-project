@@ -1,0 +1,34 @@
+@import "../../styles/_variables.scss";
+
+.transfer {
+    background-color: $color-currency-background;
+    color: $color-text-secondary;
+
+    display: grid;
+    grid-template-areas: "flag currency armount rate button";
+
+    .transfer__flag {
+        grid-area: "flag";
+    }
+
+    .transfer__currency {
+        grid-area: "currency";
+    }
+
+    .transfer__amount {
+        grid-area: "amount";
+    }
+
+    .transfer__rate {
+        grid-area: "rate"
+    }
+
+    .transfer__button {
+        grid-area: "button";
+    }
+}
+
+.transfer__active {
+    background-color: $color-primary;
+    color: $color-funds-text;
+}
