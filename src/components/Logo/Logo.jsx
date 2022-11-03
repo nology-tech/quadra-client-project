@@ -1,4 +1,4 @@
-import LogoImg from "../../assets/images/logoImage.png";
+import LogoImg from "../../assets/images/logo.png";
 import "./Logo.scss";
 
 const Logo = ({isTextDark}) => {
