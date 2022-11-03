@@ -48,7 +48,7 @@
         font-weight: 600;
         font-size: 3rem;
         line-height: 110%;
-        color: #0B2251;
+        color: $color-top-section-title;
         padding-bottom: 1rem;
     }
     &__highlight{
@@ -66,9 +66,7 @@
     }
 
     &__screenshot{
-        width: 54.5rem;
-
-
+        width: 65vw;
     }
 
 }
@@ -89,7 +87,7 @@
         padding: 3.1rem;
     }
     &__logos {
-        width: 80vw;
+        width: 85vw;
     }
 }
 
@@ -135,8 +133,8 @@
         font-size: 1.1rem;
         color: $color-funds-text;
     }
-    &__screenshoot {
-        width: 67.4rem;
+    &__screenshot {
+        width: 75vw;
     }
 }
 
@@ -164,6 +162,6 @@
         width: 34.8rem;
     }
     &__screenshot {
-        width: 85.3rem;
+        width: 85vw;
     }
 }
