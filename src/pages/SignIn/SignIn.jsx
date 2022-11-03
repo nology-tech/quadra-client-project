@@ -1,26 +1,25 @@
 import "./SignIn.scss";
-import logo from "../../assets/images/logo.png";
+import Logo from "../../components/Logo/Logo";
 import Button from "../../components/Button/Button";
 import SignUp from "../../pages/SignUp/SignUp";
 import Login from "../Login/Login";
 
 const SignIn = ({ buttonText, isLogin }) => {
+    const isTextDark = true;
     return (
         <div className="signIn">
             <div className="signIn__nav">
                 <div className="signIn__nav-company">
-                    <img
-                        className="signIn__nav-company--logo"
-                        src={logo}
-                    ></img>
-                    <p className="signIn__nav-company--name">Synergy</p>
+                    <Logo isTextDark={isTextDark}/>
                 </div>
                 <div className="signIn__nav-button">
                     <Button buttonText={buttonText} />
                 </div>
             </div>
             <div className="signIn__main">
-                {isLogin? <Login/> : <SignUp/>}
+            <div className="signIn__main--login">
+                {isLogin? <Login /> : <SignUp />}
+            </div>
             </div>
         </div>
     )

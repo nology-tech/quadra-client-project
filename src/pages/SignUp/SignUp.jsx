@@ -1,18 +1,15 @@
 import "./SignUp.scss";
 import Button from "../../components/Button/Button";
-import logo from "../../assets/images/logo.png";
+import Logo from "../../components/Logo/Logo";
 import InputBox from "../../components/InputBox/InputBox";
 
 const SignUp = ({ login }) => {
+  const isTextDark = true;
   return (
     <div className="background">
       <div className="signUp">
         <div className="signUp__company">
-          <img
-            className="signUp__company signUp__company--logo"
-            src={logo}
-          ></img>
-          <p className="signUp__company signUp__company--name">Synergy</p>
+        <Logo isTextDark={isTextDark}/>
         </div>
 
         <h1 className="signUp__header">Create an account</h1>
