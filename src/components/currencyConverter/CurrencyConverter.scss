@@ -1,0 +1,52 @@
+@use "../../styles/variables" as *;
+
+label {
+    display: block;
+    margin-bottom: 10px;
+}
+
+.convertBox {
+    display: flex;
+    flex-direction: column;
+}
+
+.convertBox__currency {
+    width: 250px;
+    cursor: pointer;
+
+    button {
+        width: 100%;
+        cursor: pointer;
+        background-color: transparent;
+        border: 1px solid black;
+        text-align: left;
+
+        &:hover {
+            background-color: #ccc;
+        }
+    }
+
+    ul {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+
+        li {
+        
+            &:hover {
+                background-color: #ccc;
+            }
+        }
+    }
+    
+
+    svg {
+        height: 1rem;
+        margin-right: 1rem;
+
+        //auto-generated class from Dropdown component
+        &.rs-dropdown-toggle-caret {
+            float: right;
+        }
+    }
+}
