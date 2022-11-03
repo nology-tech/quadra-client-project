@@ -1,15 +1,25 @@
 import Layout from "../../components/Layout/Layout";
-import { getAuth, createUserWithEmailAndPassword } from "firebase/auth";
+import {
+  getAuth,
+  createUserWithEmailAndPassword,
+  signInWithEmailAndPassword,
+  onAuthStateChanged,
+  signOut,
+} from "firebase/auth";
 import app from "../../firebase";
 import { useState } from "react";
+
 const Home = () => {
-  const [email, setEmail] = useState("");
-  const [password, setPassword] = useState("");
+  const [registerEmail, setRegisterEmail] = useState("");
+  const [registerPassword, setRegisterPassword] = useState("");
+  const [loginEmail, setLoginEmail] = useState("");
+  const [loginPassword, setLoginPassword] = useState("");
+  const [user, setUser] = useState({});
 
   const auth = getAuth(app);
 
-  const toFirebase = () => {
-    createUserWithEmailAndPassword(auth, email, password)
+  const signUp = () => {
+    createUserWithEmailAndPassword(auth, registerEmail, registerPassword)
       .then((userCredential) => {
         // Signed in
         const user = userCredential.user;
@@ -24,6 +34,31 @@ const Home = () => {
       });
   };
 
+  const signIn = () => {
+    signInWithEmailAndPassword(auth, loginEmail, loginPassword)
+      .then((userCredential) => {
+        // Signed in
+        const user = userCredential.user;
+        console.log(user);
+        alert("user has logged in");
+
+        // ...
+      })
+      .catch((error) => {
+        const errorCode = error.code;
+        alert(errorCode);
+        console.log("wrong user");
+      });
+  };
+
+  const logout = () => {
+    signOut(auth);
+  };
+
+  onAuthStateChanged(auth, (current) => {
+    setUser(current);
+  });
+
   return (
     <Layout>
       <label>
@@ -31,7 +66,7 @@ const Home = () => {
         <input
           type={"email"}
           placeholder="please enter your email"
-          onChange={(e) => setEmail(e.target.value)}
+          onChange={(e) => setRegisterEmail(e.target.value)}
         />
       </label>
 
@@ -40,13 +75,36 @@ const Home = () => {
         <input
           type={"password"}
           placeholder="please enter your password"
-          onChange={(e) => setPassword(e.target.value)}
+          onChange={(e) => setRegisterPassword(e.target.value)}
         ></input>
       </label>
 
-      <button onClick={toFirebase}>Sign up</button>
+      <button onClick={signUp}>Sign up</button>
 
-      <h1>You have signed up!</h1>
+      <label>
+        Email Address
+        <input
+          type={"email"}
+          placeholder="please enter your email"
+          onChange={(e) => setLoginEmail(e.target.value)}
+        />
+      </label>
+
+      <label>
+        password
+        <input
+          type={"password"}
+          placeholder="please enter your password"
+          onChange={(e) => setLoginPassword(e.target.value)}
+        ></input>
+      </label>
+
+      <button onClick={signIn}>Sign in</button>
+
+      <button onClick={logout}>Sign out</button>
+
+      <h1>User Logged:</h1>
+      {user?.email}
     </Layout>
   );
 };
