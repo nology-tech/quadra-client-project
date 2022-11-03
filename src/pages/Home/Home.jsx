@@ -1,4 +1,4 @@
-// import Layout from "../../components/Layout/Layout";
+import Layout from "../../components/Layout/Layout";
 import Landing from "../../pages/Landing/Landing"
 const Home = () => {
   return (

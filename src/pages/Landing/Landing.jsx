@@ -5,21 +5,17 @@ import convertAmountScreenshot from "../../assets/images/convert-amount-screensh
 import ratesScreenshot from "../../assets/images/rates-screenshot.png"
 import Button from "../../components/Button/Button";
 import Logo from "../../components/Logo/Logo.jsx";
-
+import LandingNav from '../../components/LandingNav/LandingNav';
+import Feature from "../../components/Feature/Feature.jsx";
 
 const Landing = () => {
     return(
         <>
         <header className='landing-header'>
             <Logo isTextDark={true} />
+            <LandingNav isFooter={false}/>
             <div>
-                <span>dummy</span>
-                <span>dummy</span>
-                <span>dummy</span>
-                <span>dummy</span>
-                </div>
-            <div>
-            <a href=''>Sign In</a>
+            <a className='landing-header__sign-in' href=''>Sign In</a>
             <Button buttonText={"Sign Up"}/>
             </div>
         </header>
@@ -34,6 +30,12 @@ const Landing = () => {
         </section>
         <section className='award-section'>
             <h2  className='award-section__title'>Our Award-Winning Features</h2>
+            <div className='award-section__features-container'>
+            <Feature title={"Lorem ipsum dolor sit amet."} desc={"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cursus nibh sit eu sagittis."} />
+            <Feature title={"Lorem ipsum dolor sit amet."} desc={"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cursus nibh sit eu sagittis."} />
+            <Feature title={"Lorem ipsum dolor sit amet."} desc={"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cursus nibh sit eu sagittis."} />
+            <Feature title={"Lorem ipsum dolor sit amet."} desc={"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cursus nibh sit eu sagittis."} />
+            </div>
             <Button buttonText={"Find out More"}/>
         </section>
         <section className='conversion-section'>
@@ -49,12 +51,7 @@ const Landing = () => {
         </section>
         <footer className='landing-footer'>
         <Logo isTextDark={false} />
-            <div>
-                <span>dummy</span>
-                <span>dummy</span>
-                <span>dummy</span>
-                <span>dummy</span>
-                </div>
+        <LandingNav isFooter={true}/>
             <div>
             <Button buttonText={"Sign Up"}/>
             </div>
