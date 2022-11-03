@@ -3,23 +3,23 @@
 
 .funds{
     position: absolute;
-    width: 263px;
-    height: 252px;
-    left: 0px;
-    top: 0px;
+    width: 16.438rem;
+    height: 15.75rem;
+    left: 0rem;
+    top: 0rem;
     background-image: url("../../assets/background-images/funds-background.png");
-    border-radius: 25px 0 25px 25px;
+    border-radius: 1.563rem 0 1.563rem 1.563rem;
     color: $color-funds-text;
-    padding: 26px;
+    padding: 1.625rem;
     font-style: normal;
     font-weight: 500;
 
     &__title{
-        font-size: 20px;
+        font-size: 1.25rem;
         font-family: $font-main;
     }
     &__amount{
-        font-size: 48px;
+        font-size: 3rem;
         font-family: $font-main;
     }
 }

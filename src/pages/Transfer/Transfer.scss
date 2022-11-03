@@ -1,8 +1,8 @@
 @import "../../styles/_variables.scss";
 
 .transfer {
-    background-color: #fbfbfc;
-    color: #8896A3;
+    background-color: $color-currency-background;
+    color: $color-text-secondary;
 
     display: grid;
     grid-template-areas: "flag currency armount rate button";
@@ -30,5 +30,5 @@
 
 .transfer__active {
     background-color: $color-primary;
-    color: #FFFFFF;
+    color: $color-funds-text;
 }
