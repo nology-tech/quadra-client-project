@@ -4,11 +4,11 @@
 .nav {
   position: absolute;
   width: 15%;
-  border: 2px solid;
+  border: 0.2rem solid;
   border-right-color: $color-currency;
   height: 100vh;
   h1 {
-    color: #343c49;
+    color: $color-logo-header;
   }
   img {
     margin-top: 0.5rem;
