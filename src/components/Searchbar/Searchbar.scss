@@ -1,0 +1,24 @@
+@use "../../styles/variables" as *;
+@use "../../styles/typography" as *;
+
+.searchBar {
+    display: flex;
+    align-items: center;
+    height: 3.2rem;
+    width: 14rem;
+    border-radius: 0.5rem;
+    background-color: $color-background;
+    &__image {
+        margin: 0.7rem;
+        height: 1.4rem;
+        width: 1.4rem;
+    }
+    input {
+        width: 11rem;
+        border: none;
+        border-radius: 0.7rem;
+        background-color: $color-background;
+        color: $color-footer-text;
+        font-size: 1rem;
+    }
+}
