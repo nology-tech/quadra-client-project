@@ -1,18 +1,30 @@
-@use "../../styles/typography" as *;
-@use "../../styles/variables" as *;
+@use "../../styles/_variables.scss" as *; 
 
-.logo__header {
+.logo {
+
     display: flex;
-    width: auto;
-    font-size: 1.6rem;
-    margin-bottom: 5rem;
-    img {
-        margin-top: 0.5rem;
-        margin-left: 1.8rem;
-        height: 2.5rem;
-        width: auto;
+    align-items: center;
+    justify-content: center;
+    height: 3rem;
+    font-size: 1rem;
+
+    &__logo {
+
+        height: 80%;
+        aspect-ratio: 1 / 1;
+
     }
-    h1 {
-    color: $color-logo-header;
+
+    &__darkText {
+
+        color: $color-logo-header;
+
     }
+
+    &__lightText {
+
+        color: $color-funds-text;
+
+    }
+
 }
