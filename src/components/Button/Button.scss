@@ -1,10 +1,11 @@
-@import url('https://fonts.googleapis.com/css2?family=Outfit&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Outfit&display=swap");
 
-.largeButton{
-    background-color: #00CED4;
-    color: #FFFFFF;
-    padding: 10px 20px;
-    font-family: 'Outfit', sans-serif;
-    font-size: 16px;
-    font-weight: 700;
+.largeButton {
+  background-color: #00ced4;
+  color: #ffffff;
+  padding: 10px 20px;
+  font-family: "Outfit", sans-serif;
+  font-size: 16px;
+  font-weight: 700;
+  cursor: pointer;
 }
