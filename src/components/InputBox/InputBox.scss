@@ -7,8 +7,8 @@
     flex-direction: column;
     justify-content: flex-start;
     font-weight: 400;
-    font-size: 16px;
-    line-height: 20px;
+    font-size: 1rem;
+    line-height: 1.2rem;
 
     &__title{
         color: $color-text;
@@ -17,13 +17,16 @@
     &__input{
         color: $color-input-text;
         background: $color-input-background;
+        margin: 0.2rem;
         border: 1px solid $color-input-border;
         border-radius: 6px;
+        height: 2rem;
+        padding-left: 1rem;
     }
 
     &__message{
-        font-size: 10px;
-        line-height: 13px;
+        font-size: 0.6rem;
+        line-height: 0.8rem;
         
 
         &--error{
