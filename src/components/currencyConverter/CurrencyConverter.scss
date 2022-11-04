@@ -3,13 +3,16 @@
 .convertBox {
     display: flex;
     background-color: $color-currency-background;
+    margin: 2rem;
+    width: auto;
+    align-items: center;
+    height: 15rem;
     .convertBox__amount {
         display: flex;
         flex-direction: column;
 
     label {
         display: block;
-        margin-bottom: 10px;
         font-family: $font-heading;
         font-weight: bold;
         font-size: 1.8rem;
@@ -19,7 +22,7 @@
         color: $color-input-text;
         height: 2rem;
         width: 15rem;
-        margin-bottom: 1.5rem;
+        margin-left: 2rem;
     }
 
     .convertBox__button {
@@ -29,6 +32,7 @@
         width: 7.5rem;
         background-color: #00CED4;
         border-radius: 0.3rem;
+        margin-left: 2rem;
         img {
             height: 1rem;
             width: 1rem;
@@ -48,20 +52,32 @@
 
     .convertBox__options {
         display: flex;
+        flex-direction: column;
         .convertBox__currency {
-            position: relative;
-            top: 33%;
+            // position: relative;
+            // top: 33%;
             width: 15rem;
+            height: 2rem;
             cursor: pointer;
+            
         }
         #menubutton {
             width: 15rem;
             height: 2rem;
         }
 
-    
+    #convertBtn {
+        background-color: transparent;
+        margin-left: 1.5rem;
+    }
 
-    button {
+    #currencyHeader {
+        font-family: $font-heading;
+        font-weight: bold;
+        font-size: 1.8rem;
+    }
+
+    .convert__button {
         width: 100%;
         cursor: pointer;
         background-color: transparent;
@@ -72,6 +88,25 @@
             background-color: #ccc;
         }
     }
+
+    .convertBox__headers{
+        display: flex;
+        width: 40rem;
+        justify-content: space-evenly;
+        margin-left: 2.5rem;
+    }
+
+    .convertBox__inputs{
+        display:flex;
+        background-color: transparent;
+        margin-left: 2rem;
+    }
+
+    // .convertBox__options{
+        // display: flex;
+        // flex-direction: row;
+        // justify-content: center;
+    // 
 
     ul {
         list-style: none;

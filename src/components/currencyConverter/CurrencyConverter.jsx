@@ -3,6 +3,7 @@ import { Dropdown } from 'rsuite';
 import iconMap from "../../utils/currencyIcons";
 import Button from "../Button/Button";
 import altConvert from "../../assets/images/alternate-convert.png";
+import Convert from "../../assets/images/convert-green.png"
 
 import "./CurrencyConverter.scss";
 
@@ -23,34 +24,47 @@ const CurrencyConverter = ({currencyList, amount, fromCurrency, toCurrency, setN
 
     return (
         <div className="convertBox">
+
             <div className="convertBox__amount">
-                <label id="test">Amount</label>
+                <label>Amount</label>
                 <input
                     type="text"
-                    placeholder="£10"
+                    placeholder="10.00"
                     onChange={handleAmountChange}
-                    value={amount}
-                />
-                <div className="convertBox__button">
-                    <img src={altConvert} alt="convertLogo" />
-                    <Button buttonText={"Convert"}/>
-                </div>
+                    value={amount}/>
             </div>
+
+        < div className="convertBox__button">
+                <img src={altConvert} alt="convertLogo" />
+                <Button className="convert__button" buttonText={"Convert"}/>
+        </div>
+
+        <div className="convertBox__options">                 
+            <div className="convertBox__inputs">                
+            <Dropdown  className="convertBox__currency" id="menubutton" title={fromCurrency} icon={iconMap[fromCurrency]} onSelect={handleFromChange} value={fromCurrency}>
+                {fromOptions}
+            </Dropdown>
+            <h3  id="currencyHeader">From</h3>
+            </div>
+        </div>
+
+        <div id="convertBtn">
+        <img src={Convert} alt="" />
+        </div>
             
-            <div className="convertBox__options">                
-                <h3>From</h3>                
-                <Dropdown  className="convertBox__currency" id="menubutton" title={fromCurrency} icon={iconMap[fromCurrency]} onSelect={handleFromChange} value={fromCurrency}>
-                    {fromOptions}
-                </Dropdown>
-                <div>
-                    <Button />
-                </div>
-                <h3>To</h3>
-                <Dropdown className="convertBox__currency" id="menubutton" title={toCurrency} icon={iconMap[toCurrency]} onSelect={handleToChange}>
-                    {toOptions}
-                </Dropdown>
+
+        <div>
+        <h3 id="currencyHeader">To</h3>
+        <Dropdown className="convertBox__currency" id="menubutton" title={toCurrency} icon={iconMap[toCurrency]} onSelect={handleToChange}>
+                {toOptions}
+            </Dropdown>    
+        </div>
+
+
+         
                 
-            </div>
+            
+            
         </div>
     );
 }
