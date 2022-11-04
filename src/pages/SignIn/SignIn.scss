@@ -26,13 +26,9 @@
 
     &__main {
         display: block;
-        padding: auto;
+        margin-left:20rem;
         width: 66rem;
-        padding-top: 0.5rem;
         background-color: white;
         height:26rem;
-        &--login{
-            margin-left:20rem;
-        }
     }
 }
