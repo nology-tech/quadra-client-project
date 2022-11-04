@@ -2,6 +2,7 @@ import "./SignUp.scss";
 import Button from "../../components/Button/Button";
 import logo from "../../assets/images/logo.png";
 import InputBox from "../../components/InputBox/InputBox";
+import {useNavigate} from "react-router-dom";
 
 import {
   getAuth,
@@ -23,7 +24,7 @@ const SignUp = ({ login }) => {
   const [password1Success, setPassword1Success] = useState("");
   const [password2Error, setPassword2Error] = useState("");
   const [password2Success, setPassword2Success] = useState("");
-
+  const navigate = useNavigate();
   
   const passRegex = /^(?=.*[0-9])(?=.*[!@#$%^&*])[a-zA-Z0-9!@#$%^&*]{6,16}$/
   const emailRegex = /^\w+@[a-zA-Z_]+?\.[a-zA-Z]{2,3}$/
@@ -39,7 +40,7 @@ const validateInputs = () => {
   setPassword2Error("");
   setPassword2Success("");
   if (!emailRegex.test(registerEmail)) {
-    setEmailError("Error - Your email must contain an @ symbol");
+    setEmailError("Please enter a valid email");
     result = false;
   } else {
     setEmailSuccess("Successful email entered");
@@ -51,12 +52,11 @@ const validateInputs = () => {
     setPassword2Success("Passwords Match");
   }
   if (!passRegex.test(registerPassword)) {
-    setPassword1Error("Error - password must contain at least 8 characters, 1 uppercase letter, and 1 symbol");
+    setPassword1Error("Error - password must contain at least 6 characters, 1 number, 1 uppercase letter, and 1 symbol");
     result = false;
   }
   if (confirmPassword === registerPassword && passRegex.test(registerPassword)) {
     setPassword1Success("Password meets requirements.")
-    result = false;
   }
   if (registerEmail == "") {
     setEmailError("");
@@ -82,6 +82,7 @@ useEffect(() => {
       .then((userCredential) => {
           const user = userCredential.user;
           console.log(user);
+          navigate("/wallet");
       })
       .catch((error) => {
         const errorCode = error.code;
