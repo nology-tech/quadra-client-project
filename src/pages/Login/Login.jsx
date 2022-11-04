@@ -2,12 +2,12 @@ import "./Login.scss";
 import hand from "../../assets/images/hello.svg";
 import InputBox from "../../components/InputBox/InputBox";
 import {useState, useEffect} from 'react';
+import app from "../../firebase.js";
 
 const Login = () => {
 
     const [password,setPassword] = useState();
     const [email,setEmail] = useState();
-    const [validEmail,setValidEmail] = useState();
     const [invalidEmail,setInvalidEmail] = useState();
 
     const emailRegex = /^\w+@[a-zA-Z_]+?\.[a-zA-Z]{2,3}$/;
@@ -22,7 +22,9 @@ const Login = () => {
 
     const validatEmail = () => {
         if (!emailRegex.test(email)) {
-            setEmailError("Please enter a valid email");
+            setInvalidEmail("Please enter a valid email");
+        } else {
+            setInvalidEmail("");
         }
     }
 
@@ -42,15 +44,16 @@ const Login = () => {
             <InputBox 
                 title="Email"
                 inputType="text"
-                errorMessage="" 
+                errorMessage={invalidEmail} 
                 successMessage=""
-                
+                onChange={handleEmail}
             />
             <InputBox 
                 title="Password"
                 inputType="password"
                 errorMessage="" 
                 successMessage=""
+                onChange={handlePassword}
             />
             <div className="signIn__options">
                 <p>Don&apos;t have an account? <a>Sign Up</a></p>
