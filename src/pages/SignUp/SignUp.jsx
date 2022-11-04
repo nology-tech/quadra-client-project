@@ -1,6 +1,6 @@
 import "./SignUp.scss";
 import Button from "../../components/Button/Button";
-import logo from "../../assets/images/logoImage.png";
+import logo from "../../assets/images/logo.png";
 import InputBox from "../../components/InputBox/InputBox";
 
 import {
