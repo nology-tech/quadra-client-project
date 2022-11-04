@@ -9,10 +9,10 @@ const SignIn = ({ buttonText, isLogin }) => {
   return (
     <div className="signIn">
       <div className="signIn__nav">
-        <div className="signIn__nav-company">
+        <div className="signIn__company">
           <Logo isTextDark={isTextDark}/>
         </div>
-        <div className="signIn__nav-button">
+        <div className="signIn__button">
           <Button buttonText={buttonText} />
         </div>
       </div>

@@ -12,16 +12,16 @@
         height: 5rem;
         background: $color-funds-text;
         box-shadow: 0px 1rem 2rem $color-box-shadow;
+    }
 
-        &-company {
-            display: flex;
-            padding-bottom: 2rem;
-            padding-left: 1rem;
-        }
-        &-button{
-            padding-top: 1.5rem;
-            padding-right: 1rem;
-        }
+    &__company {
+        display: flex;
+        padding-bottom: 2rem;
+        padding-left: 1rem;
+    }
+    &__button{
+        padding-top: 1.5rem;
+        padding-right: 1rem;
     }
 
     &__main {
