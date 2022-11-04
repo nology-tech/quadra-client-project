@@ -2,17 +2,11 @@ import "./SignUp.scss";
 import Button from "../../components/Button/Button";
 import logo from "../../assets/images/logo.png";
 import InputBox from "../../components/InputBox/InputBox";
-import {useNavigate} from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
-import {
-  getAuth,
-  createUserWithEmailAndPassword
-} from "firebase/auth";
+import { getAuth, createUserWithEmailAndPassword } from "firebase/auth";
 import app from "../../firebase";
-import {
-  useState,
-  useEffect
-} from "react";
+import { useState, useEffect } from "react";
 
 const SignUp = ({ login }) => {
   const [registerEmail, setRegisterEmail] = useState("");
@@ -25,70 +19,74 @@ const SignUp = ({ login }) => {
   const [password2Error, setPassword2Error] = useState("");
   const [password2Success, setPassword2Success] = useState("");
   const navigate = useNavigate();
-  
-  const passRegex = /^(?=.*[0-9])(?=.*[!@#$%^&*])[a-zA-Z0-9!@#$%^&*]{6,16}$/
-  const emailRegex = /^\w+@[a-zA-Z_]+?\.[a-zA-Z]{2,3}$/
+
+  const passRegex = /^(?=.*[0-9])(?=.*[!@#$%^&*])[a-zA-Z0-9!@#$%^&*]{6,16}$/;
+  const emailRegex = /^\w+@[a-zA-Z_]+?\.[a-zA-Z]{2,3}$/;
 
   const auth = getAuth(app);
 
-const validateInputs = () => {
-  let result = true;
-  setEmailError("");
-  setEmailSuccess("");
-  setPassword1Error("");
-  setPassword1Success("");
-  setPassword2Error("");
-  setPassword2Success("");
-  if (!emailRegex.test(registerEmail)) {
-    setEmailError("Please enter a valid email");
-    result = false;
-  } else {
-    setEmailSuccess("Successful email entered");
-  }
-  if (confirmPassword != registerPassword) {
-    setPassword2Error("Error - passwords do not match!");
-    result = false;
-  } else {
-    setPassword2Success("Passwords Match");
-  }
-  if (!passRegex.test(registerPassword)) {
-    setPassword1Error("Error - password must contain at least 6 characters, 1 number, 1 uppercase letter, and 1 symbol");
-    result = false;
-  }
-  if (confirmPassword === registerPassword && passRegex.test(registerPassword)) {
-    setPassword1Success("Password meets requirements.")
-  }
-  if (registerEmail == "") {
+  const validateInputs = () => {
+    let result = true;
     setEmailError("");
-  }
-  if (registerPassword == "" && confirmPassword == "") {
+    setEmailSuccess("");
     setPassword1Error("");
     setPassword1Success("");
     setPassword2Error("");
     setPassword2Success("");
-  }
-  return result;
-}
+    if (!emailRegex.test(registerEmail)) {
+      setEmailError("Please enter a valid email");
+      result = false;
+    } else {
+      setEmailSuccess("Successful email entered");
+    }
+    if (confirmPassword != registerPassword) {
+      setPassword2Error("Error - passwords do not match!");
+      result = false;
+    } else {
+      setPassword2Success("Passwords Match");
+    }
+    if (!passRegex.test(registerPassword)) {
+      setPassword1Error(
+        "Error - password must contain at least 6 characters, 1 number, 1 uppercase letter, and 1 symbol"
+      );
+      result = false;
+    }
+    if (
+      confirmPassword === registerPassword &&
+      passRegex.test(registerPassword)
+    ) {
+      setPassword1Success("Password meets requirements.");
+    }
+    if (registerEmail == "") {
+      setEmailError("");
+    }
+    if (registerPassword == "" && confirmPassword == "") {
+      setPassword1Error("");
+      setPassword1Success("");
+      setPassword2Error("");
+      setPassword2Success("");
+    }
+    return result;
+  };
 
-useEffect(() => {
-  validateInputs()
-}, [registerEmail, registerPassword, confirmPassword])
-
-
+  useEffect(() => {
+    validateInputs();
+  }, [registerEmail, registerPassword, confirmPassword]);
 
   const register = () => {
     if (validateInputs()) {
       createUserWithEmailAndPassword(auth, registerEmail, registerPassword)
-      .then((userCredential) => {
+        .then((userCredential) => {
           const user = userCredential.user;
           console.log(user);
           navigate("/wallet");
-      })
-      .catch((error) => {
-        const errorCode = error.code;
-        console.log(errorCode);
-      });
-  }};
+        })
+        .catch((error) => {
+          const errorCode = error.code;
+          console.log(errorCode);
+        });
+    }
+  };
 
   return (
     <div className="background">
@@ -122,7 +120,6 @@ useEffect(() => {
             title="Password"
             inputType="text"
             errorMessage={password1Error}
-            // errorMessage="Error- Passwords must contain at least 8 characters & one uppercase letter"
             successMessage={password1Success}
             onChange={(e) => setRegisterPassword(e.target.value)}
           />
