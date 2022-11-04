@@ -1,14 +1,34 @@
 import "./Login.scss";
 import hand from "../../assets/images/hello.svg";
 import InputBox from "../../components/InputBox/InputBox";
+import {useState, useEffect} from 'react';
 
 const Login = () => {
 
-    const handleSubmit = () => {
+    const [password,setPassword] = useState();
+    const [email,setEmail] = useState();
+    const [validEmail,setValidEmail] = useState();
+    const [invalidEmail,setInvalidEmail] = useState();
 
-        alert("You submitted the form");
+    const emailRegex = /^\w+@[a-zA-Z_]+?\.[a-zA-Z]{2,3}$/;
 
+    const handlePassword = (event) => {
+        setPassword(event.target.value);
     }
+
+    const handleEmail = (event) => {
+        setEmail(event.target.value);
+    }
+
+    const validatEmail = () => {
+        if (!emailRegex.test(email)) {
+            setEmailError("Please enter a valid email");
+        }
+    }
+
+    useEffect (() => {
+        validatEmail();
+    }, [email])
 
     return (
 
@@ -24,6 +44,7 @@ const Login = () => {
                 inputType="text"
                 errorMessage="" 
                 successMessage=""
+                
             />
             <InputBox 
                 title="Password"
