@@ -17,6 +17,7 @@ import { getCurrencyGBP } from "../../utils/apiUtils";
 
 const LiveRates = () => {
   const [currRates, setCurrRates] = useState({});
+  const [component, setComponent] = useState(["British Pound"]);
   useEffect(() => {
     const getData = async () => {
       const currencies = await getCurrencyGBP();
@@ -25,13 +26,15 @@ const LiveRates = () => {
     getData();
   }, []);
 
-  console.log(currRates.AED);
+  console.log(currRates);
 
   //Button onclick gets current currency abv and adds it do constCurrency
 
   // Modal window
 
-  // const addCurrency = () => {};
+  const addRate = () => {
+    setComponent([...component, "AED"]);
+  };
 
   return (
     <div className="rates">
@@ -47,12 +50,22 @@ const LiveRates = () => {
       </div>
       <div className="rates-ctner">
         <div className="rates-ctner__title">
-          <h3>Currency</h3>
-          <h3>Amount</h3>
-          <h3>Rate</h3>
+          <div>
+            <h3 id="rates-ctner__title--head">Currency</h3>
+          </div>
+          <div>
+            <h3 id="rates-ctner__title--head">Amount</h3>
+          </div>
+          <div>
+            <h3 id="rates-ctner__title--head">Rate</h3>
+          </div>
+          <div></div>
+          <div> </div>
+          <div></div>
         </div>
-        <LiveRate name="British Pound" amount="1.00" />
+        <div>{component.map((item, i) => ( <LiveRate name={item} amount={"1.00"} key={i} /> ))} </div> 
       </div>
+      <button onClick={addRate}>Add</button>
     </div>
   );
 };

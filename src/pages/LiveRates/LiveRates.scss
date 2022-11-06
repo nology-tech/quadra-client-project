@@ -18,19 +18,21 @@
   }
   .rates-ctner {
     width: 90%;
-    border: 2px solid green;
     display: flex;
     flex-direction: column;
     .rates-ctner__title {
       display: flex;
-      flex-direction: row;
       color: red;
-      margin-right: 17rem;
-      margin-left: 5rem;
+      justify-content: space-between;
+      align-content:flex-end;
+      align-items: flex-end;
+      margin-left: 5.5rem;
+
       align-items: center;
-      #hallo {
-        font-size: 5px;
-      }
+      #rates-ctner__title--head{
+        font-size: 0.8rem;
+        margin-bottom: -1rem;
+   }
     }
   }
 }

@@ -13,9 +13,9 @@ const LiveRate = ({
     <div className={isCurrentCurrency ? "live-rate current" : "live-rate"}>
       <div className="live-rate__currency">
         <img className="live-rate__icon" src={image_url} />
-        <p className="live-rate__name">{name} name</p>
+        <p className="live-rate__name">{name}</p>
       </div>
-      <p className="live-rate__amount">{amount} 1.3595</p>
+      <p className="live-rate__amount">{amount}</p>
       <p className="live-rate__rate">{!isCurrentCurrency && rate}</p>
       <div> </div>
       <div> </div>

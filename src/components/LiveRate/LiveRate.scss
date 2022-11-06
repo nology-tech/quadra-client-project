@@ -7,20 +7,20 @@
   align-items: center;
   justify-content: space-between;
   background-color: $color-input-background;
-  margin: 1rem;
   padding: 0.3rem 2rem;
   color: $color-text-secondary;
   &__currency {
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 6rem;
+    width: 10rem;
   }
   &__name {
     padding-left: 0.7rem;
     font-family: $font-main;
     font-weight: 400;
-    font-size: 1rem;
+    font-size: 0.9rem;
+    width: 100%;
   }
   &__icon {
     width: 1.7rem;
@@ -28,16 +28,16 @@
   }
   &__amount {
     width: 4rem;
-    left: -2rem;
     font-family: $font-main;
     font-weight: 600;
-    font-size: 1rem;
+    font-size: 0.9rem;
   }
   &__rate {
     width: 4rem;
     font-family: $font-main;
     font-weight: 600;
-    font-size: 1rem;
+    font-size: 0.9rem;
+    margin-left: 1rem;
   }
 }
 
