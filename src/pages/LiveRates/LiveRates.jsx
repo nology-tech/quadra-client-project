@@ -40,8 +40,8 @@ const LiveRates = () => {
     <div className="rates">
       <div className="rates-info">
         <h1 className="rates-info__transfer"> Transfer </h1>
-        <h1 id="latest-rates"> View Latest Rates </h1>
-        <p className="">
+        <h1 className="rates-info__heading"> View Latest Rates </h1>
+        <p className="rates-info__content">
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim nam
           inventore deserunt id? Rem minima dolorem asperiores perferendis sed
           aspernatur. Dolorem nostrum voluptatibus dolore odit provident minima
