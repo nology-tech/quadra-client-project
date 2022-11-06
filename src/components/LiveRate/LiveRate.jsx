@@ -3,7 +3,7 @@ import Button from "../Button/Button";
 
 const LiveRate = ({
   name,
-  amount,
+  amount = "1.00",
   rate = "0.0037",
   image_url = "../assets/images/credit-card.png",
   handleClick,

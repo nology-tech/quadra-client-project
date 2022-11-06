@@ -18,6 +18,8 @@ import { getCurrencyGBP } from "../../utils/apiUtils";
 const LiveRates = () => {
   const [currRates, setCurrRates] = useState({});
   const [component, setComponent] = useState(["British Pound"]);
+  // const [paste, setPaste] = useState(["1.00"]);
+
   useEffect(() => {
     const getData = async () => {
       const currencies = await getCurrencyGBP();
@@ -31,9 +33,9 @@ const LiveRates = () => {
   //Button onclick gets current currency abv and adds it do constCurrency
 
   // Modal window
-
-  const addRate = () => {
-    setComponent([...component, "AED"]);
+  const addRate = (e) => {
+    // setPaste(currRates[e.target.value]);
+    setComponent([...component, e.target.value]);
   };
 
   return (
@@ -63,9 +65,21 @@ const LiveRates = () => {
           <div> </div>
           <div></div>
         </div>
-        <div>{component.map((item, i) => ( <LiveRate name={item} amount={"1.00"} key={i} /> ))} </div> 
+        <div>
+          {component.map((item, i) => (
+            <LiveRate name={item} amount={currRates[item]} key={i} />
+          ))}
+        </div>
       </div>
-      <button onClick={addRate}>Add</button>
+      <button onClick={addRate} value="AED">
+        AED
+      </button>
+      <button onClick={addRate} value="USD">
+        USD
+      </button>
+      <button onClick={addRate} value="VND">
+        VND
+      </button>
     </div>
   );
 };
