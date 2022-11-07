@@ -23,49 +23,48 @@ const CurrencyConverter = ({currencyList, amount, fromCurrency, toCurrency, setN
     const handleToChange = (eventKey, event) => setToCurrency(event.target.textContent);
 
     return (
-        <div className="convertBox">
+        <div className="convertBox"> 
 
-            <div className="convertBox__amount">
-                <label>Amount</label>
-                <input
-                    type="text"
-                    placeholder="10.00"
-                    onChange={handleAmountChange}
-                    value={amount}/>
+                <h3 id="header__amount">Amount</h3>
+                <h3 id="header__from">From</h3>
+                <h3 id="header__to">To</h3>
+
+       
+            
+            <input  
+                id="input__amount"
+                type="text"
+                placeholder="10.00"
+                onChange={handleAmountChange}
+                value={amount}/>
+            
+            
+            <div className="input__from">
+            <Dropdown  id="from" title={fromCurrency} icon={iconMap[fromCurrency]} onSelect={handleFromChange} value={fromCurrency}>
+                        {fromOptions}
+            </Dropdown>
             </div>
 
-        < div className="convertBox__button">
+            <div className="convertBox__btn">
+            <img  id="convert" src={Convert} alt="" />
+            </div>
+            
+            <div className="input__to">
+            <Dropdown  id="to" title={toCurrency} icon={iconMap[toCurrency]} onSelect={handleToChange}>
+                {toOptions}
+            </Dropdown>
+            </div>
+
+        
+
+        
+            <div className="convertBox__button">
                 <img src={altConvert} alt="convertLogo" />
                 <Button className="convert__button" buttonText={"Convert"}/>
-        </div>
-
-        <div className="convertBox__options">                 
-            <div className="convertBox__inputs">                
-            <Dropdown  className="convertBox__currency" id="menubutton" title={fromCurrency} icon={iconMap[fromCurrency]} onSelect={handleFromChange} value={fromCurrency}>
-                {fromOptions}
-            </Dropdown>
-            <h3  id="currencyHeader">From</h3>
             </div>
-        </div>
+        
 
-        <div id="convertBtn">
-        <img src={Convert} alt="" />
-        </div>
-            
-
-        <div>
-        <h3 id="currencyHeader">To</h3>
-        <Dropdown className="convertBox__currency" id="menubutton" title={toCurrency} icon={iconMap[toCurrency]} onSelect={handleToChange}>
-                {toOptions}
-            </Dropdown>    
-        </div>
-
-
-         
-                
-            
-            
-        </div>
+    </div>
     );
 }
 
