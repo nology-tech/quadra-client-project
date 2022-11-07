@@ -1,0 +1,25 @@
+@use "../../styles/variables.scss" as *;
+@use "../../styles/typography.scss" as *;
+
+.bank-contact {
+    width: 100vw;
+    height: 3.6rem;
+    background: $color-input-background;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: $color-text-secondary;
+    font-family: $font-heading;
+    font-weight: 400;
+    font-size: 1rem;
+    padding: 0.3rem 2rem;
+    &__img {
+        width: 2rem;
+        height: 2rem;
+        margin: 0 2rem 0 0;
+    }
+}
+
+.hide {
+    display: none;
+}
