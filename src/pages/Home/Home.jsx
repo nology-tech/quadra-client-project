@@ -2,6 +2,7 @@
 // import Landing from "../../pages/Landing/Landing"
 import TransferSend from "../TransferSend/TransferSend";
 const Home = () => {
+
   return (
     // <Layout>
     //   <Landing/>
