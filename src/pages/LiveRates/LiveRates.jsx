@@ -7,16 +7,23 @@ const LiveRates = () => {
   const [currRates, setCurrRates] = useState({});
   const [selectCurr, setSelectCurr] = useState(["British Pound"]);
 
-  useEffect(() => {
-    const getData = async () => {
-      const currencies = await getCurrencyGBP();
-      setCurrRates(currencies);
-    };
-    getData();
-  }, []);
+  useEffect(
+    () => {
+      const getData = async () => {
+        const currencies = await getCurrencyGBP();
+        setCurrRates(currencies);
+      };
+      getData();
+    },
+    [],
+    selectCurr
+  );
 
   const addRate = (e) => {
-    setSelectCurr([...selectCurr, e.target.value]);
+    if (!selectCurr.includes(e.target.value)) {
+      setSelectCurr([...selectCurr, e.target.value]);
+    }
+    return;
   };
 
   return (
