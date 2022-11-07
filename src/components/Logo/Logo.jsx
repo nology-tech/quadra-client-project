@@ -5,9 +5,7 @@ const Logo = ({ isTextDark }) => {
   return (
     <div className="logo">
       <img src={LogoImg} alt="Synergy Logo" className="logo__logo"></img>
-      <p className={isTextDark ? "logo__darkText" : "logo__lightText"}>
-        Synergy
-      </p>
+      <p className={isTextDark ? "logo__darkText" : "logo__lightText"}>Synergy</p>
     </div>
   );
 };
