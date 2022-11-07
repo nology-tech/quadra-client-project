@@ -1,5 +1,5 @@
 import { Route, Routes } from "react-router-dom";
-import {useState, useEffect} from 'react';
+import {useState} from 'react';
 import Home from "./pages/Home/Home";
 import "./styles/main.scss";
 import Login from "./pages/Login/Login";
@@ -9,10 +9,6 @@ import Wallet from "./pages/Wallet/Wallet";
 const App = () => {
 
   const [user, setUser] = useState();
-  
-  useEffect(() => {
-    console.log("this is the user in app jsx", user);
-  },[user])
   
   return (
     <Routes>
