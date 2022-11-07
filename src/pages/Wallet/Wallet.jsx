@@ -3,7 +3,7 @@ import Contacts from "../../components/Contacts/Contacts";
 import hand from "../../assets/images/hello.svg";
 import "./Wallet.scss";
 
-const Wallet = () => {
+const Wallet = ({ amount = "0" }) => {
   return (
     <>
       <div className="wallet-ctner">
@@ -12,7 +12,7 @@ const Wallet = () => {
           <img src={hand} alt="welcome"></img>
         </div>
         <div className="wallet-ctner__funds">
-          <Funds amount="5000" isManage={true} />
+          <Funds amount={amount} isManage={true} />
         </div>
         <div className="wallet-ctner__contacts">
           <Contacts />{" "}
