@@ -1,6 +1,7 @@
 import "./Login.scss";
 import hand from "../../assets/images/hello.svg";
 import InputBox from "../../components/InputBox/InputBox";
+import Logo from "../../components/Logo/Logo";
 import Button from "../../components/Button/Button";
 import {useState, useEffect} from 'react';
 import { useNavigate } from "react-router-dom";
@@ -17,6 +18,7 @@ const Login = ({saveUser}) => {
     const [invalidEmail,setInvalidEmail] = useState();
     const [invalidPassword, setInvalidPassword] = useState()
     const navigate = useNavigate();
+    const isTextDark=true;
 
     const emailRegex = /^\w+@[a-zA-Z_]+?\.[a-zA-Z]{2,3}$/;
     const auth = getAuth(app);
@@ -69,9 +71,9 @@ const Login = ({saveUser}) => {
     return (
 
         <div className="signIn">
-            <p className="signIn__logo">Logo waiting for approval here</p>
+            <Logo isTextDark={isTextDark}/>
             <div className="signIn__welcome">
-                <p className="welcome__text">Welcome back!</p>
+                <p className="welcome__text">Welcome Back!</p>
                 <img src={hand} alt="welcome"></img>
             </div>
             <p className="signIn__intro">Lorem ipsium dolor sit amet, consectetur adipiscing elit.</p>
