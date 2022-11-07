@@ -1,21 +1,29 @@
 import "./Login.scss";
 import hand from "../../assets/images/hello.svg";
 import InputBox from "../../components/InputBox/InputBox";
+import Button from "../../components/Button/Button";
 import {useState, useEffect} from 'react';
+import { useNavigate } from "react-router-dom";
 import app from "../../firebase.js";
 import {
     getAuth,
     signInWithEmailAndPassword
   } from "firebase/auth";
 
-const Login = () => {
+const Login = ({saveUser}) => {
 
     const [password,setPassword] = useState();
     const [email,setEmail] = useState();
     const [invalidEmail,setInvalidEmail] = useState();
+    const [invalidPassword, setInvalidPassword] = useState()
+    const navigate = useNavigate();
 
     const emailRegex = /^\w+@[a-zA-Z_]+?\.[a-zA-Z]{2,3}$/;
     const auth = getAuth(app);
+
+    useEffect (() => {
+        validatEmail();
+    }, [email])
 
     const handlePassword = (event) => {
         setPassword(event.target.value);
@@ -33,26 +41,32 @@ const Login = () => {
         }
     }
 
-    const loginAuth = () => {
-        signInWithEmailAndPassword(auth, email, password)
-        .then((userCredential) => {
-            const user = userCredential.user;
-        })
-        .catch((error) => {
-            const errorCode = error.code;
-            const errorMessage = error.message;
-            console.log(errorCode);
-            console.log(errorMessage);
-        });
+    const handleLogin = async () => {
+        const userData = await loginAuth()
+        saveUser(userData)
+        setInvalidPassword("");
+        setInvalidEmail("");
+        navigate("/wallet");
     }
 
-    useEffect (() => {
-        validatEmail();
-    }, [email])
+
+    const loginAuth = async () => {
+        try {
+            const response = await signInWithEmailAndPassword(auth, email, password)
+            return response.user
+        } catch (error) {
+            const errorCode = error.code;
+                if(errorCode == "auth/wrong-password") {
+                    setInvalidPassword("Incorrect password.Please try again")
+                } else {
+                    setInvalidEmail("Incorrect email. Please try again");
+                }
+            }
+        }
 
     return (
 
-        <form className="signIn" onSubmit={loginAuth}>
+        <div className="signIn">
             <p className="signIn__logo">Logo waiting for approval here</p>
             <div className="signIn__welcome">
                 <p className="welcome__text">Welcome back!</p>
@@ -69,7 +83,7 @@ const Login = () => {
             <InputBox 
                 title="Password"
                 inputType="password"
-                errorMessage="" 
+                errorMessage={invalidPassword} 
                 successMessage=""
                 onChange={handlePassword}
             />
@@ -78,8 +92,8 @@ const Login = () => {
                 <p><a>Forgotten Password?</a></p>
             </div>
             <div className="signIn__line"></div>
-            <input type="submit" value="Login" className="signIn__submit"/>
-        </form>
+            <Button className="signIn__submit" buttonText={"Login"} handleClick={handleLogin} />
+        </div>
     );
 
 }
