@@ -2,6 +2,7 @@
 @use '../../styles/variables' as *;
 
 .modal {
+    position: fixed;
     display: flex;
     justify-content: center;
     align-items: center;
