@@ -1,9 +1,10 @@
 import "./Login.scss";
 import hand from "../../assets/images/hello.svg";
 import InputBox from "../../components/InputBox/InputBox";
+import Logo from "../../components/Logo/Logo";
 
 const Login = () => {
-
+    const isTextDark=true;
     const handleSubmit = () => {
 
         alert("You submitted the form");
@@ -13,9 +14,9 @@ const Login = () => {
     return (
 
         <form className="signIn" onSubmit={handleSubmit}>
-            <p className="signIn__logo">Logo waiting for approval here</p>
+            <Logo isTextDark={isTextDark}/>
             <div className="signIn__welcome">
-                <p className="welcome__text">Welcome back!</p>
+                <p className="welcome__text">Welcome Back!</p>
                 <img src={hand} alt="welcome"></img>
             </div>
             <p className="signIn__intro">Lorem ipsium dolor sit amet, consectetur adipiscing elit.</p>
