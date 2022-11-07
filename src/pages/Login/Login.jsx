@@ -3,6 +3,10 @@ import hand from "../../assets/images/hello.svg";
 import InputBox from "../../components/InputBox/InputBox";
 import {useState, useEffect} from 'react';
 import app from "../../firebase.js";
+import {
+    getAuth,
+    signInWithEmailAndPassword
+  } from "firebase/auth";
 
 const Login = () => {
 
@@ -11,6 +15,7 @@ const Login = () => {
     const [invalidEmail,setInvalidEmail] = useState();
 
     const emailRegex = /^\w+@[a-zA-Z_]+?\.[a-zA-Z]{2,3}$/;
+    const auth = getAuth(app);
 
     const handlePassword = (event) => {
         setPassword(event.target.value);
@@ -28,13 +33,26 @@ const Login = () => {
         }
     }
 
+    const loginAuth = () => {
+        signInWithEmailAndPassword(auth, email, password)
+        .then((userCredential) => {
+            const user = userCredential.user;
+        })
+        .catch((error) => {
+            const errorCode = error.code;
+            const errorMessage = error.message;
+            console.log(errorCode);
+            console.log(errorMessage);
+        });
+    }
+
     useEffect (() => {
         validatEmail();
     }, [email])
 
     return (
 
-        <form className="signIn" onSubmit={handleSubmit}>
+        <form className="signIn" onSubmit={loginAuth}>
             <p className="signIn__logo">Logo waiting for approval here</p>
             <div className="signIn__welcome">
                 <p className="welcome__text">Welcome back!</p>
