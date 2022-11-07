@@ -15,16 +15,16 @@ import Button from "../Button/Button";
 const ConversionResult = ({ amount, fromCurrency, fromCode, toCurrency, toCode, rate, date, handleClick }) => {
 
     return (
-        <div className="display">
-            <div className="display__currencies">
-                <h5 className="display__currencies--from">{`${amount} ${fromCurrency} =`}</h5>
-                <h2 className="display__currencies--to">{`${amount * rate} ${toCurrency}`}</h2>
-                <p className="display__currencies--code">{`1 ${fromCode} = ${rate} ${toCode}`}</p>
-                <p className="display__currencies--code">{`1 ${toCode} = ${1/rate} ${fromCode}`}</p>
+        <div className="currencies">
+            <div className="currencies__display">
+                <h5 className="currencies__source">{`${amount} ${fromCurrency} =`}</h5>
+                <h2 className="currencies__target">{`${amount * rate} ${toCurrency}`}</h2>
+                <p className="currencies__code">{`1 ${fromCode} = ${rate} ${toCode}`}</p>
+                <p className="currencies__code">{`1 ${toCode} = ${1/rate} ${fromCode}`}</p>
             </div>
-            <div className="display__makeTransfer">
+            <div className="currencies__makeTransfer">
                 <Button buttonText="Make Transfer" handleClick={handleClick}/>
-                <p className="display__makeTransfer--update">{`${fromCurrency} to ${toCurrency} conversion -- Last Updated ${date}`}</p>
+                <p className="currencies__updateTransfer">{`${fromCurrency} to ${toCurrency} conversion -- Last Updated ${date}`}</p>
             </div>
         </div>
     )
