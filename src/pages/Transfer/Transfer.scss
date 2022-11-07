@@ -1,34 +1,60 @@
-@import "../../styles/_variables.scss";
+@use "../../styles/_variables.scss" as *;
+@use "../../styles/_typography.scss" as *;
+
+.transfer-info {
+  width: 40%;
+  padding-left: 1rem;
+  margin: 2rem 0 2rem 1rem;
+  &__transfer {
+    font-size: 0.7rem;
+    color: $color-primary;
+    letter-spacing: 0.05rem;
+    width: 100rem;
+    font-family: $font-heading;
+  }
+  &__heading {
+    font-family: $font-heading;
+    font-weight: 400;
+    font-size: 1.5rem;
+  }
+  &__content {
+    font-family: $font-main;
+    color: $color-text-secondary;
+    font-size: 0.7rem;
+    word-spacing: 0.1rem;
+    line-height: 1rem;
+  }
+}
 
 .transfer {
-    background-color: $color-currency-background;
-    color: $color-text-secondary;
+  background-color: $color-currency-background;
+  color: $color-text-secondary;
 
-    display: grid;
-    grid-template-areas: "flag currency armount rate button";
+  display: grid;
+  grid-template-areas: "flag currency armount rate button";
 
-    .transfer__flag {
-        grid-area: "flag";
-    }
+  .transfer__flag {
+    grid-area: "flag";
+  }
 
-    .transfer__currency {
-        grid-area: "currency";
-    }
+  .transfer__currency {
+    grid-area: "currency";
+  }
 
-    .transfer__amount {
-        grid-area: "amount";
-    }
+  .transfer__amount {
+    grid-area: "amount";
+  }
 
-    .transfer__rate {
-        grid-area: "rate"
-    }
+  .transfer__rate {
+    grid-area: "rate";
+  }
 
-    .transfer__button {
-        grid-area: "button";
-    }
+  .transfer__button {
+    grid-area: "button";
+  }
 }
 
 .transfer__active {
-    background-color: $color-primary;
-    color: $color-funds-text;
+  background-color: $color-primary;
+  color: $color-funds-text;
 }

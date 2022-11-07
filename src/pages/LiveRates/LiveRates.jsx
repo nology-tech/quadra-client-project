@@ -1,8 +1,5 @@
 import "./LiveRates.scss";
 
-const LiveRates = () => {
-    
-
-}
+const LiveRates = () => {};
 
 export default LiveRates;
