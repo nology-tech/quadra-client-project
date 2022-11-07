@@ -23,47 +23,40 @@ const CurrencyConverter = ({currencyList, amount, fromCurrency, toCurrency, setN
     const handleToChange = (eventKey, event) => setToCurrency(event.target.textContent);
 
     return (
-        <div className="convertBox"> 
 
-                <h3 id="header__amount">Amount</h3>
-                <h3 id="header__from">From</h3>
-                <h3 id="header__to">To</h3>
+    <div className="convertBox"> 
+        <h3 id="header__amount">Amount</h3>
+        <h3 id="header__from">From</h3>
+        <h3 id="header__to">To</h3>
 
-       
+        <input  
+            id="input__amount"
+            type="number"
+            placeholder="10.00"
+            onChange={handleAmountChange}
+            value={amount}/>
             
-            <input  
-                id="input__amount"
-                type="text"
-                placeholder="10.00"
-                onChange={handleAmountChange}
-                value={amount}/>
-            
-            
-            <div className="input__from">
+        <div className="input__from">
             <Dropdown  id="from" title={fromCurrency} icon={iconMap[fromCurrency]} onSelect={handleFromChange} value={fromCurrency}>
                         {fromOptions}
             </Dropdown>
-            </div>
+        </div>
 
-            <div className="convertBox__btn">
+        <div className="convertBox__btn">
             <img  id="convert" src={Convert} alt="" />
-            </div>
-            
-            <div className="input__to">
+        </div>
+        
+        <div className="input__to">
             <Dropdown  id="to" title={toCurrency} icon={iconMap[toCurrency]} onSelect={handleToChange}>
                 {toOptions}
             </Dropdown>
-            </div>
+        </div>
 
+        <div className="convertBox__button">
+            <img src={altConvert} alt="convertLogo" />
+            <Button className="convert__button" buttonText={"Convert"}/>
+        </div>
         
-
-        
-            <div className="convertBox__button">
-                <img src={altConvert} alt="convertLogo" />
-                <Button className="convert__button" buttonText={"Convert"}/>
-            </div>
-        
-
     </div>
     );
 }
