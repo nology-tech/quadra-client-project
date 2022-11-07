@@ -42,11 +42,13 @@ const Login = ({saveUser}) => {
     }
 
     const handleLogin = async () => {
-        const userData = await loginAuth()
-        saveUser(userData)
-        setInvalidPassword("");
-        setInvalidEmail("");
-        navigate("/wallet");
+        const userData = await loginAuth();
+        if(userData != undefined) {
+            saveUser(userData)
+            setInvalidPassword("");
+            setInvalidEmail("");
+            navigate("/wallet");
+        }
     }
 
 
