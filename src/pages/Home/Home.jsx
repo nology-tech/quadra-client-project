@@ -1,12 +1,11 @@
-// import Layout from "../../components/Layout/Layout";
-// import Landing from "../../pages/Landing/Landing";
-import LiveRates from "../LiveRates/LiveRates";
+import Layout from "../../components/Layout/Layout";
+import Landing from "../../pages/Landing/Landing";
+
 const Home = () => {
   return (
-    // <Layout>
-    //   <Landing/>
-    // </Layout>
-    <LiveRates />
+    <Layout>
+      <Landing />
+    </Layout>
   );
 };
 
