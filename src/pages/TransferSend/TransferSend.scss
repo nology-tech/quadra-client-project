@@ -1,0 +1,14 @@
+.container {
+  border: 2px solid black;
+  width: 30%;
+  .info-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    .info-row-right {
+      display: flex;
+      justify-content: end;
+    }
+  }
+}
