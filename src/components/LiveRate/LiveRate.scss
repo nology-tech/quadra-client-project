@@ -1,0 +1,48 @@
+@use "../../styles/_variables.scss" as *;
+@use "../../styles/_typography.scss" as *;
+
+.live-rate {
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: $color-input-background;
+    margin: 1rem;
+    padding: 0.3rem 2rem;
+    color: $color-text-secondary;
+    &__currency {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 6rem;
+    }
+    &__name {
+        padding-left: 0.7rem;
+        font-family: $font-main;
+        font-weight: 400;
+        font-size: 1rem;
+    }
+    &__icon {
+        width: 1.7rem;
+        height: 1.3rem;
+    }
+    &__amount {
+        width: 4rem;
+        left: -2rem;
+        font-family: $font-main;
+        font-weight: 600;
+        font-size: 1rem;
+    }
+    &__rate {
+        width: 4rem;
+        font-family: $font-main;
+        font-weight: 600;
+        font-size: 1rem;
+    }
+}
+
+.current {
+    background-color: $color-primary;
+    color: $background-color;
+    border-radius: 0.5rem 0.5rem 0 0;
+}
