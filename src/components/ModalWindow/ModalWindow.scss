@@ -1,26 +1,24 @@
 @use '../../styles/typography' as *;
 @use '../../styles/variables' as *;
-.modal-background{
+
+.modal {
     position: fixed;
     width: 100vw;
     height: 100vh;
     background-color: hwb(0 0% 100% / 0.20);
-}
-
-.modal{
-    position: fixed;
-    width: 774px;
-    height: 735px;
-    left: 477px;
-    top: 191px;
-    padding: 20px;
-
-    background: #FFFFFF;
-    border-radius: 8px;
-}
-
-.modal-cross {
-    position: absolute;
-    left: 93%;
-    top: 5%;
+    &__content {
+        position: fixed;
+        width: 48rem;
+        height: 46rem;
+        left: 29.8rem;
+        top: 11.9rem;
+        padding: 1.25rem;
+        background: $background-color;
+        border-radius: 0.5rem;
+    }
+    &__image {
+        position: absolute;
+        left: 93%;
+        top: 5%;
+    }
 }
