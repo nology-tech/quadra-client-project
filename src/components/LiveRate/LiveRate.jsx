@@ -1,13 +1,13 @@
 import "./LiveRate.scss";
 import Button from "../Button/Button";
-
+import GBP from "../../assets/images/gbp.png";
 const LiveRate = ({
   name,
   amount = "1.00",
-  rate = "0.0037",
-  image_url = "../assets/images/credit-card.png",
+  rate,
+  image_url = GBP,
   handleClick,
-  isCurrentCurrency = false,
+  isCurrentCurrency = true,
 }) => {
   return (
     <div className={isCurrentCurrency ? "live-rate current" : "live-rate"}>
