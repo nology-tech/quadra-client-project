@@ -5,7 +5,7 @@ import { getCurrencyGBP } from "../../utils/apiUtils";
 
 const LiveRates = () => {
   const [currRates, setCurrRates] = useState({});
-  const [component, setComponent] = useState(["British Pound"]);
+  const [selectCurr, setSelectCurr] = useState(["British Pound"]);
 
   useEffect(() => {
     const getData = async () => {
@@ -16,7 +16,7 @@ const LiveRates = () => {
   }, []);
 
   const addRate = (e) => {
-    setComponent([...component, e.target.value]);
+    setSelectCurr([...selectCurr, e.target.value]);
   };
 
   return (
@@ -47,7 +47,7 @@ const LiveRates = () => {
           <div></div>
         </div>
         <div>
-          {component.map((item, i) => (
+          {selectCurr.map((item, i) => (
             <LiveRate name={item} amount={currRates[item]} key={i} />
           ))}
         </div>
