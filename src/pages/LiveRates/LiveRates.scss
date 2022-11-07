@@ -1,52 +1,47 @@
 @use "../../styles/_variables.scss" as *;
 @use "../../styles/_typography.scss" as *;
 
-.user-nav {
-  display: flex;
-  justify-content: flex-end;
-}
-.rates {
-  .rates-info {
-    width: 40%;
-    padding-left: 1rem;
-    margin: 2rem 0 2rem 1rem;
-    &__transfer {
-      font-size: 0.7rem;
-      color: $color-primary;
-      letter-spacing: 0.05rem;
-      width: 100rem;
-      font-family: $font-heading;
-    }
-    &__heading {
-      font-family: $font-heading;
-      font-weight: 400;
-      font-size: 1.5rem;
-    }
-    &__content {
-      font-family: $font-main;
-      color: $color-text-secondary;
-      font-size: 0.7rem;
-      word-spacing: 0.1rem;
-      line-height: 1rem;
-    }
+.info {
+  width: 40%;
+  padding-left: 1rem;
+  margin: 2rem 0 2rem 1rem;
+  &__transfer {
+    font-size: 0.7rem;
+    color: $color-primary;
+    letter-spacing: 0.05rem;
+    width: 100rem;
+    font-family: $font-heading;
   }
-  .rates-ctner {
-    width: 90%;
+  &__heading {
+    font-family: $font-heading;
+    font-weight: 400;
+    font-size: 1.5rem;
+  }
+  &__content {
+    font-family: $font-main;
+    color: $color-text-secondary;
+    font-size: 0.7rem;
+    word-spacing: 0.1rem;
+    line-height: 1rem;
+  }
+}
+.container {
+  width: 90%;
+  display: flex;
+  flex-direction: column;
+  &__title {
     display: flex;
-    flex-direction: column;
-    .rates-ctner__title {
-      display: flex;
-      color: $color-text;
-      justify-content: space-between;
-      align-content: flex-end;
-      align-items: flex-end;
-      margin-left: 5.5rem;
+    color: $color-text;
+    justify-content: flex-start;
+    align-content: flex-end;
+    align-items: flex-end;
+    margin-left: 4rem;
+    align-items: center;
 
-      align-items: center;
-      #rates-ctner__title--head {
-        font-size: 0.8rem;
-        margin-bottom: -1rem;
-      }
+    #container__title--head {
+      font-size: 0.8rem;
+      margin-bottom: -1rem;
+      margin-right: 14rem;
     }
   }
 }

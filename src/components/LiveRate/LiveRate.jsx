@@ -17,8 +17,6 @@ const LiveRate = ({
       </div>
       <p className="live-rate__amount">{amount}</p>
       <p className="live-rate__rate">{!isCurrentCurrency && rate}</p>
-      <div> </div>
-      <div> </div>
       <Button
         buttonText={isCurrentCurrency ? "Edit" : "Send"}
         handleClick={handleClick}
