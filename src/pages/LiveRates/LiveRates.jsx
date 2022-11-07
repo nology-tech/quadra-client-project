@@ -3,22 +3,9 @@ import LiveRate from "../../components/LiveRate/LiveRate";
 import "./LiveRates.scss";
 import { getCurrencyGBP } from "../../utils/apiUtils";
 
-//Plan
-
-//1. Add in the components and styling
-
-//2. create a mock button, so when you click on the button it will map out another componenet container.
-
-//3. Add API call
-
-//4. integrate the base currency to be set out in the component
-
-// ZAIN COMMENT
-
 const LiveRates = () => {
   const [currRates, setCurrRates] = useState({});
   const [component, setComponent] = useState(["British Pound"]);
-  // const [paste, setPaste] = useState(["1.00"]);
 
   useEffect(() => {
     const getData = async () => {
@@ -30,11 +17,7 @@ const LiveRates = () => {
 
   console.log(currRates);
 
-  //Button onclick gets current currency abv and adds it do constCurrency
-
-  // Modal window
   const addRate = (e) => {
-    // setPaste(currRates[e.target.value]);
     setComponent([...component, e.target.value]);
   };
 
@@ -83,12 +66,5 @@ const LiveRates = () => {
     </div>
   );
 };
-/*
-transactionId: any;
-    senderAmount: any;
-    payeeAmount: any;
-    rate: any;
-    date: any;
-*/
 
 export default LiveRates;
