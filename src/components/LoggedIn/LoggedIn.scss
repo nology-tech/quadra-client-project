@@ -1,0 +1,30 @@
+@use "../../styles/_variables.scss" as *;
+@use "../../styles/typography.scss" as *;
+
+.userProfile {
+
+    display: flex;
+    width: 16rem;
+    height: 5rem;
+    align-items: center;
+    justify-content: space-around;
+
+
+    &__name {
+        color: $color-heading;
+        font-size: 1rem;
+        font-family: $font-heading;
+        font-weight: 400;
+        max-width: 8rem;
+    }
+
+    &__pic {
+        height: 2.5rem;
+        aspect-ratio: 1 / 1;
+    }
+
+    &__dropDown {
+        height: 0.5rem;
+    }
+
+}

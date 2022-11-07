@@ -1,0 +1,22 @@
+@use "../../styles/_variables.scss" as *; 
+
+.logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 3rem;
+    font-size: 1rem;
+    margin: 1rem 0;
+
+    &__logo {
+        height: 80%;
+    }
+
+    &__darkText {
+        color: $color-logo-header;
+    }
+
+    &__lightText {
+        color: $color-funds-text;
+    }
+}
