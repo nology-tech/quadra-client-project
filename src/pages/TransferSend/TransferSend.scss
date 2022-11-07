@@ -1,14 +1,171 @@
-.container {
-  border: 2px solid black;
-  width: 30%;
-  .info-row {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+@use "../../styles/typography" as *;
+@use "../../styles/variables" as *;
 
-    .info-row-right {
+.info {
+  width: 40%;
+  padding-left: 1rem;
+  margin: 1rem 0 2rem 1rem;
+  &__transfer {
+    font-size: 0.7rem;
+    color: $color-primary;
+    letter-spacing: 0.05rem;
+    width: 100rem;
+    font-family: $font-heading;
+  }
+  &__heading {
+    font-family: $font-heading;
+    font-weight: 400;
+    font-size: 1.5rem;
+  }
+  &__content {
+    font-family: $font-main;
+    color: $color-text-secondary;
+    font-size: 0.7rem;
+    word-spacing: 0.1rem;
+    line-height: 1rem;
+  }
+}
+.form {
+  display: flex;
+  flex-direction: column;
+  width: 40%;
+  padding: 2rem 3rem;
+
+  margin: 1rem 0 2rem 1rem;
+  background-color: $color-input-background;
+
+  .form__head {
+    font-family: $font-heading;
+    font-weight: 500;
+    letter-spacing: 0.05rem;
+  }
+  .form__inner {
+    // border: 2px solid black;
+    border-radius: 1rem;
+    margin-top: 1rem;
+    width: 95%;
+    padding: 1rem;
+    padding-left: 2rem;
+
+    background-color: $line-divider;
+    .form__inner__grey-line {
+      border-top: 0.005rem solid $color-menu-unselected;
+      width: auto;
+    }
+    .form__inner__user {
+      color: $color-primary;
+      font-family: $font-main;
+      font-size: 2rem;
+      font-weight: 400;
+    }
+    .form__inner__account,
+    .form__inner__sort {
       display: flex;
-      justify-content: end;
+      align-items: center;
+      justify-content: space-between;
+      .form__inner__account--name,
+      .form__inner__sort--name {
+        font-family: $font-main;
+        font-weight: 300;
+        font-size: 1rem;
+        color: $color-text;
+      }
+      .form__inner__account--entered,
+      .form__inner__sort--entered {
+        font-size: 0.7rem;
+        color: $color-currency;
+        text-align: end;
+      }
+
+      .funds-remaining {
+        font-family: $font-main;
+        font-weight: 300;
+        font-size: 0.7rem;
+        color: $color-text;
+      }
+
+      .info-row-right {
+        display: flex;
+        justify-content: end;
+      }
+    }
+    .form__inner__total {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-top: 1.5rem;
+
+      .form__inner__total--name {
+        font-family: $font-main;
+        font-weight: 400;
+        font-size: 1.5rem;
+      }
+      .form__inner__total--amount {
+        font-family: $font-main;
+        font-weight: 400;
+        font-size: 1.5rem;
+        text-align: end;
+      }
+    }
+
+    .form__inner__remainder {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+
+      .form__inner__remainder--name,
+      .form__inner__remainder--amount {
+        font-family: $font-main;
+        font-weight: 400;
+        font-size: 0.7rem;
+        color: $color-text-secondary;
+      }
+
+      .form__inner__remainder--amount {
+        font-family: $font-main;
+        font-weight: 400;
+        font-size: 0.7rem;
+        color: $color-text-secondary;
+        text-align: end;
+      }
+    }
+  }
+
+  .form__send {
+    margin-top: 2rem;
+    .form__send__to {
+      font-size: 1.5rem;
+      margin-bottom: 1rem;
+      font-family: $font-main;
+      color: $color-heading;
+      font-weight: 600;
+    }
+    .form__send__buttons {
+      width: 95%;
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+      border-bottom: 0.005rem solid $color-menu-unselected;
+      margin-bottom: 2rem;
+      .form__send__buttons--select {
+        margin-bottom: 2rem;
+        margin-right: 2rem;
+      }
+      .form__send__buttons--new {
+        display: flex;
+        width: 40%;
+        margin-bottom: 2rem;
+        cursor: pointer;
+        color: $color-primary;
+        padding-left: 2rem;
+        border-left: 0.1rem solid gray;
+        #form__send__buttons--new--img {
+          width: auto;
+          height: 1rem;
+          align-self: center;
+          margin-right: 0.5rem;
+        }
+      }
     }
   }
 }
