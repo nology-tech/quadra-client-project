@@ -15,8 +15,6 @@ const LiveRates = () => {
     getData();
   }, []);
 
-  console.log(currRates);
-
   const addRate = (e) => {
     setComponent([...component, e.target.value]);
   };
