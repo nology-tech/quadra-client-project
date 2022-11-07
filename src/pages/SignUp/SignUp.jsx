@@ -92,7 +92,7 @@ const SignUp = ({ login }) => {
     <div className="background">
       <div className="signUp">
         <div className="signUp__company">
-        <Logo isTextDark={isTextDark}/>
+        <Logo isTextDark={true}/>
         </div>
 
         <h1 className="signUp__header">Create an account</h1>
