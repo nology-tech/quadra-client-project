@@ -1,0 +1,19 @@
+@use "../../styles/variables" as *;
+@use "../../styles/typography" as *;
+
+.feature{
+    text-align: center;
+    padding: 1rem;
+    &__title{
+        font-family: $font-heading;
+        font-weight: 500;
+        font-size: 1.25rem;
+        color: $color-heading;
+    }
+    &__desc{
+        font-family: $font-main;
+        font-weight: 400;
+        font-size: 1rem;
+        color:$color-footer-text;
+    }
+}
