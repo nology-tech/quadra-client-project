@@ -1,0 +1,89 @@
+@use "../../styles/_variables.scss"as *;
+@use "../../styles/_typography.scss"as *;
+
+.liveRateList {
+    display: flex;
+    flex-direction: column;
+    width: 100vw;
+    height: 100%;
+    padding-left: 4rem;
+    margin-top: 2rem;
+
+    &__page {
+        width: 3rem;
+        height: 1rem;
+        top: 5rem;
+        font-family: $font-heading;
+        font-style: normal;
+        font-weight: 500;
+        font-size: 0.8rem;
+        line-height: 1rem;
+        color: $color-primary;
+    }
+
+    &__header {
+        width: 16rem;
+        height: 2.5rem;
+        top: 7rem;
+        font-family: $font-heading;
+        font-style: normal;
+        font-weight: 400;
+        font-size: 2rem;
+        line-height: 2.5rem;
+        color: $color-heading;
+    }
+
+    &__intro {
+        width: 32rem;
+        height: 4.5rem;
+        top: 11rem;
+        font-family: $font-main;
+        font-style: normal;
+        font-weight: 400;
+        font-size: 1rem;
+        line-height: 1.5rem;
+        color: $color-text-secondary;
+    }
+
+    &__currencies {
+        .table {
+            font-family: $font-heading;
+            font-style: normal;
+            font-weight: 500;
+            height: 1.3rem;
+            font-size: 1rem;
+            line-height: 1.3rem;
+            color: $color-text;
+            top: 18rem;
+            margin: 1rem;
+            padding: 0.3rem 2rem;
+            width: 100%;
+            display: grid;
+            grid-template-rows: repeat(5, 1fr);
+            grid-template-areas: "currency amount rates empty";
+
+            &__currency {
+                grid-area: currency;
+                padding-left: 2rem;
+            }
+
+            &__amount {
+                grid-area: amount;
+            }
+
+            &__rate {
+                grid-area: rates;
+            }
+
+            &__align {
+                grid-area: empty;
+            }
+        }
+    }
+
+    &__button {
+        width: 8rem;
+        margin-left: 5rem;
+    }
+
+}
