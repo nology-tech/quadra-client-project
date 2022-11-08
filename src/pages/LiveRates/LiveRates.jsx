@@ -60,13 +60,13 @@ const LiveRates = () => {
       <div className="container">
         <div className="container__title">
           <div>
-            <h3 id="container__head">Currency</h3>
+            <h3 className="container__head">Currency</h3>
           </div>
           <div>
-            <h3 id="container__head">Amount</h3>
+            <h3 className="container__head">Amount</h3>
           </div>
           <div>
-            <h3 id="container__head">Rate</h3>
+            <h3 className="container__head">Rate</h3>
           </div>
         </div>
         <div>{singleRate}</div>
