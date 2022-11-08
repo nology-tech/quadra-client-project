@@ -1,13 +1,11 @@
-// import Layout from "../../components/Layout/Layout";
-// import Landing from "../../pages/Landing/Landing"
-import TransferSend from "../TransferSend/TransferSend";
-const Home = () => {
+import Layout from "../../components/Layout/Layout";
+import Landing from "../../pages/Landing/Landing";
 
+const Home = () => {
   return (
-    // <Layout>
-    //   <Landing/>
-    // </Layout>
-    <TransferSend />
+    <Layout>
+      <Landing />
+    </Layout>
   );
 };
 
