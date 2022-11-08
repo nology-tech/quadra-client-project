@@ -1,0 +1,78 @@
+@use "../../styles/_typography.scss" as *;
+@use "../../styles/_variables.scss" as *;
+
+.accountWrapper {
+    display: flex;
+    flex-direction: column;
+    border: 2px solid green;
+    margin-left: 15%;
+    .userProfile{
+        width: 100%;
+        display: flex;
+        justify-content: flex-end;
+        border: 2px solid red;
+        padding-right: 3rem;
+        // margin-left: 65rem;
+    }  
+    .accountWrapper__info{
+        display: flex;
+        flex-direction: row;
+        border: 2px solid blue;
+        
+        .left-hand-box{
+            border: 2px solid purple;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 50%;
+        }
+    }
+    .contactPath {
+        font-family: $font-heading;
+        font-weight: 400;
+        font-size: 12px;
+        .changeColor{
+            
+            color: skyblue;
+        }
+        
+    }
+    
+}
+
+.topnav {
+    margin-left: 20%;
+}
+
+.sidenav {
+    margin-top: 0;
+}
+
+.heading {
+    font-family: $font-heading;
+    font-size: 2rem;
+    font-weight: 400;
+    text-align: left;
+    height: 2.5rem;
+    color: $color-heading;
+
+}
+
+
+
+p {
+    font-family: $font-heading;
+    font-weight: 400;
+    font-size: 1rem;
+    line-height: 1rem;
+
+    color: $color-input-text;
+}
+
+.contactsList {
+    font-family: $font-heading;
+    font-size: 24px;
+    font-weight: 400;
+    color: $color-heading;
+
+}
