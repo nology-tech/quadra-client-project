@@ -73,7 +73,7 @@ const Login = ({saveUser}) => {
         <div className="signIn">
             <Logo isTextDark={isTextDark}/>
             <div className="signIn__welcome">
-                <p className="message">Welcome Back!</p>
+                <p className="signIn__message">Welcome Back!</p>
                 <img src={hand} alt="welcome"></img>
             </div>
             <p className="signIn__intro">Lorem ipsium dolor sit amet, consectetur adipiscing elit.</p>
