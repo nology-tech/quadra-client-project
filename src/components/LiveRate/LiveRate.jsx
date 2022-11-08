@@ -1,18 +1,26 @@
 import "./LiveRate.scss";
-import Button from "../Button/Button"
-
-const LiveRate = ({name, amount, rate="0.0037", image_url="../assets/images/credit-card.png", handleClick, isCurrentCurrency=false}) => {
-    return (
-        <div className={isCurrentCurrency ? "live-rate current" : "live-rate"}>
-            <div className="live-rate__currency">
-                <img className="live-rate__icon" src={image_url}/>
-                <p className="live-rate__name">{name} name</p>
-            </div>
-            <p className="live-rate__amount">{amount} 1.3595</p>
-            <p className="live-rate__rate">{!isCurrentCurrency && rate}</p>
-            <Button classNaming={isCurrentCurrency ? "whiteBorderButton" : "corneredButton"} buttonText={isCurrentCurrency ? "Edit" : "Send"} handleClick={handleClick} />
-        </div>
-    )
-}
+import Button from "../Button/Button";
+import GBP from "../../assets/images/gbp.png";
+const LiveRate = ({
+  name,
+  amount = "1.00",
+  rate,
+  image_url = GBP,
+  handleClick,
+  isCurrentCurrency = true,
+}) => {
+  return (
+    <div className={isCurrentCurrency ? "live-rate current" : "live-rate"}>
+      <div className="live-rate__currency">
+        <img className="live-rate__icon" src={image_url} />
+        <p className="live-rate__name">{name}</p>
+      </div>
+      <p className="live-rate__amount">{amount}</p>
+      <p className="live-rate__rate">{!isCurrentCurrency && rate}</p>
+      <Button classNaming={isCurrentCurrency ? "whiteBorderButton" : "corneredButton"} 
+      buttonText={isCurrentCurrency ? "Edit" : "Send"} handleClick={handleClick} />
+    </div>
+  );
+};
 
 export default LiveRate;
