@@ -1,29 +1,18 @@
+import { Route, Routes } from "react-router-dom";
+import Home from "./pages/Home/Home";
 import "./styles/main.scss";
-import CurrencyConverter from "./components/CurrencyConverter/CurrencyConverter";
-import { useState } from "react";
+import Login from "./pages/Login/Login";
+import SignUp from "./pages/SignUp/SignUp";
+import Wallet from "./pages/Wallet/Wallet";
 
 const App = () => {
-  const dummyCurrencyList = ["GBP", "USD", "EUR", "JPY", "ZAR", "AUD"];
-
-  const [amount, setNewAmount] = useState(10);
-  const [fromCurrency, setFromCurrency] = useState(dummyCurrencyList[0]);
-  const [toCurrency, setToCurrency] = useState(dummyCurrencyList[2]);
-
-  const handleAmountChange = (event) => { setNewAmount(event.target.value) };
-  const handleFromChange = (selected) => { setFromCurrency(selected.value) };
-  const handleToChange = (selected) => { setToCurrency(selected.value) };
-
   return (
-    <CurrencyConverter
-      currencyList={dummyCurrencyList}
-      amount={amount}
-      fromCurrency={fromCurrency}
-      toCurrency={toCurrency}
-      handleAmountChange={handleAmountChange}
-      handleFromChange={handleFromChange}
-      handleToChange={handleToChange}
-      />
-  
+    <Routes>
+      <Route path="*" element={<Home />} />
+      <Route path="/login" element={<Login />} />
+      <Route path="/signup" element={<SignUp />} />
+      <Route path="/wallet" element={<Wallet />} />
+    </Routes>
   );
 };
 
