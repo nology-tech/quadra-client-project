@@ -1,6 +1,6 @@
 @use "../../styles/variables" as *;
 
-.signIn__message {
+.signIn {
 
     display: flex;
     flex-direction: column;
@@ -11,14 +11,14 @@
     padding-left: 3rem;
     justify-content: center;
 
-    &--welcome {
+    &__welcome {
         display: flex;
         width: 70%;
         justify-content: flex-start;
         align-items: center;
         margin-bottom: -0.5rem;
 
-        .welcome__text {
+        .message {
             font-weight: 500;
             color:$color-heading;
             font-size: 1rem;
@@ -33,14 +33,14 @@
         }
     }
 
-    &--intro {
+    &__intro {
 
         font-size: 0.7rem;
         color:$color-text-secondary;
 
     }
 
-    &--options {
+    &__options {
 
         color:$color-text-secondary;
         font-size: 0.8rem;
@@ -58,7 +58,7 @@
 
     }
 
-    &--line {
+    &__line {
 
         height: 1px;
         width: 100%;
@@ -69,7 +69,7 @@
 
     }
 
-    &--submit {
+    &__submit {
 
         background-color: $color-primary;
         color: $color-funds-text;

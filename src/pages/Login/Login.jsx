@@ -70,13 +70,13 @@ const Login = ({saveUser}) => {
 
     return (
 
-        <div className="signIn__message">
+        <div className="signIn">
             <Logo isTextDark={isTextDark}/>
-            <div className="signIn__message--welcome">
-                <p className="welcome__text">Welcome Back!</p>
+            <div className="signIn__welcome">
+                <p className="message">Welcome Back!</p>
                 <img src={hand} alt="welcome"></img>
             </div>
-            <p className="signIn__message--intro">Lorem ipsium dolor sit amet, consectetur adipiscing elit.</p>
+            <p className="signIn__intro">Lorem ipsium dolor sit amet, consectetur adipiscing elit.</p>
             <InputBox 
                 title="Email"
                 inputType="text"
@@ -91,12 +91,12 @@ const Login = ({saveUser}) => {
                 successMessage=""
                 onChange={handlePassword}
             />
-            <div className="signIn__message--options">
+            <div className="signIn__options">
                 <p>Don&apos;t have an account? <a>Sign Up</a></p>
                 <p><a>Forgotten Password?</a></p>
             </div>
-            <div className="signIn__message--line"></div>
-            <Button className="signIn__message--submit" buttonText={"Login"} handleClick={handleLogin} />
+            <div className="signIn__line"></div>
+            <Button className="signIn__submit" buttonText={"Login"} handleClick={handleLogin} />
         </div>
     );
 
