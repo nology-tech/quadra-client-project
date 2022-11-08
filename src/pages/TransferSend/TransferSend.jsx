@@ -28,36 +28,36 @@ const TransferSend = ({
           reiciendis dignissimos iste.
         </p>
       </div>
-      <div className="form">
-        <h1 className="form__head">Send From</h1>
-        <div className="form__inner">
-          <h1 className="form__inner__user">{user}</h1>
-          <div className="form__inner__account">
-            <h2 className="form__inner__account--name">Account Number</h2>
-            <p className="form__inner__account--entered">{accNum}</p>
+      <div className="transferForm">
+        <h1 className="transferForm__head">Send From</h1>
+        <div className="transferForm__inner">
+          <h1 className="transferForm__user">{user}</h1>
+          <div className="transferForm__infoWrapper">
+            <h2 className="transferForm__infoName">Account Number</h2>
+            <p className="transferForm__infoNum">{accNum}</p>
           </div>
-          <div className="form__inner__sort">
-            <h2 className="form__inner__sort--name">Sort Code</h2>
-            <p className="form__inner__sort--entered">{sortCode}</p>
+          <div className="transferForm__infoWrapper">
+            <h2 className="transferForm__infoName">Sort Code</h2>
+            <p className="transferForm__infoNum">{sortCode}</p>
           </div>
-          <div className="form__inner__grey-line"></div>
-          <div className="form__inner__total">
-            <h2 className="form__inner__total--name">Total</h2>
-            <p className="form__inner__total--amount">{total}</p>
+          <div className="transferForm__greyLine"></div>
+          <div className="transferForm__totalWrapper">
+            <h2 className="transferForm__total">Total</h2>
+            <p className="transferForm__total transferForm__total--amount">{total}</p>
           </div>
-          <div className="form__inner__remainder">
-            <h2 className="form__inner__remainder--name">Funds Remaining</h2>
-            <p className="form__inner__remainder--amount">{fundsRem}</p>
+          <div className="transferForm__remainderWrapper">
+            <h2 className="transferForm__remainder">Funds Remaining</h2>
+            <p className="transferForm__remainder transferForm__remainder--amount">{fundsRem}</p>
           </div>
         </div>
-        <div className="form__send">
-          <h1 className="form__send__to">To</h1>
-          <div className="form__send__buttons">
-            <div className="form__send__buttons--select">
+        <div className="transferForm__sendWrapper">
+          <h1 className="transferForm__head">To</h1>
+          <div className="transferForm__buttons">
+            <div className="transferForm__select">
               <Button buttonText="Select Recipient" />
             </div>
-            <div className="form__send__buttons--new" onClick={buttonPress}>
-              <img src={Plus} alt="plus" id="form__send__buttons--new--img" />
+            <div className="transferForm__new" onClick={buttonPress}>
+              <img src={Plus} alt="plus" />
               <p>Pay someone new</p>
             </div>
           </div>
