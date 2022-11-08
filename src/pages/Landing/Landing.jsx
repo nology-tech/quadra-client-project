@@ -18,7 +18,7 @@ const Landing = () => {
             <div>
             <Link className='landing-header__sign-in' to={'/login'}>Sign In</Link>
             <Link to={`/signup`}>
-                <Button buttonText={"Sign Up"}/>
+                <Button classNaming="largeButton" buttonText={"Sign Up"}/>
             </Link>
             
             </div>
@@ -40,7 +40,7 @@ const Landing = () => {
                 <Feature title={"Lorem ipsum dolor sit amet."} desc={"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cursus nibh sit eu sagittis."} />
                 <Feature title={"Lorem ipsum dolor sit amet."} desc={"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cursus nibh sit eu sagittis."} />
             </div>
-            <Button buttonText={"Find out More"}/>
+            <Button classNaming="invertedButton" buttonText={"Find out More"}/>
         </section>
         <section className='conversion-section'>
             <h2 className='conversion-section__title'>Make A Conversion</h2>
@@ -57,7 +57,7 @@ const Landing = () => {
             <Logo isTextDark={false} />
             <LandingNav isFooter={true}/>
             <Link to={`/signup`}>
-                <Button buttonText={"Sign Up"}/>
+                <Button classNaming="largeButton" buttonText={"Sign Up"}/>
             </Link>
         </footer>
         </>

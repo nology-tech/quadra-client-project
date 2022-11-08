@@ -10,7 +10,7 @@ const LiveRate = ({name, amount, rate="0.0037", image_url="../assets/images/cred
             </div>
             <p className="live-rate__amount">{amount} 1.3595</p>
             <p className="live-rate__rate">{!isCurrentCurrency && rate}</p>
-            <Button buttonText={isCurrentCurrency ? "Edit" : "Send"} handleClick={handleClick} />
+            <Button classNaming={isCurrentCurrency ? "whiteBorderButton" : "corneredButton"} buttonText={isCurrentCurrency ? "Edit" : "Send"} handleClick={handleClick} />
         </div>
     )
 }

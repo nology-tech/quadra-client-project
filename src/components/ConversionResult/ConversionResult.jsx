@@ -12,7 +12,7 @@ import Button from "../Button/Button";
  * @date The Date element from the Exchage Rates return for fromCurrency.
  * @handleClick The function to be run when the "Make Transfer" button is clicked.
  */
-const ConversionResult = ({ amount, fromCurrency, fromCode, toCurrency, toCode, rate, date, handleClick }) => {
+const ConversionResult = ({  amount, fromCurrency, fromCode, toCurrency, toCode, rate, date, handleClick }) => {
 
     return (
         <div className="currencies">
@@ -23,7 +23,7 @@ const ConversionResult = ({ amount, fromCurrency, fromCode, toCurrency, toCode, 
                 <p className="currencies__code">{`1 ${toCode} = ${1/rate} ${fromCode}`}</p>
             </div>
             <div className="currencies__makeTransfer">
-                <Button buttonText="Make Transfer" handleClick={handleClick}/>
+                <Button classNaming="invertedButton" buttonText="Make Transfer" handleClick={handleClick}/>
                 <p className="currencies__updateTransfer">{`${fromCurrency} to ${toCurrency} conversion -- Last Updated ${date}`}</p>
             </div>
         </div>

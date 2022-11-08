@@ -6,7 +6,7 @@ const Funds = ({amount, isManage}) => {
         <div className="funds">
             <h4 className="funds__title">Your Funds:</h4>
             <p className="funds__amount">£{amount}</p>
-            {isManage && <Button buttonText={"Manage"}/>}
+            {isManage && <Button classNaming="invertedButton" buttonText={"Manage"}/>}
         </div>
     )
 }

@@ -51,7 +51,7 @@ const CurrencyConverter = ({currencyList, amount, fromCurrency, toCurrency, setN
 
         <div className="converter__submitWrapper">
             <img src={altConvert} alt="convertLogo" />
-            <Button className="converter__submitButton" buttonText={"Convert"}/>
+            <Button classNaming="largeButton" buttonText={"Convert"}/>
         </div>
         
     </div>
