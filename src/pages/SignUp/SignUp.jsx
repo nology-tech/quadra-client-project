@@ -92,7 +92,7 @@ const SignUp = ({ login }) => {
     <div className="background">
       <div className="signUp">
         <div className="signUp__company">
-        <Logo isTextDark={true}/>
+          <Logo isTextDark={true} />
         </div>
 
         <h1 className="signUp__header">Create an account</h1>
@@ -140,7 +140,11 @@ const SignUp = ({ login }) => {
         </div>
 
         <div className="signUp__continue">
-          <Button buttonText="Continue >" handleClick={register} />
+          <Button
+            classNaming="largeButton"
+            buttonText="Continue >"
+            handleClick={register}
+          />
         </div>
       </div>
     </div>
