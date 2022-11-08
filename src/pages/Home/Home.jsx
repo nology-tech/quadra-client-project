@@ -1,5 +1,6 @@
 import Layout from "../../components/Layout/Layout";
 import Landing from "../../pages/Landing/Landing"
+
 const Home = () => {
 
   return (
@@ -7,6 +8,7 @@ const Home = () => {
     <Layout>
       <Landing/>
     </Layout>
+    
   );
 };
 

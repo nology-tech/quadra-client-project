@@ -76,22 +76,22 @@
       font-size: 0.7rem;
       width: auto;
       color: $color-text;
-
       font-family: $font-heading;
       font-weight: 400;
     }
+
     #delivery {
-      //   inline-size: 8rem;
       width: 35%;
       text-align: right;
     }
-
+      
     .receipt__body__info--title {
       color: $color-heading;
       font-size: 0.7rem;
       font-family: $font-heading;
       letter-spacing: 0.025rem;
     }
+
   }
   .receipt__bottom {
     display: flex;
