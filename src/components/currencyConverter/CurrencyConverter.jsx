@@ -10,7 +10,14 @@ const CurrencyConverter = ({currencyList, amount, fromCurrency, toCurrency, setN
     const fromOptions = currencyList.map(currency => <Dropdown.Item key={currency} icon={iconMap[currency]}>{currency}</Dropdown.Item>);
     const toOptions = currencyList.filter(currency => currency !== fromCurrency).map(currency => <Dropdown.Item key={currency} icon={iconMap[currency]}>{currency}</Dropdown.Item>);
 
-    const handleAmountChange = (event) => setNewAmount(event.target.value);
+    // const handleAmountChange = (event) => setNewAmount(event.target.value);
+
+    const handleAmountChange = (event) => {
+        if (event.target.value >= 0) {
+            setNewAmount(event.target.value);
+        }
+    }
+
     const handleFromChange = (eventKey, event) => {
         const newFromCurrency = event.target.textContent;
         if (toCurrency == newFromCurrency) {
@@ -57,6 +64,5 @@ const CurrencyConverter = ({currencyList, amount, fromCurrency, toCurrency, setN
     </div>
     );
 }
-
 
 export default CurrencyConverter;
