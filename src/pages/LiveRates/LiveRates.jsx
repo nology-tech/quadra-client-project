@@ -3,10 +3,6 @@ import LiveRate from "../../components/LiveRate/LiveRate";
 import "./LiveRates.scss";
 import { getCurrencyGBP } from "../../utils/apiUtils";
 
-<<<<<<< HEAD
-const LiveRates = () => {};
-
-=======
 const LiveRates = () => {
   const [currRates, setCurrRates] = useState({});
   const [selectCurr, setSelectCurr] = useState(["British Pound"]);
@@ -88,5 +84,4 @@ const LiveRates = () => {
   );
 };
 
->>>>>>> feb6439c062396eb374fa904ec32bb8ab6d5a22e
 export default LiveRates;
