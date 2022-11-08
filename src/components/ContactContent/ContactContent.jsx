@@ -1,7 +1,34 @@
 import "./ContactContent.scss";
-import ContactItem from "../../components/ContactItem/ContactItem";
+import BankContact from "../BankContact/BankContact";
+import {useEffect, useState} from "react";
+import { getUserContacts } from "../../utils/apiUtils";
 
 const ContactContent = () => {
+    const [allContacts, setAllContacts] = useState([]);
+
+    const getData = async () => {
+        const contacts = await getUserContacts();
+        setAllContacts(contacts)
+    }
+    useEffect(() => {
+        getData();
+    }, [])
+
+    const userContacts = allContacts.map((item) => {
+        return (
+            <BankContact 
+                image_url={""} 
+                userName={item.contactName}
+                sortCode={item.sortCode} 
+                accNum={item.accountNumber} 
+                bank={item.bankName} 
+                iban={""} 
+                isTransfer={false}
+                key={item.id}
+        />
+        )
+    })
+
     return (
         <div className="contactList">
             <h3 className="contactList__title">Contact List</h3>
@@ -14,14 +41,7 @@ const ContactContent = () => {
                 <h5 className="contactList__iban">IBAN</h5>
             </div>
             <div className="contactList__list">
-                <ContactItem 
-                    bankImage={""}
-                    userName={"Erik Dare"}
-                    sortCode={"110063"}
-                    accNo={"10840366"}
-                    bankName={"Halifax PLC"}
-                    iban={"GB56HLFX11005310840366"}
-                />
+                <div>{userContacts}</div>
             </div>
         </div>
     )
