@@ -1,72 +1,57 @@
     @use "../../styles/variables" as *;
 
-.login {
+.signIn {
     background-color: $color-background;
     height: 100vh;
-    overflow-y: hidden;
-    overflow-x: hidden;
-    &__content {
+    &__form {
         display: flex;
         justify-content: center;
         align-items: center;
         height: 93vh;
     }
-}   
-.login__form {
-    display: flex;
-    flex-direction: column;
-    background-color: $background-color;
-    width: 28rem;
-    height: 28rem;
-    padding: 0 2.5rem;
-
-    .login__welcome {
+    &__contents{
+        display: flex;
+        flex-direction: column;
+        background-color: $background-color;
+        width: 28rem;
+        height: 28rem;
+        padding: 0 2.5rem;
+    }
+    &__welcome{
         display: flex;
         width: 100%;
         align-items: center;
         margin-bottom: -0.5rem;
-
-        .signIn__message {
-            font-weight: 500;
+    }
+    &__message{
+        font-weight: 500;
             color:$color-heading;
             font-size: 1rem;
+    }
 
-        }
-
-        img {
-            height: 1.5rem;
+    &__img{
+        height: 1.5rem;
             aspect-ratio: 1 / 1;
             margin-right: 14rem;
-        }
     }
-
-    .login__intro {
-
+    &__intro{
         font-size: 0.7rem;
         color:$color-text-secondary;
-
     }
-
-    .login__options {
-
+    &__options{
         color:$color-text-secondary;
         font-size: 0.8rem;
         display: flex;
         justify-content: space-between;
         width: 140%;
         margin-top: 2rem;
-
-        a {
-
-            color:$color-primary;
+    }
+    &__link{
+        color:$color-primary;
             text-decoration:underline dotted;
 
-        }
-
     }
-
-    .login__line {
-
+    &__line{
         height: 1px;
         width: 100%;
         border-bottom: 1px solid $line-divider;
@@ -75,9 +60,7 @@
         align-self: center;
 
     }
-
-    .login__submit {
-
+    &__submit{
         background-color: $color-primary;
         color: $color-funds-text;
         width: 5rem;
@@ -87,5 +70,4 @@
         border: none;
 
     }
-
-}
+}   
