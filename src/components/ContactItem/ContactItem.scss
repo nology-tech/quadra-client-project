@@ -1,0 +1,27 @@
+@use "../../styles/variables" as *;
+@use "../../styles/typography" as *;
+
+.contacts {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    color: $color-text;
+    font-weight: 400;
+    font-size: 0.8rem;
+    line-height: 1.25rem;
+    width: 98vw;
+    height: 3.5rem;
+    font-family: $font-heading;
+    background: $color-currency-background;
+    padding: 0.5rem;
+    &__image {
+        &--bankImage {
+            width: 1.8rem;
+            height: 1.8rem;
+        }
+        &--deleteIcon {
+            width: 1rem;
+            height: 1rem;
+            margin-top: 0.5rem;
+        }
+    }
+}

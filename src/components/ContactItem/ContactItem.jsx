@@ -1,7 +1,7 @@
-import "./Contacts.scss";
+import "./ContactItem.scss";
 import bin from "../../assets/images/bin.png";
 
-const Contacts = ({bankImage, userName, sortCode, accNo, bankName, iban}) =>{
+const ContactItem = ({bankImage, userName, sortCode, accNo, bankName, iban}) =>{
 
     return(
         <div className="contacts">
@@ -16,4 +16,4 @@ const Contacts = ({bankImage, userName, sortCode, accNo, bankName, iban}) =>{
     )
 }
 
-export default Contacts;
+export default ContactItem;
