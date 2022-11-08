@@ -2,6 +2,7 @@ import "./Login.scss";
 import hand from "../../assets/images/hello.svg";
 import InputBox from "../../components/InputBox/InputBox";
 import Logo from "../../components/Logo/Logo";
+import AuthNav from "../../components/AuthNav/AuthNav";
 import Button from "../../components/Button/Button";
 import {useState, useEffect} from 'react';
 import { useNavigate } from "react-router-dom";
@@ -9,7 +10,7 @@ import app from "../../firebase.js";
 import {
     getAuth,
     signInWithEmailAndPassword
-  } from "firebase/auth";
+} from "firebase/auth";
 
 const Login = ({saveUser}) => {
 
@@ -69,34 +70,36 @@ const Login = ({saveUser}) => {
         }
 
     return (
-
-        <div className="signIn">
-            <Logo isTextDark={isTextDark}/>
-            <div className="signIn__welcome">
-                <p className="signIn__message">Welcome Back!</p>
-                <img src={hand} alt="welcome"></img>
+        <div className="login">
+            <AuthNav isLogin={false}/>
+            <div className="signIn">
+                <Logo isTextDark={isTextDark}/>
+                <div className="signIn__welcome">
+                    <p className="signIn__message">Welcome Back!</p>
+                    <img src={hand} alt="welcome"></img>
+                </div>
+                <p className="signIn__intro">Lorem ipsium dolor sit amet, consectetur adipiscing elit.</p>
+                <InputBox 
+                    title="Email"
+                    inputType="text"
+                    errorMessage={invalidEmail} 
+                    successMessage=""
+                    onChange={handleEmail}
+                />
+                <InputBox 
+                    title="Password"
+                    inputType="password"
+                    errorMessage={invalidPassword} 
+                    successMessage=""
+                    onChange={handlePassword}
+                />
+                <div className="signIn__options">
+                    <p>Don&apos;t have an account? <a>Sign Up</a></p>
+                    <p><a>Forgotten Password?</a></p>
+                </div>
+                <div className="signIn__line"></div>
+                <Button className="signIn__submit" buttonText={"Login"} handleClick={handleLogin} />
             </div>
-            <p className="signIn__intro">Lorem ipsium dolor sit amet, consectetur adipiscing elit.</p>
-            <InputBox 
-                title="Email"
-                inputType="text"
-                errorMessage={invalidEmail} 
-                successMessage=""
-                onChange={handleEmail}
-            />
-            <InputBox 
-                title="Password"
-                inputType="password"
-                errorMessage={invalidPassword} 
-                successMessage=""
-                onChange={handlePassword}
-            />
-            <div className="signIn__options">
-                <p>Don&apos;t have an account? <a>Sign Up</a></p>
-                <p><a>Forgotten Password?</a></p>
-            </div>
-            <div className="signIn__line"></div>
-            <Button className="signIn__submit" buttonText={"Login"} handleClick={handleLogin} />
         </div>
     );
 
