@@ -12,7 +12,7 @@
         height: 93vh;
     }
 }   
-.signIn {
+.login__form {
     display: flex;
     flex-direction: column;
     background-color: $background-color;
@@ -20,13 +20,13 @@
     height: 28rem;
     padding: 0 2.5rem;
 
-    &__welcome {
+    .login__welcome {
         display: flex;
         width: 100%;
         align-items: center;
         margin-bottom: -0.5rem;
 
-        .welcome__text {
+        .login__text {
             font-weight: 500;
             color:$color-heading;
             font-size: 1rem;
@@ -40,14 +40,14 @@
         }
     }
 
-    &__intro {
+    .login__intro {
 
         font-size: 0.7rem;
         color:$color-text-secondary;
 
     }
 
-    &__options {
+    .login__options {
 
         color:$color-text-secondary;
         font-size: 0.8rem;
@@ -65,7 +65,7 @@
 
     }
 
-    &__line {
+    .login__line {
 
         height: 1px;
         width: 100%;
@@ -76,7 +76,7 @@
 
     }
 
-    &__submit {
+    .login__submit {
 
         background-color: $color-primary;
         color: $color-funds-text;

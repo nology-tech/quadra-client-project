@@ -16,13 +16,13 @@ const Login = () => {
         <div className="login">
             <AuthNav isLogin={false}/>
             <div className="login__content">
-                <form className="signIn" onSubmit={handleSubmit}>
+                <form className="login__form" onSubmit={handleSubmit}>
                     <Logo isTextDark={isTextDark}/>
-                    <div className="signIn__welcome">
-                        <p className="welcome__text">Welcome Back!</p>
+                    <div className="login__welcome">
+                        <p className="login__text">Welcome Back!</p>
                         <img src={hand} alt="welcome"></img>
                     </div>
-                    <p className="signIn__intro">Lorem ipsium dolor sit amet, consectetur adipiscing elit.</p>
+                    <p className="login__intro">Lorem ipsium dolor sit amet, consectetur adipiscing elit.</p>
                     <InputBox 
                         title="Email"
                         inputType="text"
@@ -35,12 +35,12 @@ const Login = () => {
                         errorMessage="" 
                         successMessage=""
                     />
-                    <div className="signIn__options">
+                    <div className="login__options">
                         <p>Don&apos;t have an account? <a>Sign Up</a></p>
                         <p><a>Forgotten Password?</a></p>
                     </div>
-                    <div className="signIn__line"></div>
-                    <input type="submit" value="Login" className="signIn__submit"/>
+                    <div className="login__line"></div>
+                    <input type="submit" value="Login" className="login__submit"/>
                 </form>
             </div>
 
