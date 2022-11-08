@@ -1,6 +1,7 @@
 import "./Contacts.scss";
+import bin from "../../assets/images/bin.png";
 
-const Contacts = ({bankImage, userName, sortCode, accNo, bankName, iban, deleteIcon}) =>{
+const Contacts = ({bankImage, userName, sortCode, accNo, bankName, iban}) =>{
 
     return(
         <div className="contacts">
@@ -10,7 +11,7 @@ const Contacts = ({bankImage, userName, sortCode, accNo, bankName, iban, deleteI
             <p className="contacts__accNo">{accNo}</p>
             <p className="contacts__bankName">{bankName}</p>
             <p className="contacts__iban">{iban}</p>
-            <img className="contacts__image contacts__image--deleteIcon" src={deleteIcon}></img>
+            <img className="contacts__image contacts__image--deleteIcon" src={bin}></img>
         </div>
     )
 }
