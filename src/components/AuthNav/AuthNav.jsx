@@ -7,7 +7,7 @@ const AuthNav = ({ isLogin }) => {
     <div className="authNav">
       <Logo isTextDark={true} />
       <Button
-        classNaming="largeButton"
+        buttonClass="largeButton"
         buttonText={isLogin ? "Login" : "Sign Up"}
         handleClick={""}
       />

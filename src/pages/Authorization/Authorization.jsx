@@ -10,13 +10,15 @@ const Authorization = ({ buttonText, isLogin }) => {
     <div className="signIn-container">
       <div className="signIn-container__nav">
         <div className="signIn-container__company">
-          <Logo isTextDark={isTextDark}/>
+          <Logo isTextDark={isTextDark} />
         </div>
         <div className="signIn-container__button">
-          <Button classNaming="largeButton" buttonText={buttonText} />
+          <Button buttonClass="largeButton" buttonText={buttonText} />
         </div>
       </div>
-      <div className="signIn-container__main">{isLogin ? <Login /> : <SignUp />}</div>
+      <div className="signIn-container__main">
+        {isLogin ? <Login /> : <SignUp />}
+      </div>
     </div>
   );
 };

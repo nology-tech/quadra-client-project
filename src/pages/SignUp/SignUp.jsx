@@ -139,7 +139,7 @@ const SignUp = ({ login }) => {
           </div>
           <div className="signUp__continue">
             <Button
-              classNaming="largeButton"
+              buttonClass="largeButton"
               buttonText="Continue >"
               handleClick={register}
             />

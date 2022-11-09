@@ -55,7 +55,7 @@ const Transfer = ({
             <h1 className="receipt__bottom__box--end">{sendAmount + fee}</h1>
           </div>
           <div className="receipt__button">
-            <Button classNaming="largeButton" buttonText={"Continue"} />
+            <Button buttonClass="largeButton" buttonText={"Continue"} />
           </div>
         </div>
       </div>

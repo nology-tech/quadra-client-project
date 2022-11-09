@@ -58,7 +58,7 @@ const TransferSend = ({
           <h1 className="transferForm__head">To</h1>
           <div className="transferForm__buttons">
             <div className="transferForm__select">
-              <Button classNaming="largeButton" buttonText="Select Recipient" />
+              <Button buttonClass="largeButton" buttonText="Select Recipient" />
             </div>
             <div className="transferForm__new" onClick={buttonPress}>
               <img src={Plus} alt="plus" />

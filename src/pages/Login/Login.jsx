@@ -21,7 +21,7 @@ const Login = ({ saveUser }) => {
   const auth = getAuth(app);
 
   useEffect(() => {
-    validatEmail();
+    validateEmail();
   }, [email]);
 
   const handlePassword = (event) => {
@@ -32,7 +32,7 @@ const Login = ({ saveUser }) => {
     setEmail(event.target.value);
   };
 
-  const validatEmail = () => {
+  const validateEmail = () => {
     if (!emailRegex.test(email)) {
       setInvalidEmail("Please enter a valid email");
     } else {
@@ -103,7 +103,7 @@ const Login = ({ saveUser }) => {
           <div className="signIn__line"></div>
           <div className="signIn__submit">
             <Button
-              classNaming="largeButton"
+              buttonClass="largeButton"
               buttonText={"Login"}
               handleClick={handleLogin}
             />

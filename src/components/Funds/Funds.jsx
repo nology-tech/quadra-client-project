@@ -1,14 +1,16 @@
 import "./Funds.scss";
-import Button from '../Button/Button';
+import Button from "../Button/Button";
 
-const Funds = ({amount, isManage}) => {
-    return(
-        <div className="funds">
-            <h4 className="funds__title">Your Funds:</h4>
-            <p className="funds__amount">£{amount}</p>
-            {isManage && <Button classNaming="invertedButton" buttonText={"Manage"}/>}
-        </div>
-    )
-}
+const Funds = ({ amount, isManage }) => {
+  return (
+    <div className="funds">
+      <h4 className="funds__title">Your Funds:</h4>
+      <p className="funds__amount">£{amount}</p>
+      {isManage && (
+        <Button buttonClass="invertedButton" buttonText={"Manage"} />
+      )}
+    </div>
+  );
+};
 
 export default Funds;
