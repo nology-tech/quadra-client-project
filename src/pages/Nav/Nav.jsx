@@ -5,8 +5,23 @@ import Wallet from "../../assets/images/non-focus-wallet.png";
 import LiveRate from "../../assets/images/non-focus-graph.png";
 import Convert from "../../assets/images/non-focus-convert.png";
 import Transfer from "../../assets/images/transfer-focus.png";
+import Logout from "../../assets/images/logout.png";
+import { getAuth, signOut } from "firebase/auth";
+import { useNavigate } from "react-router-dom";
 
 const Nav = () => {
+
+  const logoutUser = () => {
+    signOut(auth).then(() => {
+      navigate("/");
+    }).catch((error) => { 
+      console.log(error)  
+    });
+  }
+
+  const auth = getAuth();
+  const navigate = useNavigate();
+
   return (
     <div className="nav">
       <div className="nav__logo">
@@ -39,6 +54,11 @@ const Nav = () => {
           <p>Contacts</p>
         </div>
       </div>
+      <div>
+        <img src={Logout} alt="logout" />
+      </div>
+
+      <button onClick={logoutUser}>sign out</button>
     </div>
   );
 };
