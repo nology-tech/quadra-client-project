@@ -43,18 +43,22 @@ const TransferSend = ({
           <div className="transferForm__greyLine"></div>
           <div className="transferForm__totalWrapper">
             <h2 className="transferForm__total">Total</h2>
-            <p className="transferForm__total transferForm__total--amount">{total}</p>
+            <p className="transferForm__total transferForm__total--amount">
+              {total}
+            </p>
           </div>
           <div className="transferForm__remainderWrapper">
             <h2 className="transferForm__remainder">Funds Remaining</h2>
-            <p className="transferForm__remainder transferForm__remainder--amount">{fundsRem}</p>
+            <p className="transferForm__remainder transferForm__remainder--amount">
+              {fundsRem}
+            </p>
           </div>
         </div>
         <div className="transferForm__sendWrapper">
           <h1 className="transferForm__head">To</h1>
           <div className="transferForm__buttons">
             <div className="transferForm__select">
-              <Button buttonText="Select Recipient" />
+              <Button buttonClass="largeButton" buttonText="Select Recipient" />
             </div>
             <div className="transferForm__new" onClick={buttonPress}>
               <img src={Plus} alt="plus" />

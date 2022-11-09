@@ -18,6 +18,7 @@ const LiveRate = ({
       <p className="live-rate__amount">{amount}</p>
       <p className="live-rate__rate">{!isCurrentCurrency && rate}</p>
       <Button
+        buttonClass={isCurrentCurrency ? "whiteBorderButton" : "corneredButton"}
         buttonText={isCurrentCurrency ? "Edit" : "Send"}
         handleClick={handleClick}
       />
