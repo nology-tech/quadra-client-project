@@ -3,8 +3,8 @@
 
 .funds {
   background-size: cover;
-  width: 16.4rem;
-  height: 15.7rem;
+  width: 14rem;
+  height: 13.7rem;
   left: 0rem;
   top: 0rem;
   background-image: url("../../assets/background-images/funds-background.png");
@@ -15,11 +15,13 @@
   font-weight: 500;
 
   &__title {
-    font-size: 1.2rem;
+    font-size: 1rem;
     font-family: $font-main;
+    margin-bottom: -1.5rem;
   }
   &__amount {
-    font-size: 3rem;
+    font-size: 2.5rem;
     font-family: $font-main;
+    margin-bottom: 2rem;
   }
 }

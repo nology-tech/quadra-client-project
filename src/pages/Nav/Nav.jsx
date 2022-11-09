@@ -5,6 +5,8 @@ import Wallet from "../../assets/images/non-focus-wallet.png";
 import LiveRate from "../../assets/images/non-focus-graph.png";
 import Convert from "../../assets/images/non-focus-convert.png";
 import Transfer from "../../assets/images/transfer-focus.png";
+import Button from "../../components/Button/Button";
+import LogOut from "../../assets/images/logOut.png"
 
 const Nav = () => {
   return (
@@ -12,6 +14,7 @@ const Nav = () => {
       <div className="nav__logo">
         <Logo isTextDark={true}/>
       </div>
+
       <div className="nav__menu">
         <h3>Menu</h3>
         <div className="nav__button">
@@ -38,6 +41,11 @@ const Nav = () => {
           <img src={Contacts} alt="contacts"></img>
           <p>Contacts</p>
         </div>
+      </div>
+
+      <div className="nav__logoutWrapper">
+        <Button buttonClass="largeButton" buttonText="Sign Out"  />
+        <img src={LogOut} alt={"logout"} />
       </div>
     </div>
   );
