@@ -1,91 +1,67 @@
-    @use "../../styles/variables" as *;
+@use "../../styles/variables" as *;
 
-.login {
-    background-color: $color-background;
-    height: 100vh;
-    overflow-y: hidden;
-    overflow-x: hidden;
-    &__content {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        height: 93vh;
-    }
-}   
-.login__form {
+.signIn {
+  background-color: $color-background;
+  height: 100vh;
+  &__form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 93vh;
+  }
+  &__contents {
     display: flex;
     flex-direction: column;
     background-color: $background-color;
     width: 28rem;
     height: 28rem;
     padding: 0 2.5rem;
+  }
+  &__welcome {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    margin-bottom: -0.5rem;
+  }
+  &__message {
+    font-weight: 500;
+    color: $color-heading;
+    font-size: 1rem;
+  }
 
-    .login__welcome {
-        display: flex;
-        width: 100%;
-        align-items: center;
-        margin-bottom: -0.5rem;
-
-        .signIn__message {
-            font-weight: 500;
-            color:$color-heading;
-            font-size: 1rem;
-
-        }
-
-        img {
-            height: 1.5rem;
-            aspect-ratio: 1 / 1;
-            margin-right: 14rem;
-        }
-    }
-
-    .login__intro {
-
-        font-size: 0.7rem;
-        color:$color-text-secondary;
-
-    }
-
-    .login__options {
-
-        color:$color-text-secondary;
-        font-size: 0.8rem;
-        display: flex;
-        justify-content: space-between;
-        width: 140%;
-        margin-top: 2rem;
-
-        a {
-
-            color:$color-primary;
-            text-decoration:underline dotted;
-
-        }
-
-    }
-
-    .login__line {
-
-        height: 1px;
-        width: 100%;
-        border-bottom: 1px solid $line-divider;
-        margin-top: 1rem;
-        margin-bottom: 1rem;
-        align-self: center;
-
-    }
-
-    .login__submit {
-
-        background-color: $color-primary;
-        color: $color-funds-text;
-        width: 5rem;
-        height: 2rem;
-        align-self: flex-end;
-        border-radius: 5px;
-        border: none;
-
-    }
-
+  &__img {
+    height: 1.5rem;
+    aspect-ratio: 1 / 1;
+    margin-right: 14rem;
+  }
+  &__intro {
+    font-size: 0.7rem;
+    color: $color-text-secondary;
+  }
+  &__options {
+    color: $color-text-secondary;
+    font-size: 0.8rem;
+    display: flex;
+    justify-content: space-between;
+    width: 140%;
+    margin-top: 2rem;
+  }
+  &__link {
+    color: $color-primary;
+    text-decoration: underline dotted;
+  }
+  &__line {
+    height: 1px;
+    width: 100%;
+    border-bottom: 1px solid $line-divider;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    align-self: center;
+  }
+  &__submit {
+    width: 100%;
+    height: 2.5rem;
+    display: flex;
+    justify-content: flex-end;
+  }
 }
