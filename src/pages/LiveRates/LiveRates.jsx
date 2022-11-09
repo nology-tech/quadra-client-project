@@ -3,35 +3,48 @@ import LiveRate from "../../components/LiveRate/LiveRate";
 import "./LiveRates.scss";
 import { getCurrencyGBP } from "../../utils/apiUtils";
 import iconMap from "../../utils/currencyIcons";
+import { Dropdown } from 'rsuite';
+import Button from "../../components/Button/Button";
 
 const LiveRates = () => {
   const [currRates, setCurrRates] = useState({});
   const [selectCurr, setSelectCurr] = useState(["GBP"]);
+  const [dropdownCurr, setDropdownCurr] = useState("GBP");
+  const newCurrencies = Object.keys(iconMap);
+  const newCurrencyOptions = newCurrencies.map(currency => <Dropdown.Item key={currency} >{currency}</Dropdown.Item>);
 
+
+ 
   const getData = async () => {
     const currencies = await getCurrencyGBP();
     setCurrRates(currencies);
+    
+    
   };
 
   useEffect(() => {
     getData();
   }, []);
 
-  const addRate = (e) => {
-    if (!selectCurr.includes(e.target.value)) {
-      setSelectCurr([...selectCurr, e.target.value]);
+  const addRate = () => {
+    if (!selectCurr.includes(dropdownCurr)) {
+      setSelectCurr([...selectCurr, dropdownCurr]);
     }
     return;
   };
 
+  const changeSelectedCurrency = (eventKey, event) => {
+    setDropdownCurr(event.target.textContent);
+  }
+
   const singleRate = selectCurr.map((item, i) => {
-    // console.log(iconMap["USD"]);
     if (i === 0) {
       return (
         <LiveRate
           name={item}
           amount={currRates[item]}
           key={i}
+          rate={0.12}
           flagImage={iconMap[item]}
           isCurrentCurrency={true}
         />
@@ -42,6 +55,7 @@ const LiveRates = () => {
           name={item}
           amount={currRates[item]}
           key={i}
+          rate={0.12}
           flagImage={iconMap[item]}
           isCurrentCurrency={false}
         />
@@ -75,15 +89,13 @@ const LiveRates = () => {
         </div>
         <div>{singleRate}</div>
       </div>
-      <button onClick={addRate} value="USD">
-        USD
-      </button>
-      <button onClick={addRate} value="AUD">
-        AUD
-      </button>
-      <button onClick={addRate} value="JPY">
-        JPY
-      </button>
+      <div className="dropdown-container">
+      <Dropdown title={dropdownCurr} icon={iconMap[dropdownCurr]} onSelect={changeSelectedCurrency} value={dropdownCurr}>
+        {newCurrencyOptions}
+      </Dropdown>
+      <Button buttonText={"Add Currency"} handleClick={addRate}/>
+      </div>
+      
     </>
   );
 };
