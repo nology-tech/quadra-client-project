@@ -14,12 +14,9 @@ const LiveRates = () => {
   const newCurrencyOptions = newCurrencies.map(currency => <Dropdown.Item className="dropdown-container__dropdown-item" key={currency} >{currency}</Dropdown.Item>);
 
 
- 
   const getData = async () => {
     const currencies = await getCurrencyGBP();
     setCurrRates(currencies);
-    
-    
   };
 
   useEffect(() => {

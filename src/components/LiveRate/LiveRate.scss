@@ -6,7 +6,6 @@
   grid-template-columns: 3em 1fr 1fr 1fr 1fr 3em;
   
   background-color: $color-input-background;
-  // padding: 0.3rem 2rem;
   color: $color-text-secondary;
   &__icon{
     grid-column-start: 1;
@@ -18,7 +17,6 @@
     grid-column-end: 3;
   }
   &__name {
- 
     font-family: $font-main;
     font-weight: 400;
     font-size: 0.9rem;
@@ -32,7 +30,6 @@
     grid-column-end: 4;
   }
   &__rate {
-  
     font-family: $font-main;
     font-weight: 600;
     font-size: 0.9rem;

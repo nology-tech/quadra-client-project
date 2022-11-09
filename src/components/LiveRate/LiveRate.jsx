@@ -1,6 +1,5 @@
 import "./LiveRate.scss";
 import Button from "../Button/Button";
-// import GBP from "../../assets/images/gbp.png";
 const LiveRate = ({
   name,
   amount = "1.00",
