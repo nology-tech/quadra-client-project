@@ -10,7 +10,7 @@ import { useState, useEffect } from "react";
 
 import AuthNav from "../../components/AuthNav/AuthNav";
 
-const SignUp = ({ login }) => {
+const SignUp = ({ login, saveUser }) => {
   const [registerEmail, setRegisterEmail] = useState("");
   const [registerPassword, setRegisterPassword] = useState("");
   const [confirmPassword, setConfirmPassword] = useState("");
@@ -80,7 +80,7 @@ const SignUp = ({ login }) => {
       createUserWithEmailAndPassword(auth, registerEmail, registerPassword)
         .then((userCredential) => {
           const user = userCredential.user;
-          console.log(user);
+          saveUser(user);
           navigate("/wallet");
         })
         .catch((error) => {
