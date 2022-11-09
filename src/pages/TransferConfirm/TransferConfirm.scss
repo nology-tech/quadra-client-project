@@ -1,0 +1,252 @@
+@use "../../styles/_variables.scss" as *;
+@use "../../styles/_typography.scss" as *;
+
+.transfer-info {
+height: 30%;
+  width: 60%;
+  border: 1px solid green;
+  // margin: 2rem 0 2rem 1rem;
+  padding: 0;
+margin: 0;
+  &__transfer {
+    font-size: 0.7rem;
+    color: $color-primary;
+    letter-spacing: 0.05rem;
+    font-family: $font-heading;
+    border: 1px solid green;
+padding: 0;
+margin: 0;
+  }
+  &__heading {
+    font-family: $font-heading;
+    font-weight: 400;
+    font-size: 1.5rem;
+    border: 1px solid green;
+    padding: 0;
+margin: 0;
+  }
+  &__content {
+    font-family: $font-main;
+    color: $color-text-secondary;
+    font-size: 0.7em;
+    word-spacing: 0.2rem;
+    line-height: 1rem;
+    border: 1px solid green;
+
+  }
+}
+
+.receipt {
+  background-color: $color-currency-background;
+  // margin-left: 0.5rem;
+  width: 40%;
+  height: 60%;
+  // padding: 3% 5% 3% 5%;
+  // padding-left: 1rem;
+  // margin: 2rem 0 2rem 1rem;
+  .transferForm {
+    display: flex;
+    flex-direction: column;
+    // padding: 2rem 3.5rem;
+    // margin: 1rem 2rem;
+    background-color: $color-input-background;
+  
+    &__head {
+      font-family: $font-heading;
+      font-weight: 400;
+      letter-spacing: 0.05rem;
+      font-size: 1.5rem;
+    }
+  
+    &__inner {
+      border-radius: 1rem;
+      // margin-top: 1rem;
+      width: 100%;
+      // padding: 1rem 2rem;
+      background-color: $line-divider;
+    }
+  
+    &__user {
+      color: $color-primary;
+      font-family: $font-main;
+      font-size: 1rem;
+      font-weight: 400;
+    }
+  
+    &__infoWrapper {
+      display: flex;
+      // height: 1.5rem;
+    }
+  
+    &__infoName {
+      font-family: $font-main;
+      font-weight: 350;
+      font-size: 0.65rem;
+      color: $color-text;
+    }
+  
+    &__infoNum {
+      font-size: 0.65rem;
+      color: $color-currency;
+      text-align: end;
+    }
+  
+    &__greyLine {
+      border-top: 0.005rem solid $color-background;
+      // margin-top: 1rem;
+    }
+    
+    &__totalWrapper {
+      display: flex;
+      align-items: center;
+      margin-top: 0.5rem;
+    }
+  
+    &__total {
+      font-family: $font-main;
+      font-weight: 550;
+      font-size: 0.9rem;
+  
+      &--amount {
+        text-align: end;
+
+      }
+    }
+      
+  &__remainderWrapper {
+    display: flex;
+    // height: 0.7rem;
+    align-items: center;
+    justify-content: space-evenly;
+
+  }
+
+  &__remainder {
+    font-family: $font-main;
+    font-weight: 400;
+    font-size: 0.5rem;
+    color: $color-text-secondary;
+
+
+    &--amount {
+    text-align: end;
+
+    }
+  }
+  &__sendWrapper {
+    margin-top: 1rem;
+  }
+  }  
+  .receipt__head {
+    font-size: 1rem;
+    font-family: $font-heading;
+    color: $color-heading;
+    font-weight: 500;
+    letter-spacing: 0.05rem;
+  }
+
+  .receipt__box {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: auto;
+    border: 0.001rem solid $color-text-secondary;
+    background-color: white;
+    // padding: 1% 4% 1% 4%;
+    // margin-bottom: 5%;
+    .receipt__currency {
+      font-size: 0.7rem;
+      width: auto;
+      font-family: $font-main;
+      color: $color-text;
+      font-weight: 400;
+    }
+  }
+
+  .additionalCost {
+    // margin-top: 2.2rem;
+  }
+  .additionalCost__info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    // height: auto;
+    width: auto;
+
+    .additionalCost__info--value {
+      font-size: 0.8rem;
+      width: auto;
+      color: $color-text-secondary;
+      font-family: $font-heading;
+      font-weight: 400;
+    }
+
+    #delivery {
+      width: 35%;
+      text-align: right;
+    }
+      
+    .additionalCost__info--title {
+      color: $color-heading;
+      font-size: 1rem;
+      font-weight: 400;
+      font-family: $font-heading;
+      letter-spacing: 0.025rem;
+    }
+
+  }
+  .total{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    // margin-top: 0.5rem;
+    border-top: 0.001rem solid $color-currency;
+    width: 100%;
+    .totalContainer{
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around;
+      margin-top: 1rem;
+      width: 100%;
+
+      .totalContainer__toPay {
+        font-size: 0.7rem;
+        font-family: $font-heading;
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+        .totalContainer__value {
+            text-align: right;
+        }
+      }
+      .totalContainer__recipient {
+        font-size: 0.7rem;
+        font-family: $font-heading;
+        color: $color-primary;
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+        .totalContainer__receiveValue {
+            text-align: right;
+        }
+      }
+    }
+  }
+  .line {
+    border-bottom: 1px solid $color-currency;
+    margin-bottom: 1rem;
+    margin-top: 1rem;
+  }
+  .confirm {
+    display: flex;
+    text-align: end;
+    width: 100%;
+    &__cancel {
+        text-decoration: dotted;
+        color: $color-currency;
+        margin-right: 2rem;
+    }
+    
+  }
+}
