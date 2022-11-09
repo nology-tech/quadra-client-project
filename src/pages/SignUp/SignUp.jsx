@@ -92,63 +92,61 @@ const SignUp = ({ login }) => {
 
   return (
     <div className="signUp">
-      <AuthNav isLogin={true}/>
+      <AuthNav isLogin={true} />
       <div className="signUp__form">
-          <div className="signUp__contents">
-            <div className="signUp__company">
-            <Logo isTextDark={true}/>
-            </div>
-
-            <h1 className="signUp__header">Create an account</h1>
-            <p className="signUp__headerText">
-              {" "}
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit.{" "}
+        <div className="signUp__contents">
+          <div className="signUp__company">
+            <Logo isTextDark={true} />
+          </div>
+          <h1 className="signUp__header">Create an account</h1>
+          <p className="signUp__headerText">
+            {" "}
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit.{" "}
+          </p>
+          <div className="signUp__input">
+            <InputBox
+              className="signUp__input signUp__input--email"
+              title="Email"
+              inputType="text"
+              errorMessage={emailError}
+              successMessage={emailSuccess}
+              onChange={(e) => setRegisterEmail(e.target.value)}
+            />
+            <InputBox
+              className="signUp__input signUp__input--password"
+              title="Password"
+              inputType="text"
+              errorMessage={password1Error}
+              successMessage={password1Success}
+              onChange={(e) => setRegisterPassword(e.target.value)}
+            />
+            <InputBox
+              className="signUp__input signUp__input--confirmPassword"
+              title="Confirm Password"
+              inputType="text"
+              errorMessage={password2Error}
+              successMessage={password2Success}
+              onChange={(e) => setConfirmPassword(e.target.value)}
+            />
+          </div>
+          <div className="signUp__text">
+            <p className="signUp__text signUp__text--account">
+              Already have an account?
             </p>
-
-            <div className="signUp__input">
-              <InputBox
-                className="signUp__input signUp__input--email"
-                title="Email"
-                inputType="text"
-                errorMessage={emailError}
-                successMessage={emailSuccess}
-                onChange={(e) => setRegisterEmail(e.target.value)}
-              />
-
-              <InputBox
-                className="signUp__input signUp__input--password"
-                title="Password"
-                inputType="text"
-                errorMessage={password1Error}
-                successMessage={password1Success}
-                onChange={(e) => setRegisterPassword(e.target.value)}
-              />
-
-              <InputBox
-                className="signUp__input signUp__input--confirmPassword"
-                title="Confirm Password"
-                inputType="text"
-                errorMessage={password2Error}
-                successMessage={password2Success}
-                onChange={(e) => setConfirmPassword(e.target.value)}
-              />
-            </div>
-
-            <div className="signUp__text">
-              <p className="signUp__text signUp__text--account">
-                Already have an account?
-              </p>
-              <a href={login} className="signUp__text signUp__text--login">
-                Login
-              </a>
-            </div>
-
-            <div className="signUp__continue">
-              <Button buttonText="Continue >" handleClick={register} />
-            </div>
+            <a href={login} className="signUp__text signUp__text--login">
+              Login
+            </a>
+          </div>
+          <div className="signUp__continue">
+            <Button
+              buttonClass="largeButton"
+              buttonText="Continue >"
+              handleClick={register}
+            />
           </div>
         </div>
       </div>
+    </div>
   );
 };
 
