@@ -15,12 +15,12 @@ import Button from "../Button/Button";
 const ConversionResult = ({
   amount,
   fromCurrency,
-  fromCode,
+  // fromCode,
   toCurrency,
-  toCode,
+  // toCode,
   rate,
   date,
-  handleClick,
+  handleClick
 }) => {
   return (
     <div className="currencies">
@@ -29,10 +29,10 @@ const ConversionResult = ({
         <h2 className="currencies__target">{`${
           amount * rate
         } ${toCurrency}`}</h2>
-        <p className="currencies__code">{`1 ${fromCode} = ${rate} ${toCode}`}</p>
-        <p className="currencies__code">{`1 ${toCode} = ${
+        <p className="currencies__code">{`1 ${fromCurrency} = ${rate} ${toCurrency}`}</p>
+        <p className="currencies__code">{`1 ${toCurrency} = ${
           1 / rate
-        } ${fromCode}`}</p>
+        } ${fromCurrency}`}</p>
       </div>
       <div className="currencies__makeTransfer">
         <Button
