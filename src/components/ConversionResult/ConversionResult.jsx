@@ -12,22 +12,38 @@ import Button from "../Button/Button";
  * @date The Date element from the Exchage Rates return for fromCurrency.
  * @handleClick The function to be run when the "Make Transfer" button is clicked.
  */
-const ConversionResult = ({ amount, fromCurrency, fromCode, toCurrency, toCode, rate, date, handleClick }) => {
-
-    return (
-        <div className="currencies">
-            <div className="currencies__display">
-                <h5 className="currencies__source">{`${amount} ${fromCurrency} =`}</h5>
-                <h2 className="currencies__target">{`${amount * rate} ${toCurrency}`}</h2>
-                <p className="currencies__code">{`1 ${fromCode} = ${rate} ${toCode}`}</p>
-                <p className="currencies__code">{`1 ${toCode} = ${1/rate} ${fromCode}`}</p>
-            </div>
-            <div className="currencies__makeTransfer">
-                <Button buttonText="Make Transfer" handleClick={handleClick}/>
-                <p className="currencies__updateTransfer">{`${fromCurrency} to ${toCurrency} conversion -- Last Updated ${date}`}</p>
-            </div>
-        </div>
-    )
-}
+const ConversionResult = ({
+  amount,
+  fromCurrency,
+  fromCode,
+  toCurrency,
+  toCode,
+  rate,
+  date,
+  handleClick,
+}) => {
+  return (
+    <div className="currencies">
+      <div className="currencies__display">
+        <h5 className="currencies__source">{`${amount} ${fromCurrency} =`}</h5>
+        <h2 className="currencies__target">{`${
+          amount * rate
+        } ${toCurrency}`}</h2>
+        <p className="currencies__code">{`1 ${fromCode} = ${rate} ${toCode}`}</p>
+        <p className="currencies__code">{`1 ${toCode} = ${
+          1 / rate
+        } ${fromCode}`}</p>
+      </div>
+      <div className="currencies__makeTransfer">
+        <Button
+          buttonClass="invertedButton"
+          buttonText="Make Transfer"
+          handleClick={handleClick}
+        />
+        <p className="currencies__updateTransfer">{`${fromCurrency} to ${toCurrency} conversion -- Last Updated ${date}`}</p>
+      </div>
+    </div>
+  );
+};
 
 export default ConversionResult;

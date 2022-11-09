@@ -1,5 +1,4 @@
 import Funds from "../../components/Funds/Funds";
-import Contacts from "../../components/Contacts/Contacts";
 import hand from "../../assets/images/hello.svg";
 import "./Wallet.scss";
 
@@ -15,7 +14,6 @@ const Wallet = ({ amount = "0" }) => {
           <Funds amount={amount} isManage={true} />
         </div>
         <div className="wallet-ctner__contacts">
-          <Contacts />{" "}
         </div>
       </div>
     </>
