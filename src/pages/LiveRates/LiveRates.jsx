@@ -2,10 +2,11 @@ import { useEffect, useState } from "react";
 import LiveRate from "../../components/LiveRate/LiveRate";
 import "./LiveRates.scss";
 import { getCurrencyGBP } from "../../utils/apiUtils";
+import iconMap from "../../utils/currencyIcons";
 
 const LiveRates = () => {
   const [currRates, setCurrRates] = useState({});
-  const [selectCurr, setSelectCurr] = useState(["British Pound"]);
+  const [selectCurr, setSelectCurr] = useState(["GBP"]);
 
   const getData = async () => {
     const currencies = await getCurrencyGBP();
@@ -24,12 +25,14 @@ const LiveRates = () => {
   };
 
   const singleRate = selectCurr.map((item, i) => {
+    // console.log(iconMap["USD"]);
     if (i === 0) {
       return (
         <LiveRate
           name={item}
           amount={currRates[item]}
           key={i}
+          flagImage={iconMap[item]}
           isCurrentCurrency={true}
         />
       );
@@ -39,6 +42,7 @@ const LiveRates = () => {
           name={item}
           amount={currRates[item]}
           key={i}
+          flagImage={iconMap[item]}
           isCurrentCurrency={false}
         />
       );
@@ -71,14 +75,14 @@ const LiveRates = () => {
         </div>
         <div>{singleRate}</div>
       </div>
-      <button onClick={addRate} value="AED">
-        AED
-      </button>
       <button onClick={addRate} value="USD">
         USD
       </button>
-      <button onClick={addRate} value="VND">
-        VND
+      <button onClick={addRate} value="AUD">
+        AUD
+      </button>
+      <button onClick={addRate} value="JPY">
+        JPY
       </button>
     </>
   );

@@ -8,10 +8,14 @@ import Logo from "../../components/Logo/Logo.jsx";
 import LandingNav from '../../components/LandingNav/LandingNav';
 import Feature from "../../components/Feature/Feature.jsx";
 import {Link} from "react-router-dom";
+import LiveRates from "../LiveRates/LiveRates";
+
 
 const Landing = () => {
+  
     return(
         <>
+        <LiveRates/>
         <header className='landing-header'>
             <Logo isTextDark={true} />
             <LandingNav isFooter={false}/>
