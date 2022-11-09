@@ -1,5 +1,4 @@
 import Funds from "../../components/Funds/Funds";
-import Contacts from "../../components/Contacts/Contacts";
 import hand from "../../assets/images/hello.svg";
 import "./Wallet.scss";
 
