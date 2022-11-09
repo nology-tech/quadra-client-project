@@ -1,15 +1,16 @@
 @use "../../styles/variables" as *;
 @use "../../styles/typography" as *;
 
-.wallet-ctner {
+.wallet {
   display: flex;
   flex-direction: column;
   height: 100vh;
   width: 83%;
   padding-left: 2rem;
+  margin-left: 11rem;
   &__message {
     display: flex;
-    width: 15%;
+    width: 30%;
     align-items: center;
     margin: 0 0 1rem 2.5rem;
     .welcome__text {
@@ -28,18 +29,7 @@
   &__funds {
     margin: 0 0 5rem 2rem;
   }
-}
 
-.wallet {
-  display: flex;
-  width: 100%;
-  height: auto;
-  &-ctner {
-    width: 85%;
-  }
-  &__nav {
-    width: 15%;
-  }
   &__user {
     display: flex;
     justify-content: flex-end;

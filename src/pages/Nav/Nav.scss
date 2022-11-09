@@ -2,27 +2,11 @@
 @use "../../styles/variables" as *;
 
 .nav {
-  position: absolute;
+  position: fixed;
   width: 17%;
   border-right: 0.2rem solid;
   border-right-color: $line-divider;
   height: 100vh;
-
-  &__logoutWrapper {
-    align-items: center;
-    margin: 14rem 0 1rem 1.5rem;
-    display: flex;
-    justify-content: center;
-    height: 2.5rem;
-    width: 9rem;
-    background-color: $color-primary;
-    border-radius: 0.3rem;
-    img{
-      width: 1.5rem;
-      height: 1.5rem;
-      margin-left: -0.5rem;
-    }
-  }
 
   &__logo {
     margin-left: 1rem;
@@ -62,17 +46,20 @@
       font-family: $font-main;
     }
   }
-  .nav__logoutWrapper {
+
+  &__logoutWrapper {
     display: flex;
     justify-content: center;
     align-items: center;
     height: 2.5rem;
-    width: 10rem;
+    width: 8.5rem;
     background-color: $color-primary;
     border-radius: 0.3rem;
+    margin: 14rem 0 2rem 1.5rem;
     img{
-      width: 2rem;
-      height: 2rem;
+      width: 1.5rem;
+      height: 1.5rem;
+      margin-left: -0.5rem;
     }
 }
 }
