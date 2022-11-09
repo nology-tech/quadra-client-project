@@ -3,11 +3,11 @@ import "./Transfer.scss";
 import Button from "../../components/Button/Button";
 const Transfer = ({
   sendCurr = "GBP - British Pounds",
-  sendAmount = 1000.00,
+  sendAmount = 1000.0,
   recCurr = "USD - US Dollars",
-  recAmount = 1359.50,
+  recAmount = 1359.5,
   rate = 1.3595,
-  fee = 20.00,
+  fee = 20.0,
 }) => {
   return (
     <>
@@ -55,7 +55,7 @@ const Transfer = ({
             <h1 className="receipt__bottom__box--end">{sendAmount + fee}</h1>
           </div>
           <div className="receipt__button">
-            <Button buttonText={"Continue"} />
+            <Button buttonClass="largeButton" buttonText={"Continue"} />
           </div>
         </div>
       </div>

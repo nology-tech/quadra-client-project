@@ -1,11 +1,63 @@
+@use "../../styles/variables" as *;
+@use "../../styles/typography" as *;
 @import url("https://fonts.googleapis.com/css2?family=Outfit&display=swap");
 
 .largeButton {
-  background-color: #00ced4;
-  color: #ffffff;
-  padding: 10px 20px;
+  background-color: $color-primary;
+  color: $background-color;
+  padding: 0.6rem 1.2rem;
   font-family: "Outfit", sans-serif;
-  font-size: 16px;
+  font-size: 1rem;
   font-weight: 700;
   cursor: pointer;
+  border: none;
+  border-radius: 0.2rem;
+}
+
+.corneredButton {
+  background-color: $color-primary;
+  color: $background-color;
+  padding: 0.6rem 1.2rem;
+  font-family: "Outfit", sans-serif;
+  font-size: 1rem;
+  font-weight: 700;
+  cursor: pointer;
+  border: none;
+}
+
+.invertedButton {
+  background-color: $background-color;
+  color: $color-primary;
+  padding: 0.6rem 1.2rem;
+  font-family: "Outfit", sans-serif;
+  font-size: 1rem;
+  font-weight: 700;
+  cursor: pointer;
+  border: 0.15rem solid $color-primary;
+  border-radius: 0.2rem;
+}
+
+.addCurrency {
+  border: 1px dashed $color-text-secondary;
+  border-radius: 0.5rem ;
+  padding: 0.6rem 1.2rem;
+  color: $color-text-secondary;
+  background-color: white;
+  font-family: $font-main;
+  font-weight: 600;
+  font-size: 1rem;
+  text-align: center;
+  font-style: normal;
+  cursor: pointer;
+}
+
+.whiteBorderButton {
+  background-color: $color-primary;
+  color: $background-color;
+  padding: 0.6rem 1.2rem;
+  font-family: "Outfit", sans-serif;
+  font-size: 1rem;
+  font-weight: 700;
+  cursor: pointer;
+  border: 0.01rem solid white;
 }
