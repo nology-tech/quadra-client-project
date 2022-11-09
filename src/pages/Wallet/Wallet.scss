@@ -8,7 +8,7 @@
   width: 100%;
   &__message {
     display: flex;
-    width: 12%;
+    width: 50%;
     align-items: center;
     margin: 4rem 0 2rem 3rem;
 
@@ -19,6 +19,7 @@
     img {
       height: 2rem;
       aspect-ratio: 1 / 1;
+      margin-right: 1rem
     }
   }
 
