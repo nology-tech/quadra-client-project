@@ -1,15 +1,21 @@
 @use "../../styles/variables" as *;
 @use "../../styles/typography" as *;
 
-.signUp {
-  padding: 0.5rem;
-  padding-left: 1rem;
-  width: 40rem;
-  background-color: white;
-  padding-top: 2rem;
 
-  &__company {
+.signUp {
+  background-color: $color-background;
+  height: 100vh;
+  &__form {
     display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 93vh;
+  }
+
+  &__contents {
+    padding: 0.5rem 2rem;
+    width: 32rem;
+    background-color: $background-color;
   }
 
   &__header {
@@ -35,19 +41,17 @@
     font-family: $font-login-text;
     color: $color-text;
     display: flex;
-
     &--login {
-      margin-left: -27rem;
       padding-top: 0.5rem;
       color: $color-primary;
       border-bottom: 0.2rem dotted;
+      margin-right: 14rem;
     }
   }
 
   &__continue {
-    margin-left: 19rem;
-    margin-top: 2rem;
     width: 10rem;
+    margin: 1.3rem 0 0.5rem 21rem;
   }
 
 &__input{

@@ -1,0 +1,158 @@
+@use "../../styles/typography" as *;
+@use "../../styles/variables" as *;
+
+.info {
+  width: 40%;
+  padding-left: 1rem;
+  margin: 1rem 0 2rem 1rem;
+  &__transfer {
+    font-size: 0.7rem;
+    color: $color-primary;
+    letter-spacing: 0.05rem;
+    width: 100rem;
+    font-family: $font-heading;
+  }
+  &__heading {
+    font-family: $font-heading;
+    font-weight: 400;
+    font-size: 1.5rem;
+  }
+  &__content {
+    font-family: $font-main;
+    color: $color-text-secondary;
+    font-size: 0.7rem;
+    word-spacing: 0.1rem;
+    line-height: 1rem;
+  }
+}
+
+.transferForm {
+  display: flex;
+  flex-direction: column;
+  width: 45%;
+  padding: 2rem 3.5rem;
+  margin: 1rem 2rem;
+  background-color: $color-input-background;
+
+  &__head {
+    font-family: $font-heading;
+    font-weight: 500;
+    letter-spacing: 0.05rem;
+    font-size: 1.5rem;
+  }
+
+  &__inner {
+    border-radius: 1rem;
+    margin-top: 1rem;
+    width: 95%;
+    padding: 1rem 2rem;
+    background-color: $line-divider;
+  }
+
+  &__user {
+    color: $color-primary;
+    font-family: $font-main;
+    font-size: 1rem;
+    font-weight: 400;
+  }
+
+  &__infoWrapper {
+    display: flex;
+    height: 1.5rem;
+  }
+
+  &__infoName {
+    font-family: $font-main;
+    font-weight: 350;
+    font-size: 0.65rem;
+    color: $color-text;
+  }
+
+  &__infoNum {
+    font-size: 0.65rem;
+    color: $color-currency;
+    text-align: end;
+  }
+
+  &__greyLine {
+    border-top: 0.005rem solid $color-menu-unselected;
+    margin-top: 1rem;
+  }
+  
+  &__totalWrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 0.5rem;
+  }
+
+  &__total {
+    font-family: $font-main;
+    font-weight: 550;
+    font-size: 0.9rem;
+
+    &--amount {
+      text-align: end;
+    }
+  }
+  
+  &__remainderWrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  &__remainder {
+    font-family: $font-main;
+    font-weight: 400;
+    font-size: 0.5rem;
+    color: $color-text-secondary;
+
+    &--amount {
+    text-align: end;
+    }
+  }
+
+  &__sendWrapper {
+    margin-top: 1rem;
+  }
+
+  &__buttons {
+    width: 95%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    border-bottom: 0.005rem solid $color-menu-unselected;
+  }
+
+  &__select {
+    margin-bottom: 2rem;
+    margin-right: 2rem;
+
+    button {
+      border: none;
+      border-radius: 0.2rem;
+    }
+  }
+
+  &__new {
+    display: flex;
+    width: 50%;
+    margin-bottom: 2rem;
+    cursor: pointer;
+    color: $color-primary;
+    padding-left: 1rem;
+    border-left: 0.1rem solid $color-text-secondary;
+
+    img {
+      width: auto;
+      height: 1rem;
+      align-self: center;
+      margin-right: 0.5rem;
+    }
+
+    p {
+      font-size: 0.9rem;
+    }
+  }
+}
