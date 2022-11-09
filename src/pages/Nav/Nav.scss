@@ -62,4 +62,17 @@
       font-family: $font-main;
     }
   }
+  .nav__logoutWrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 2.5rem;
+    width: 10rem;
+    background-color: $color-primary;
+    border-radius: 0.3rem;
+    img{
+      width: 2rem;
+      height: 2rem;
+    }
+}
 }
