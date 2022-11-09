@@ -5,6 +5,7 @@ import "./styles/main.scss";
 import Login from "./pages/Login/Login";
 import SignUp from "./pages/SignUp/SignUp";
 import Wallet from "./pages/Wallet/Wallet";
+import Nav from "./pages/Nav/Nav";
 
 const App = () => {
 
@@ -15,7 +16,17 @@ const App = () => {
       <Route path="*" element={<Home/>} />
       <Route path="/login" element={<Login saveUser={setUser}/>} />
       <Route path="/signup" element={<SignUp saveUser={setUser}/>} />
-        {user && <Route path="/wallet" element={<Wallet user={user}/>} />}
+      {user && (
+        <Route 
+          path="/wallet" 
+          element={ 
+            <> 
+              <Nav clearUser={setUser}/> 
+              <Wallet user={user} amount={1000}/> 
+            </>
+          } 
+        /> 
+      )}
     </Routes>
   );
 };

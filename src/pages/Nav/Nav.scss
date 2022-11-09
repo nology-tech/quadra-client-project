@@ -2,24 +2,26 @@
 @use "../../styles/variables" as *;
 
 .nav {
-  position: absolute;
-  width: 12.5rem;
-  border: 0.2rem solid;
-  border-right-color: $color-currency;
+  position: fixed;
+  width: 13rem;
+  border-right: 0.2rem solid;
+  border-right-color: $line-divider;
   height: 100vh;
 
   &__logo {
-    margin-left: 2rem;
+    margin-left: 1rem;
   }
 
   &__menu {
-    margin: 3rem 0 0 2.5rem;
+    margin: 3rem 0 0 1.5rem;
     display: flex;
     flex-direction: column;
-    justify-content: center;
     
     h3 {
     color: $color-logo-header;
+    font-family: $font-main;
+    font-size: 0.7rem;
+    font-weight: 400;
     }
   }
 
@@ -28,6 +30,7 @@
     flex-direction: row;
     justify-content: space-evenly;
     width: 70%;
+    margin: 0.2rem 0;
     
     img {
       height: 1.2rem;
@@ -38,19 +41,25 @@
 
     p {
       color: $color-menu-unselected;
+      font-size: 0.7rem;
+      font-weight: 400;
+      font-family: $font-main;
     }
   }
-  .nav__logoutWrapper {
+
+  &__logoutWrapper {
     display: flex;
     justify-content: center;
     align-items: center;
     height: 2.5rem;
-    width: 10rem;
+    width: 8.5rem;
     background-color: $color-primary;
     border-radius: 0.3rem;
+    margin: 14rem 0 2rem 1.5rem;
     img{
-      width: 2rem;
-      height: 2rem;
+      width: 1.5rem;
+      height: 1.5rem;
+      margin-left: -0.5rem;
     }
 }
 }
