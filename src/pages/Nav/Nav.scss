@@ -10,7 +10,7 @@
 
   &__logoutWrapper {
     align-items: center;
-    margin: 13rem 0 1rem 1.5rem;
+    margin: 14rem 0 1rem 1.5rem;
     display: flex;
     justify-content: center;
     height: 2.5rem;
@@ -36,7 +36,7 @@
     h3 {
     color: $color-logo-header;
     font-family: $font-main;
-    font-size: 1rem;
+    font-size: 0.7rem;
     font-weight: 400;
     }
   }
@@ -46,6 +46,7 @@
     flex-direction: row;
     justify-content: space-evenly;
     width: 70%;
+    margin: 0.2rem 0;
     
     img {
       height: 1.2rem;
@@ -56,7 +57,7 @@
 
     p {
       color: $color-menu-unselected;
-      font-size: 1rem;
+      font-size: 0.7rem;
       font-weight: 400;
       font-family: $font-main;
     }
