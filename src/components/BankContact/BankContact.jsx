@@ -4,7 +4,7 @@ import bin from "../../assets/images/bin.png";
 const BankContact = ({image_url, userName, sortCode, accNum, bank, iban, isTransfer=false}) => {
     return (
         <div className="bank-contact">
-            <img className="bank-contact__img" src={image_url} />
+            <img className="bank-contact__img" src={image_url} alt="bank icon"/>
             <p className="bank-contact__name">{userName}</p>
             <p className="bank-contact__sortCode">{sortCode}</p>
             <p className="bank-contact__accNum">{accNum}</p>
