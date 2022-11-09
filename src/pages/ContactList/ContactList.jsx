@@ -5,7 +5,7 @@ const ContactList = () => {
 
     return (
         <div className="contactList">
-            <ContactContent className="contactList__main" />
+            <ContactContent />
         </div>
     )
 }
