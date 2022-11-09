@@ -5,7 +5,7 @@ const ContactList = () => {
 
     return (
         <div className="contactList">
-            <ContactContent />
+            <ContactContent numContacts={10} />
         </div>
     )
 }

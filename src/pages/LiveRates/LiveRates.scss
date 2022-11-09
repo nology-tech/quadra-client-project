@@ -27,20 +27,44 @@
 }
 .container {
   width: 90%;
-  display: flex;
-  flex-direction: column;
+  padding-left: 1rem;
+  margin: 2rem 0 2rem 1rem;
   &__title {
-    display: flex;
     color: $color-text;
-    justify-content: flex-start;
-    align-content: flex-end;
-    align-items: flex-end;
-    margin-left: 4rem;
-    align-items: center;
+    display: grid;
+    grid-template-columns: 3em 1fr 1fr 1fr 1fr 3em;
   }
   &__head {
     font-size: 0.8rem;
-    margin-bottom: -1rem;
-    margin-right: 19rem;
+    &--currency{
+      grid-column-start: 2;
+      grid-column-end: 3;
+    }
+    &--amount{
+      grid-column-start: 3;
+      grid-column-end: 4;
+    }
+    &--rate{
+      grid-column-start: 4;
+      grid-column-end: 6;
+    }
   }
+}
+
+.dropdown-container{
+  display: flex;
+  padding-left: 1rem;
+  margin: 2rem 0 2rem 1rem;
+  &__dropdown-item{
+    list-style: none;
+    padding: 0.3em 1em;
+    margin: 0.1em;
+    border: 0.1em solid $color-text-secondary;
+    background-color: $color-input-background;
+    color: $color-text-secondary;
+  }
+  &__button{
+    padding: 1em;
+  }
+
 }

@@ -2,10 +2,17 @@ import { useEffect, useState } from "react";
 import LiveRate from "../../components/LiveRate/LiveRate";
 import "./LiveRates.scss";
 import { getCurrencyGBP } from "../../utils/apiUtils";
+import iconMap from "../../utils/currencyIcons";
+import { Dropdown } from 'rsuite';
+import Button from "../../components/Button/Button";
 
 const LiveRates = () => {
   const [currRates, setCurrRates] = useState({});
-  const [selectCurr, setSelectCurr] = useState(["British Pound"]);
+  const [selectCurr, setSelectCurr] = useState(["GBP"]);
+  const [dropdownCurr, setDropdownCurr] = useState("GBP");
+  const newCurrencies = Object.keys(iconMap);
+  const newCurrencyOptions = newCurrencies.map(currency => <Dropdown.Item className="dropdown-container__dropdown-item" key={currency} >{currency}</Dropdown.Item>);
+
 
   const getData = async () => {
     const currencies = await getCurrencyGBP();
@@ -16,12 +23,16 @@ const LiveRates = () => {
     getData();
   }, []);
 
-  const addRate = (e) => {
-    if (!selectCurr.includes(e.target.value)) {
-      setSelectCurr([...selectCurr, e.target.value]);
+  const addRate = () => {
+    if (!selectCurr.includes(dropdownCurr)) {
+      setSelectCurr([...selectCurr, dropdownCurr]);
     }
     return;
   };
+
+  const changeSelectedCurrency = (eventKey, event) => {
+    setDropdownCurr(event.target.textContent);
+  }
 
   const singleRate = selectCurr.map((item, i) => {
     if (i === 0) {
@@ -30,6 +41,8 @@ const LiveRates = () => {
           name={item}
           amount={currRates[item]}
           key={i}
+          rate={"+0.01%"}
+          flagImage={iconMap[item]}
           isCurrentCurrency={true}
         />
       );
@@ -39,6 +52,8 @@ const LiveRates = () => {
           name={item}
           amount={currRates[item]}
           key={i}
+          rate={"+0.01%"}
+          flagImage={iconMap[item]}
           isCurrentCurrency={false}
         />
       );
@@ -59,27 +74,22 @@ const LiveRates = () => {
       </div>
       <div className="container">
         <div className="container__title">
-          <div>
-            <h3 className="container__head">Currency</h3>
-          </div>
-          <div>
-            <h3 className="container__head">Amount</h3>
-          </div>
-          <div>
-            <h3 className="container__head">Rate</h3>
-          </div>
+            <h3 className="container__head container__head--currency">Currency</h3>
+            <h3 className="container__head container__head--amount">Amount</h3>
+            <h3 className="container__head container__head--rate">Rate</h3>
         </div>
-        <div>{singleRate}</div>
+        {singleRate}
       </div>
-      <button onClick={addRate} value="AED">
-        AED
-      </button>
-      <button onClick={addRate} value="USD">
-        USD
-      </button>
-      <button onClick={addRate} value="VND">
-        VND
-      </button>
+
+      <div className="dropdown-container">
+        <Dropdown title={dropdownCurr} icon={iconMap[dropdownCurr]} onSelect={changeSelectedCurrency} value={dropdownCurr}>
+          {newCurrencyOptions}
+        </Dropdown>
+        <div className="dropdown-container__button">
+        <Button buttonClass={"addCurrency"} buttonText={"Add Currency"} handleClick={addRate}/>
+        </div>
+      </div>
+      
     </>
   );
 };

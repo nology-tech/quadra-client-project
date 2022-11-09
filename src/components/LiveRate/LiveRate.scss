@@ -2,41 +2,46 @@
 @use "../../styles/_typography.scss" as *;
 
 .live-rate {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
+  display: grid;
+  grid-template-columns: 3em 1fr 1fr 1fr 1fr 3em;
+  
   background-color: $color-input-background;
-  padding: 0.3rem 2rem;
   color: $color-text-secondary;
+  &__icon{
+    grid-column-start: 1;
+    grid-column-end: 2;
+    padding: 0.5em;
+  }
   &__currency {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 10rem;
+    grid-column-start: 2;
+    grid-column-end: 3;
   }
   &__name {
-    padding-left: 0.7rem;
     font-family: $font-main;
     font-weight: 400;
     font-size: 0.9rem;
     width: 100%;
   }
-  &__icon {
-    width: 1.7rem;
-    height: 1.3rem;
-  }
   &__amount {
-    width: 4rem;
     font-family: $font-main;
     font-weight: 600;
     font-size: 0.9rem;
+    grid-column-start: 3;
+    grid-column-end: 4;
   }
   &__rate {
-    width: 4rem;
     font-family: $font-main;
     font-weight: 600;
     font-size: 0.9rem;
-    margin-left: 18rem;
+    grid-column-start: 4;
+    grid-column-end: 5;
+  }
+  &__button {
+    grid-column-start: 5;
+    grid-column-end: 6;
+    padding: 0.5em;
+    display: flex;
+    justify-content: end;
   }
 }
 
@@ -44,4 +49,8 @@
   background-color: $color-primary;
   color: $background-color;
   border-radius: 0.5rem 0.5rem 0 0;
+}
+.flag{
+    width: 1.7rem;
+    height: 1.3rem;
 }
