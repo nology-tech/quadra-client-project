@@ -79,13 +79,11 @@ const SignUp = ({ login, saveUser }) => {
     if (validateInputs()) {
       createUserWithEmailAndPassword(auth, registerEmail, registerPassword)
         .then((userCredential) => {
-          const user = userCredential.user;
-          saveUser(user);
+          saveUser(userCredential.user);
           navigate("/wallet");
         })
         .catch((error) => {
-          const errorCode = error.code;
-          console.log(errorCode);
+          console.error(error.code);
         });
     }
   };

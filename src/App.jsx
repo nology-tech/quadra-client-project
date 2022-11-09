@@ -15,7 +15,7 @@ const App = () => {
       <Route path="*" element={<Home/>} />
       <Route path="/login" element={<Login saveUser={setUser}/>} />
       <Route path="/signup" element={<SignUp saveUser={setUser}/>} />
-        {user && <Route path="/wallet" element={<Wallet user={user} clearUser={setUser}/>} />}
+        {user && <Route path="/wallet" element={<Wallet user={user}/>} />}
     </Routes>
   );
 };
