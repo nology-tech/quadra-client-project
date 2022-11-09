@@ -1,0 +1,48 @@
+@use "../../styles/variables" as *;
+@use "../../styles/typography" as *;
+
+.contactList {
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+    &__title {
+        font-family: $font-heading;
+        font-weight: 400;
+        font-size: 1.5rem;
+        color: $color-heading;
+    }
+    &__desc {
+        font-family: $font-main;
+        font-weight: 400;
+        font-size: 1rem;
+        width: 25rem;
+        color: $color-text-secondary;
+    }
+    &__userName {
+        grid-area: userName;
+    }
+    &__sortCode {
+        grid-area: sortCode;
+    }
+    &__accNum {
+        grid-area: accNum;
+    }
+    &__bank {
+        grid-area: bank;
+    }
+    &__iban {
+        grid-area: iban;
+    }
+    &__headings {
+        font-family: $font-heading;
+        display: grid;
+        grid-template-columns: repeat(7, 1fr);
+        grid-template-areas: 
+        ". userName sortCode accNum bank iban .";
+        color: $color-text;
+        font-weight: 500;
+        font-size: 1rem;
+        width: 90vw;
+        height: 2.5rem;
+    }
+}
