@@ -33,29 +33,36 @@ const Nav = ({ clearUser }) => {
 
       <div className="nav__menu">
         <h3>Menu</h3>
-
-        <div className={"nav__button"}>
-          <img src={Wallet} alt="wallet"></img>
-          <p>Wallet</p>
-        </div>
-        <div className="nav__button">
-          <img src={LiveRate} alt="graph"></img>
-          <p>Live rates</p>
-        </div>
+        <Link to={"/wallet"}>
+          <div className={"nav__button"}>
+            <img src={Wallet} alt="wallet"></img>
+            <p>Wallet</p>
+          </div>
+        </Link>
+        <Link to={"/liverates"}>
+          <div className="nav__button">
+            <img src={LiveRate} alt="graph"></img>
+            <p>Live rates</p>
+          </div>
+        </Link>
         <Link to={`/convert`}>
           <div className="nav__button">
             <img src={Convert} alt="convert"></img>
             <p>Convert</p>
           </div>{" "}
         </Link>
-        <div className="nav__button">
-          <img src={Transfer} alt="transfer"></img>
-          <p>Transfer</p>
-        </div>
-        <div className="nav__button">
-          <img src={Contacts} alt="contacts"></img>
-          <p>Contacts</p>
-        </div>
+        <Link to={`/transfer`}>
+          <div className="nav__button">
+            <img src={Transfer} alt="transfer"></img>
+            <p>Transfer</p>
+          </div>
+        </Link>
+        <Link to={`/contacts`}>
+          <div className="nav__button">
+            <img src={Contacts} alt="contacts"></img>
+            <p>Contacts</p>
+          </div>
+        </Link>
       </div>
       <div className="nav__logoutWrapper">
         <Button

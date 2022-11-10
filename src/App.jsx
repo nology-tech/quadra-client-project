@@ -8,6 +8,8 @@ import Wallet from "./pages/Wallet/Wallet";
 import Nav from "./pages/Nav/Nav";
 import Convert from "./pages/Convert/Convert";
 import LiveRates from "./pages/LiveRates/LiveRates";
+import Transfer from "./pages/Transfer/Transfer";
+import ContactList from "./pages/ContactList/ContactList";
 const App = () => {
   const [user, setUser] = useState();
 
@@ -40,11 +42,33 @@ const App = () => {
       )}
       {user && (
         <Route
-          path="/liveRates"
+          path="/liverates"
           element={
             <>
               <Nav clearUser={setUser} />
               <LiveRates />
+            </>
+          }
+        />
+      )}
+      {user && (
+        <Route
+          path="/transfer"
+          element={
+            <>
+              <Nav clearUser={setUser} />
+              <Transfer />
+            </>
+          }
+        />
+      )}
+      {user && (
+        <Route
+          path="/contacts"
+          element={
+            <>
+              <Nav clearUser={setUser} />
+              <ContactList />
             </>
           }
         />
