@@ -22,8 +22,7 @@ const ConversionResult = ({
   rate,
   date,
   handleClick,
-  saveTransferDetails
-}) => {
+  saveTransferDetails}) => {
 
   const toAmount = amount * rate;
   const transferDetails = {fromCurr:fromCurrency,
@@ -32,6 +31,7 @@ const ConversionResult = ({
     toAmt:toAmount,
     transferRate:rate
   }
+
   useEffect(() => {
     saveTransferDetails.saveTransferDetails(transferDetails);
   }, []);
@@ -39,8 +39,6 @@ const ConversionResult = ({
   useEffect(() => {
     saveTransferDetails.saveTransferDetails(transferDetails);
   }, [ amount,fromCurrency,toCurrency,rate]);
-
-
 
   return (
     <div className="currencies">

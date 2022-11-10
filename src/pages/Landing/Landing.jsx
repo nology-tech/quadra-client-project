@@ -8,6 +8,7 @@ import Logo from "../../components/Logo/Logo.jsx";
 import LandingNav from "../../components/LandingNav/LandingNav";
 import Feature from "../../components/Feature/Feature.jsx";
 import { Link } from "react-router-dom";
+
 const Landing = () => {
   return (
     <>

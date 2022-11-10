@@ -2,7 +2,7 @@ import "./Transfer.scss";
 import Button from "../../components/Button/Button";
 const Transfer = ({
   fee = 0.00,
-  transferDetails
+  transferDetails = (fromCurr, fromAmt, toCurr, toAmt, fromAmt, transferRate)
 }) => {
   return (
     <>
@@ -19,19 +19,19 @@ const Transfer = ({
       <div className="receipt">
         <h1 className="receipt__head">You Send</h1>
         <div className="receipt__box">
-          <h2 className="receipt__currency">{transferDetails.fromCurr}</h2>
-          <h2 className="receipt__currency">{transferDetails.fromAmt}</h2>
+          <h2 className="receipt__currency">{fromCurr}</h2>
+          <h2 className="receipt__currency">{fromAmt}</h2>
         </div>
         <h1 className="receipt__head">Recipient gets</h1>
         <div className="receipt__box">
-          <h2 className="receipt__currency">{transferDetails.toCurr}</h2>
-          <h2 className="receipt__currency">{transferDetails.toAmt}</h2>
+          <h2 className="receipt__currency">{toCurr}</h2>
+          <h2 className="receipt__currency">{toAmt}</h2>
         </div>
 
         <div className="receipt__body">
           <div className="receipt__body__info">
             <h1 className="receipt__body__info--title">Rate</h1>
-            <h1 className="receipt__body__info--value">{transferDetails.transferRate}</h1>
+            <h1 className="receipt__body__info--value">{transferRate}</h1>
           </div>
           <div className="receipt__body__info">
             <h1 className="receipt__body__info--title">Fee</h1>
@@ -47,7 +47,7 @@ const Transfer = ({
         <div className="receipt__bottom">
           <div className="receipt__bottom__box">
             <h1 className="receipt__bottom__box--info">Total</h1>
-            <h1 className="receipt__bottom__box--end">{Number(transferDetails.fromAmt) + Number(fee)}</h1>
+            <h1 className="receipt__bottom__box--end">{Number(fromAmt) + Number(fee)}</h1>
           </div>
           <div className="receipt__button">
             <Button buttonClass="largeButton" buttonText={"Continue"} />
