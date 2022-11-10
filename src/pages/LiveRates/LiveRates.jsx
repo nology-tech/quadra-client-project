@@ -3,7 +3,7 @@ import LiveRate from "../../components/LiveRate/LiveRate";
 import "./LiveRates.scss";
 import { getCurrencyGBP } from "../../utils/apiUtils";
 import iconMap from "../../utils/currencyIcons";
-import { Dropdown } from 'rsuite';
+import { Dropdown } from "rsuite";
 import Button from "../../components/Button/Button";
 
 const LiveRates = () => {
@@ -11,8 +11,11 @@ const LiveRates = () => {
   const [selectCurr, setSelectCurr] = useState(["GBP"]);
   const [dropdownCurr, setDropdownCurr] = useState("GBP");
   const newCurrencies = Object.keys(iconMap);
-  const newCurrencyOptions = newCurrencies.map(currency => <Dropdown.Item className="dropdown-container__dropdown-item" key={currency} >{currency}</Dropdown.Item>);
-
+  const newCurrencyOptions = newCurrencies.map((currency) => (
+    <Dropdown.Item className="dropdown-container__dropdown-item" key={currency}>
+      {currency}
+    </Dropdown.Item>
+  ));
 
   const getData = async () => {
     const currencies = await getCurrencyGBP();
@@ -32,7 +35,7 @@ const LiveRates = () => {
 
   const changeSelectedCurrency = (eventKey, event) => {
     setDropdownCurr(event.target.textContent);
-  }
+  };
 
   const singleRate = selectCurr.map((item, i) => {
     if (i === 0) {
@@ -74,22 +77,32 @@ const LiveRates = () => {
       </div>
       <div className="container">
         <div className="container__title">
-            <h3 className="container__head container__head--currency">Currency</h3>
-            <h3 className="container__head container__head--amount">Amount</h3>
-            <h3 className="container__head container__head--rate">Rate</h3>
+          <h3 className="container__head container__head--currency">
+            Currency
+          </h3>
+          <h3 className="container__head container__head--amount">Amount</h3>
+          <h3 className="container__head container__head--rate">Rate</h3>
         </div>
         {singleRate}
       </div>
 
       <div className="dropdown-container">
-        <Dropdown title={dropdownCurr} icon={iconMap[dropdownCurr]} onSelect={changeSelectedCurrency} value={dropdownCurr}>
+        <Dropdown
+          title={dropdownCurr}
+          icon={iconMap[dropdownCurr]}
+          onSelect={changeSelectedCurrency}
+          value={dropdownCurr}
+        >
           {newCurrencyOptions}
         </Dropdown>
         <div className="dropdown-container__button">
-        <Button buttonClass={"addCurrency"} buttonText={"Add Currency"} handleClick={addRate}/>
+          <Button
+            buttonClass={"addCurrency"}
+            buttonText={"Add Currency"}
+            handleClick={addRate}
+          />
         </div>
       </div>
-      
     </>
   );
 };
