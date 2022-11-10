@@ -2,11 +2,13 @@ import "./TransferConfirm.scss";
 import Button from "../../components/Button/Button";
 const TransferConfirm = ({
   sendAmount = 1000.0,
-
-  user = "Sam",
-  accNum = "123",
-  sortCode = "000",
-  total = "£100.00",
+  sender = "Samantha Brooks",
+  senderAcc = "12345678",
+  senderSort = "123456",
+  totalToSend = "£100.00",
+  receiver = "Erik Just",
+  receiverAcc = "87654321",
+  receiverSort = "654321",
   fundsRem = "£1",
   rate = 1.3595,
   fee = 20.0,
@@ -30,20 +32,20 @@ const TransferConfirm = ({
         <div className="transferForm">
           <h1 className="transferForm__head">Send From</h1>
           <div className="transferForm__inner">
-            <h1 className="transferForm__user">{user}</h1>
+            <h1 className="transferForm__user">{sender}</h1>
             <div className="transferForm__infoWrapper">
               <h2 className="transferForm__infoName">Account Number</h2>
-              <p className="transferForm__infoNum">{accNum}</p>
+              <p className="transferForm__infoNum">{senderAcc}</p>
             </div>
             <div className="transferForm__infoWrapper">
               <h2 className="transferForm__infoName">Sort Code</h2>
-              <p className="transferForm__infoNum">{sortCode}</p>
+              <p className="transferForm__infoNum">{senderSort}</p>
             </div>
             <div className="transferForm__greyLine"></div>
             <div className="transferForm__totalWrapper">
               <h2 className="transferForm__total">Total</h2>
               <p className="transferForm__total transferForm__total--amount">
-                {total}
+                {totalToSend}
               </p>
             </div>
             <div className="transferForm__remainderWrapper">
@@ -53,23 +55,22 @@ const TransferConfirm = ({
               </p>
             </div>
           </div>
-       
 
           <div className="transferForm">
             <h1 className="transferForm__head">To</h1>
             <div className="transferForm__inner">
-              <h1 className="transferForm__user">{user}</h1>
+              <h1 className="transferForm__user">{receiver}</h1>
               <div className="transferForm__infoWrapper">
                 <h2 className="transferForm__infoName">Account Number</h2>
-                <p className="transferForm__infoNum">{accNum}</p>
+                <p className="transferForm__infoNum">{receiverAcc}</p>
               </div>
               <div className="transferForm__infoWrapper">
                 <h2 className="transferForm__infoName">Sort Code</h2>
-                <p className="transferForm__infoNum">{sortCode}</p>
+                <p className="transferForm__infoNum">{receiverSort}</p>
               </div>
             </div>
           </div>
- </div>
+        </div>
 
         <div className="additionalCost">
           <div className="additionalCost__info">
@@ -90,21 +91,23 @@ const TransferConfirm = ({
         <div className="total">
           <div className="totalContainer">
             <div className="totalContainer__toPay">
-                <h2>Total to Pay</h2>
-                <h2 className="totalContainer__value">£ {sendAmount + fee}</h2>
+              <h2 className="totalContainer__toPay--head">Total to Pay</h2>
+              <h2 className="totalContainer__toPay--value">
+                £ {sendAmount + fee}
+              </h2>
             </div>
             <div className="totalContainer__recipient">
-                <h5>Recipient Receives</h5>
-                <h5 className="totalContainer__receiveValue">$ {sendAmount * rate}</h5>
+              <h5>Recipient Receives</h5>
+              <h5 className="totalContainer__receiveValue">
+                $ {sendAmount * rate}
+              </h5>
             </div>
           </div>
-          <div className="additionalCost__button">
-          </div>
+          <div className="additionalCost__button"></div>
         </div>
-        <div></div>
         <div className="confirm">
-            <p className="confirm__cancel">Cancel</p>
-            <Button buttonClass="largeButton" buttonText={"Send"} />
+          <p className="confirm__cancel">Cancel</p>
+          <Button buttonClass="largeButton" buttonText={"Send"} />
         </div>
       </div>
     </>
