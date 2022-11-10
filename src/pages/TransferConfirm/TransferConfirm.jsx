@@ -108,7 +108,7 @@ const TransferConfirm = ({
           <div className="additionalCost__button"></div>
         </div>
         <div className="confirm">
-          <p className="confirm__cancel">Cancel</p>
+          <a className="confirm__cancel">Cancel</a>
           <div className="confirm__button">
             <img src={arrow} alt="transfer" />
             <Button buttonClass="largeButton" buttonText={"Send"} />
