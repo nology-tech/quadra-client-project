@@ -8,18 +8,19 @@ import Transfer from "../../assets/images/transfer-focus.png";
 import Logout from "../../assets/images/logout.svg";
 import Button from "../../components/Button/Button";
 import { getAuth, signOut } from "firebase/auth";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
-const Nav = ({clearUser}) => {
-
+const Nav = ({ clearUser }) => {
   const logoutUser = () => {
-    signOut(auth).then(() => {
-      clearUser("");
-      navigate("/");
-    }).catch((error) => { 
-      console.error(error);  
-    });
-  }
+    signOut(auth)
+      .then(() => {
+        clearUser("");
+        navigate("/");
+      })
+      .catch((error) => {
+        console.error(error);
+      });
+  };
 
   const auth = getAuth();
   const navigate = useNavigate();
@@ -27,16 +28,13 @@ const Nav = ({clearUser}) => {
   return (
     <div className="nav">
       <div className="nav__logo">
-        <Logo isTextDark={true}/>
+        <Logo isTextDark={true} />
       </div>
 
       <div className="nav__menu">
         <h3>Menu</h3>
-        <div className="nav__button">
-          <img src={Contacts} alt="contacts"></img>
-          <p>Contacts</p>
-        </div>
-        <div className="nav__button">
+
+        <div className={"nav__button"}>
           <img src={Wallet} alt="wallet"></img>
           <p>Wallet</p>
         </div>
@@ -44,10 +42,12 @@ const Nav = ({clearUser}) => {
           <img src={LiveRate} alt="graph"></img>
           <p>Live rates</p>
         </div>
-        <div className="nav__button">
-          <img src={Convert} alt="convert"></img>
-          <p>Convert</p>
-        </div>
+        <Link to={`/convert`}>
+          <div className="nav__button">
+            <img src={Convert} alt="convert"></img>
+            <p>Convert</p>
+          </div>{" "}
+        </Link>
         <div className="nav__button">
           <img src={Transfer} alt="transfer"></img>
           <p>Transfer</p>
@@ -58,7 +58,11 @@ const Nav = ({clearUser}) => {
         </div>
       </div>
       <div className="nav__logoutWrapper">
-        <Button buttonClass="largeButton" buttonText="Sign Out" handleClick={logoutUser}/>
+        <Button
+          buttonClass="largeButton"
+          buttonText="Sign Out"
+          handleClick={logoutUser}
+        />
         <img src={Logout} alt="logout" />
       </div>
     </div>
