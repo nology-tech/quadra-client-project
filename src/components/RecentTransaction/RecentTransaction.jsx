@@ -1,10 +1,10 @@
 import "./RecentTransaction.scss";
 
-const RecentTransaction = ({ transactionId, senderAmount, payeeAmount, rate, date }) => {
+const RecentTransaction = ({ transactionId, senderAmount, payeeAmount, rate, date, firstName, lastName }) => {
 
     return (
         <div className="transactions">
-            <h1>Past Transactions to Erik</h1>
+            <h1>Past Transactions to {firstName}{lastName}</h1>
             <div className="transactions__grid">
                 <div className="transactions__header">Transaction ID</div>
                 <div className="transactions__header">Sender Amount</div>
