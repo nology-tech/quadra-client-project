@@ -1,5 +1,7 @@
 import "./TransferConfirm.scss";
 import Button from "../../components/Button/Button";
+import arrow from "../../assets/images/transfer-focus-inverted.png";
+
 const TransferConfirm = ({
   sendAmount = 1000.0,
   sender = "Samantha Brooks",
@@ -107,7 +109,10 @@ const TransferConfirm = ({
         </div>
         <div className="confirm">
           <p className="confirm__cancel">Cancel</p>
-          <Button buttonClass="largeButton" buttonText={"Send"} />
+          <div className="confirm__button">
+            <img src={arrow} alt="transfer" />
+            <Button buttonClass="largeButton" buttonText={"Send"} />
+          </div>
         </div>
       </div>
     </>
