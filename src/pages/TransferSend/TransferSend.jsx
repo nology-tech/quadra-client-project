@@ -33,9 +33,9 @@ const TransferSend = ({
   const getData = async () => {
     const contacts = await getUserContacts();
     await setAllContacts(contacts);
-    console.log("this is all contacts 1", contacts);
+    // console.log("this is all contacts 1", contacts);
 
-    console.log("this is all contacts", allContacts);
+    // console.log("this is all contacts", allContacts);
   };
   useEffect(() => {
     getData();
@@ -43,13 +43,15 @@ const TransferSend = ({
   useEffect(() => {}, modalVisible);
 
   const getContactData = (contact) => {
-    setIndividualContact(contact);
+    return setIndividualContact(contact);
 
-    return console.log(
-      "get contact data has been pressed",
-      individualContact.contactName
-    );
+    // return console.log(
+    //   "get contact data has been pressed",
+    //   individualContact.contactName
+    // );
   };
+
+  console.log("this is length ", individualContact.length);
 
   return (
     <>
@@ -79,15 +81,25 @@ const TransferSend = ({
             <h1 className="transferForm__head">Send From</h1>
             <div className="transferForm__inner">
               <h1 className="transferForm__user">
-                {individualContact.contactName}
+                {Object.keys(individualContact).length > 0
+                  ? individualContact.contactName
+                  : user}
               </h1>
               <div className="transferForm__infoWrapper">
                 <h2 className="transferForm__infoName">Account Number</h2>
-                <p className="transferForm__infoNum">{accNum}</p>
+                <p className="transferForm__infoNum">
+                  {Object.keys(individualContact).length > 0
+                    ? individualContact.accountNumber
+                    : accNum}
+                </p>
               </div>
               <div className="transferForm__infoWrapper">
                 <h2 className="transferForm__infoName">Sort Code</h2>
-                <p className="transferForm__infoNum">{sortCode}</p>
+                <p className="transferForm__infoNum">
+                  {Object.keys(individualContact).length > 0
+                    ? individualContact.sortCode
+                    : sortCode}
+                </p>
               </div>
               <div className="transferForm__greyLine"></div>
               <div className="transferForm__totalWrapper">
