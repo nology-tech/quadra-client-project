@@ -54,7 +54,7 @@ const ContactContent = ({numContacts=4}) => {
             })
         )
     },[searchText])
-    
+
     return (
         <div className="contactList">
             <h3 className="contactList__title">Contact List</h3>
