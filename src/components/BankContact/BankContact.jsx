@@ -10,7 +10,7 @@ const BankContact = ({
   iban,
   isTransfer = false,
 }) => {
-  console.log("this is username in bank contact ", userName);
+  //   console.log("this is username in bank contact ", userName);
   return (
     <div className="bank-contact">
       <img className="bank-contact__img" src={image_url} alt="bank icon" />

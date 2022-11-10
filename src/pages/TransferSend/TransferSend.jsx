@@ -25,6 +25,7 @@ const TransferSend = ({
   const [modalVisible, setModalVisible] = useState(false);
   const [allContacts, setAllContacts] = useState([]);
   const [individualContact, setIndividualContact] = useState([]);
+
   const toggleModal = () => {
     console.log("modal toggle has been pressed");
     setModalVisible(!modalVisible);
