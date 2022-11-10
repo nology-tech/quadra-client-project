@@ -9,9 +9,7 @@
     &__options {
         display: flex;
         justify-content: space-between;
-
     }
-
     &__title {
         font-family: $font-heading;
         font-weight: 400;
@@ -56,7 +54,6 @@
     font-family: $font-main;
     width: 6rem;
     height: 3rem;
-    // margin-left: -8rem;
     background-color: transparent;
     border: solid 2px $color-primary;
     color: $color-primary;

@@ -8,11 +8,8 @@ import Button from "../../components/Button/Button";
 
 const ContactContent = ({numContacts=4}) => {
     const [allContacts, setAllContacts] = useState([]);
-
     const [searchText, setSearchText] = useState("");
     const [userContacts, setUserContacts] = useState();
-
-
 
     const getData = async () => {
         let contacts = await getUserContacts();
@@ -34,14 +31,10 @@ const ContactContent = ({numContacts=4}) => {
                 )
             })
         )
-    
         }
-            
     useEffect(() => {
-        getData()
-    
+        getData();
     }, [])
-
     useEffect(()=>{
         const filteredContacts = (allContacts.filter(contact => contact.contactName.toLowerCase().includes(searchText.toLowerCase())));
         setUserContacts(
@@ -61,14 +54,15 @@ const ContactContent = ({numContacts=4}) => {
             })
         )
     },[searchText])
-
+    
     return (
         <div className="contactList">
             <h3 className="contactList__title">Contact List</h3>
             <div className="contactList__options">
-                <p className="contactList__desc">All your friends and family financial details in one place. Easily transfer currency internationally at the best possible rates.</p>
+                <p className="contactList__desc">
+                    All your friends and family financial details in one place. Easily transfer currency internationally at the best possible rates.
+                </p>
                 <Searchbar saveSearchText={setSearchText} />
-            
                 <Button buttonText={"+ Add"} buttonClass={"addContact"} />
             </div>
             <div className="contactList__options contactList__headings">

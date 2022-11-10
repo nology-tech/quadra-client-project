@@ -2,12 +2,9 @@ import "./Searchbar.scss";
 import searchIcon from "../../assets/images/searchIcon.png";
 
 const Searchbar = ({saveSearchText}) => {
-
     const handleChange = (event) => {
         saveSearchText(event.target.value)
     }
-
-
     return(
         <div className="searchBar">
             <img src={searchIcon} alt="Icon" className="searchBar__image"/>
