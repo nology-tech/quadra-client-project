@@ -64,7 +64,7 @@ const LiveRates = () => {
   });
 
   return (
-    <>
+    <div className="live-rates-main">
       <div className="info">
         <h1 className="info__transfer"> Transfer </h1>
         <h1 className="info__heading"> View Latest Rates </h1>
@@ -103,7 +103,7 @@ const LiveRates = () => {
           />
         </div>
       </div>
-    </>
+    </div>
   );
 };
 

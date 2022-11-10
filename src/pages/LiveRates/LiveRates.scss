@@ -1,6 +1,11 @@
 @use "../../styles/_variables.scss" as *;
 @use "../../styles/_typography.scss" as *;
 
+.live-rates-main{
+  padding-left: 2rem;
+  margin-left: 11rem;
+}
+
 .info {
   width: 40%;
   padding-left: 1rem;
