@@ -29,6 +29,7 @@ const Nav = ({clearUser}) => {
       <div className="nav__logo">
         <Logo isTextDark={true}/>
       </div>
+
       <div className="nav__menu">
         <h3>Menu</h3>
         <div className="nav__button">

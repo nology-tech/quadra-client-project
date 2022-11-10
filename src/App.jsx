@@ -7,6 +7,8 @@ import SignUp from "./pages/SignUp/SignUp";
 import Wallet from "./pages/Wallet/Wallet";
 import Transfer from "./pages/Transfer/Transfer";
 import Convert from "./pages/Convert/Convert";
+import Nav from "./pages/Nav/Nav";
+
 const App = () => {
 
   const [user, setUser] = useState();
@@ -20,6 +22,17 @@ const App = () => {
         {user && <Route path="/wallet" element={<Wallet user={user}/>} />}
         <Route path="/converter" element={<Convert saveTransferDetails={setTransferDetails}/>}/>
         <Route path="/transfer" element={<Transfer transferDetails={transferDetails} />}/>
+      {user && (
+        <Route 
+          path="/wallet" 
+          element={ 
+            <> 
+              <Nav clearUser={setUser}/> 
+              <Wallet user={user} amount={1000}/> 
+            </>
+          } 
+        /> 
+      )}
     </Routes>
   );
 };

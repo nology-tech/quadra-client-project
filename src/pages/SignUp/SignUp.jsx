@@ -9,6 +9,7 @@ import app from "../../firebase";
 import { useState, useEffect } from "react";
 
 import AuthNav from "../../components/AuthNav/AuthNav";
+import { storeUserDetails } from "../../utils/apiUtils";
 
 const SignUp = ({ login, saveUser }) => {
   const [registerEmail, setRegisterEmail] = useState("");
@@ -79,7 +80,9 @@ const SignUp = ({ login, saveUser }) => {
     if (validateInputs()) {
       createUserWithEmailAndPassword(auth, registerEmail, registerPassword)
         .then((userCredential) => {
-          saveUser(userCredential.user);
+          const user = userCredential.user
+          saveUser(user);
+          storeUserDetails(user.uid, user.email);
           navigate("/wallet");
         })
         .catch((error) => {
@@ -90,61 +93,63 @@ const SignUp = ({ login, saveUser }) => {
 
   return (
     <div className="signUp">
-      <AuthNav isLogin={true} />
+      <AuthNav isLogin={true}/>
       <div className="signUp__form">
-        <div className="signUp__contents">
-          <div className="signUp__company">
-            <Logo isTextDark={true} />
-          </div>
-          <h1 className="signUp__header">Create an account</h1>
-          <p className="signUp__headerText">
-            {" "}
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit.{" "}
-          </p>
-          <div className="signUp__input">
-            <InputBox
-              className="signUp__input signUp__input--email"
-              title="Email"
-              inputType="text"
-              errorMessage={emailError}
-              successMessage={emailSuccess}
-              onChange={(e) => setRegisterEmail(e.target.value)}
-            />
-            <InputBox
-              className="signUp__input signUp__input--password"
-              title="Password"
-              inputType="text"
-              errorMessage={password1Error}
-              successMessage={password1Success}
-              onChange={(e) => setRegisterPassword(e.target.value)}
-            />
-            <InputBox
-              className="signUp__input signUp__input--confirmPassword"
-              title="Confirm Password"
-              inputType="text"
-              errorMessage={password2Error}
-              successMessage={password2Success}
-              onChange={(e) => setConfirmPassword(e.target.value)}
-            />
-          </div>
-          <div className="signUp__text">
-            <p className="signUp__text signUp__text--account">
-              Already have an account?
+          <div className="signUp__contents">
+            <div className="signUp__company">
+            <Logo isTextDark={true}/>
+            </div>
+
+            <h1 className="signUp__header">Create an account</h1>
+            <p className="signUp__headerText">
+              {" "}
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit.{" "}
             </p>
-            <a href={login} className="signUp__text signUp__text--login">
-              Login
-            </a>
-          </div>
-          <div className="signUp__continue">
-            <Button
-              buttonClass="largeButton"
-              buttonText="Continue >"
-              handleClick={register}
-            />
+
+            <div className="signUp__input">
+              <InputBox
+                className="signUp__input signUp__input--email"
+                title="Email"
+                inputType="text"
+                errorMessage={emailError}
+                successMessage={emailSuccess}
+                onChange={(e) => setRegisterEmail(e.target.value)}
+              />
+
+              <InputBox
+                className="signUp__input signUp__input--password"
+                title="Password"
+                inputType="text"
+                errorMessage={password1Error}
+                successMessage={password1Success}
+                onChange={(e) => setRegisterPassword(e.target.value)}
+              />
+
+              <InputBox
+                className="signUp__input signUp__input--confirmPassword"
+                title="Confirm Password"
+                inputType="text"
+                errorMessage={password2Error}
+                successMessage={password2Success}
+                onChange={(e) => setConfirmPassword(e.target.value)}
+              />
+            </div>
+
+            <div className="signUp__text">
+              <p className="signUp__text signUp__text--account">
+                Already have an account?
+              </p>
+              <a href={login} className="signUp__text signUp__text--login">
+                Login
+              </a>
+            </div>
+
+            <div className="signUp__continue">
+              <Button buttonClass="largeButton" buttonText="Continue >" handleClick={register} />
+            </div>
           </div>
         </div>
       </div>
-    </div>
   );
 };
 
