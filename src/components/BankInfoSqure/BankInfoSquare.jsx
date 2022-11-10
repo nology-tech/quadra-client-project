@@ -10,7 +10,7 @@ const BankInfoSqaure = ({firstName,lastName,img,sortCode,accNum,iban}) => {
       <div className = "container">
         <div className="row" id="row-one">
           <div className="inner-left-row"><p>{firstName} {lastName}</p></div>
-          <p className="heading">This is where bank image will go</p>
+          <p className="heading">{img}</p>
         </div>
         <div className="row">
           <p className="heading">Sort Code</p>

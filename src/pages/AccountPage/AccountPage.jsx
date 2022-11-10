@@ -1,18 +1,9 @@
 import "./AccountPage.scss";
 import React from "react";
-import {
-	BrowserRouter as Router,
-	Link,
-} from 'react-router-dom';
-
-
-import Nav from "../Nav/Nav";
+import {Link,} from 'react-router-dom';
 import LoggedIn from "../../components/LoggedIn/LoggedIn";
 import RecentTransaction from "../../components/RecentTransaction/RecentTransaction";
 import Button from "../../components/Button/Button"
-import Transfer from "../../pages/Transfer/Transfer"
-import ContactList from "../ContactList/ContactList";
-import ContactContent from "../../components/ContactContent/ContactContent";
 import BankInfoSqaure from "../../components/BankInfoSqure/BankInfoSquare";
 
 const AccountPage = ({firstName = "Erik", lastName = "Drew"}) => { 
