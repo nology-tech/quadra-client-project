@@ -19,59 +19,53 @@ const App = () => {
       <Route path="/login" element={<Login saveUser={setUser} />} />
       <Route path="/signup" element={<SignUp saveUser={setUser} />} />
       {user && (
-        <Route
-          path="/wallet"
-          element={
-            <>
-              <Nav clearUser={setUser} />
-              <Wallet user={user} amount={1000} />
-            </>
-          }
-        />
-      )}
-      {user && (
-        <Route
-          path="/convert"
-          element={
-            <>
-              <Nav clearUser={setUser} />
-              <Convert />
-            </>
-          }
-        />
-      )}
-      {user && (
-        <Route
-          path="/liverates"
-          element={
-            <>
-              <Nav clearUser={setUser} />
-              <LiveRates />
-            </>
-          }
-        />
-      )}
-      {user && (
-        <Route
-          path="/transfer"
-          element={
-            <>
-              <Nav clearUser={setUser} />
-              <Transfer />
-            </>
-          }
-        />
-      )}
-      {user && (
-        <Route
-          path="/contacts"
-          element={
-            <>
-              <Nav clearUser={setUser} />
-              <ContactList />
-            </>
-          }
-        />
+        <>
+          <Route
+            path="/wallet"
+            element={
+              <>
+                <Nav clearUser={setUser} />
+                <Wallet user={user} amount={1000} />
+              </>
+            }
+          />{" "}
+          <Route
+            path="/convert"
+            element={
+              <>
+                <Nav clearUser={setUser} />
+                <Convert />
+              </>
+            }
+          />
+          <Route
+            path="/liverates"
+            element={
+              <>
+                <Nav clearUser={setUser} />
+                <LiveRates />
+              </>
+            }
+          />
+          <Route
+            path="/transfer"
+            element={
+              <>
+                <Nav clearUser={setUser} />
+                <Transfer />
+              </>
+            }
+          />
+          <Route
+            path="/contacts"
+            element={
+              <>
+                <Nav clearUser={setUser} />
+                <ContactList />
+              </>
+            }
+          />
+        </>
       )}
     </Routes>
   );
