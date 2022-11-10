@@ -16,12 +16,12 @@
     margin: 3rem 0 0 1.5rem;
     display: flex;
     flex-direction: column;
-    
+
     h3 {
-    color: $color-logo-header;
-    font-family: $font-main;
-    font-size: 0.7rem;
-    font-weight: 400;
+      color: $color-logo-header;
+      font-family: $font-main;
+      font-size: 0.7rem;
+      font-weight: 400;
     }
   }
 
@@ -31,7 +31,7 @@
     justify-content: space-evenly;
     width: 70%;
     margin: 0.2rem 0;
-    
+
     img {
       height: 1.2rem;
       width: auto;
@@ -56,10 +56,10 @@
     background-color: $color-primary;
     border-radius: 0.3rem;
     margin: 14rem 0 2rem 1.5rem;
-    img{
+    img {
       width: 1.5rem;
       height: 1.5rem;
       margin-left: -0.5rem;
     }
-}
+  }
 }
