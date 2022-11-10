@@ -77,7 +77,7 @@
       margin: 0;
       font-size: 0.65rem;
       color: $color-currency;
-      text-align: end;
+      text-align: right;
     }
 
     &__greyLine {
@@ -101,7 +101,7 @@
       &--amount {
         padding: 0 0 0.3rem 0;
         margin: 0;
-        text-align: end;
+        text-align: right;
       }
     }
 
@@ -124,7 +124,7 @@
       &--amount {
         padding: 0;
         margin: 0;
-        text-align: end;
+        text-align: right;
       }
     }
     &__sendWrapper {
@@ -208,9 +208,9 @@
         display: flex;
         justify-content: space-between;
         width: 100%;
-        &__receiveValue {
-          text-align: right;
-        }
+      }
+      &__receiveValue {
+        text-align: right;
       }
     }
   }
@@ -219,7 +219,7 @@
     padding-top: 1rem;
     display: flex;
     justify-content: flex-end;
-    text-align: end;
+    text-align: right;
     width: 100%;
     &__cancel {
       color: $color-currency;
