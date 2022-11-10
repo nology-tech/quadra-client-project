@@ -3,33 +3,30 @@ import Button from "../../components/Button/Button";
 import arrow from "../../assets/images/transfer-focus-inverted.png";
 
 const TransferConfirm = ({
-  sendAmount = 1000.0,
-  sender = "Samantha Brooks",
-  senderAcc = "12345678",
-  senderSort = "123456",
-  totalToSend = "£100.00",
-  receiver = "Erik Just",
-  receiverAcc = "87654321",
-  receiverSort = "654321",
-  fundsRem = "£1",
-  rate = 1.3595,
-  fee = 20.0,
+  sendAmount,
+  sender,
+  senderAcc,
+  senderSort,
+  totalToSend,
+  receiver,
+  receiverAcc,
+  receiverSort,
+  fundsRem,
+  rate,
+  fee,
 }) => {
   return (
     <>
-      <section>
-        <div className="transfer-info">
-          <h1 className="transfer-info__transfer"> Transfer </h1>
-          <h1 className="transfer-info__heading"> Make Transfer </h1>
-          <p className="transfer-info__content">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim nam
-            inventore deserunt id? Rem minima dolorem asperiores perferendis sed
-            aspernatur. Dolorem nostrum voluptatibus dolore odit provident
-            minima reiciendis dignissimos iste.
-          </p>
-        </div>
-      </section>
-
+      <div className="transfer-info">
+        <h1 className="transfer-info__transfer"> Transfer </h1>
+        <h1 className="transfer-info__heading"> Make Transfer </h1>
+        <p className="transfer-info__content">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim nam
+          inventore deserunt id? Rem minima dolorem asperiores perferendis sed
+          aspernatur. Dolorem nostrum voluptatibus dolore odit provident minima
+          reiciendis dignissimos iste.
+        </p>
+      </div>
       <div className="receipt">
         <div className="transferForm">
           <h1 className="transferForm__head">Send From</h1>
