@@ -1,11 +1,56 @@
-.container{
-  display: flex;
-  flex-direction: column;
-  width: 100%;
+@use "../../styles/_typography.scss" as *;
+@use "../../styles/_variables.scss" as *;
 
-  .row{
+.container{
     display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-  }
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    background-color: $color-currency-background;
+    padding: 1rem;
+
+.row{
+    border-bottom: 0.1rem solid $color-currency;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+
+    .heading {
+        font-family: $font-main;
+        font-size: 1rem;
+        font-weight: 500;
+        line-height: 1rem;
+        color: $color-text;
+        text-align: start;
+    }
+
+    p {
+        font-family: $font-heading;
+        font-size: 1rem;
+        font-weight: 400;
+        line-height: 1.4rem;
+        color: $color-text-secondary;
+        text-align: end;
+        
+
+    }
+    
+    .inner-left-row{
+        width: 100%;
+        height: 100%;
+        p {
+            font-family: $font-main;
+            font-size: 1.5rem;
+            font-weight: 500;
+            line-height: 1.8rem;
+            color: $color-heading;
+            text-align: start;
+        }  
+    }
+}
+    #row-one{
+        
+        height: 100%;
+        border: none;
+    }
 }

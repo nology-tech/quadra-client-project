@@ -7,34 +7,26 @@ const BankInfoSqaure = ({firstName,lastName,img,sortCode,accNum,iban}) => {
 
   return(
     <>
-    <div className = "container">
-      <div className="row">
-
-      <span>{firstName} {lastName}</span>
-      <p>This is where image will go</p>
+      <div className = "container">
+        <div className="row" id="row-one">
+          <div className="inner-left-row"><p>{firstName} {lastName}</p></div>
+          <p className="heading">This is where bank image will go</p>
+        </div>
+        <div className="row">
+          <p className="heading">Sort Code</p>
+          <p>{sortCode}</p>
+        </div>
+        <div className="row">
+          <p className="heading">Account No</p>
+          <p>{accNum}</p>
+        </div>
+        <div className="row">
+          <p className="heading">IBAN</p>
+          <p>{iban}</p>
+        </div>
       </div>
-      <div className="row">
-
-      <p>Sort Code</p>
-      <p>{sortCode}</p>
-      </div>
-      <div className="row">
-
-      <p>Account No</p>
-      <p>{accNum}</p>
-      </div>
-      
-      <div className="row">
-
-      <p>IBAN</p>
-      <p>{iban}</p>
-      </div>
-
-    </div>
     </>
   )
-
-
 }
 
 export default BankInfoSqaure;
