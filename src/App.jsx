@@ -9,7 +9,6 @@ import Transfer from "./pages/Transfer/Transfer";
 import Convert from "./pages/Convert/Convert";
 import Nav from "./pages/Nav/Nav";
 import LiveRates from "./pages/LiveRates/LiveRates";
-import Transfer from "./pages/Transfer/Transfer";
 import ContactList from "./pages/ContactList/ContactList";
 const App = () => {
   const [user, setUser] = useState();
