@@ -1,0 +1,243 @@
+@use "../../styles/_variables.scss" as *;
+@use "../../styles/_typography.scss" as *;
+
+.transfer-info {
+  width: 40%;
+  &__transfer {
+    font-size: 0.7rem;
+    color: $color-primary;
+    letter-spacing: 0.05rem;
+    font-family: $font-heading;
+  }
+  &__heading {
+    font-family: $font-heading;
+    font-weight: 400;
+    font-size: 1.25rem;
+    padding: 0;
+    margin: 0;
+  }
+  &__content {
+    font-family: $font-main;
+    color: $color-text-secondary;
+    font-size: 0.6em;
+    word-spacing: 0.2rem;
+    line-height: 1rem;
+  }
+}
+
+.receipt {
+  background-color: $color-currency-background;
+  width: 40rem;
+  height: 38rem;
+  padding: 0.5rem 4rem 1rem 4rem;
+
+  .transferForm {
+    margin-top: 0.5rem;
+    display: flex;
+    flex-direction: column;
+    background-color: $color-input-background;
+
+    &__head {
+      font-family: $font-heading;
+      font-weight: 500;
+      letter-spacing: 0.05rem;
+      font-size: 1.1rem;
+    }
+
+    &__inner {
+      border-radius: 0.5rem;
+      padding: 1rem 2rem;
+      background-color: $line-divider;
+    }
+
+    &__user {
+      padding: 0 0 0.4rem 0;
+      margin: 0;
+      color: $color-primary;
+      font-family: $font-main;
+      font-size: 0.7rem;
+      font-weight: 700;
+    }
+
+    &__infoWrapper {
+      display: flex;
+    }
+
+    &__infoName {
+      padding: 0 0 0.3rem 0;
+      margin: 0;
+      font-family: $font-main;
+      font-weight: 350;
+      font-size: 0.65rem;
+      color: $color-text;
+    }
+
+    &__infoNum {
+      padding: 0 0 0.2rem 0;
+      margin: 0;
+      font-size: 0.65rem;
+      color: $color-currency;
+      text-align: end;
+    }
+
+    &__greyLine {
+      border-top: 0.005rem solid $color-background;
+      margin-top: 0.7rem;
+    }
+
+    &__totalWrapper {
+      display: flex;
+      align-items: center;
+      margin-top: 0.5rem;
+    }
+
+    &__total {
+      padding: 0 0 0.3rem 0;
+      margin: 0;
+      font-family: $font-main;
+      font-weight: 550;
+      font-size: 0.9rem;
+
+      &--amount {
+        padding: 0 0 0.3rem 0;
+        margin: 0;
+        text-align: end;
+      }
+    }
+
+    &__remainderWrapper {
+      padding: 0;
+      margin: 0;
+      display: flex;
+      align-items: center;
+      justify-content: space-evenly;
+    }
+
+    &__remainder {
+      padding: 0;
+      margin: 0;
+      font-family: $font-main;
+      font-weight: 400;
+      font-size: 0.5rem;
+      color: $color-text-secondary;
+
+      &--amount {
+        padding: 0;
+        margin: 0;
+        text-align: end;
+      }
+    }
+    &__sendWrapper {
+      margin-top: 1rem;
+    }
+  }
+
+  .additionalCost {
+    margin-top: 0.5rem;
+    .additionalCost__info {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      width: auto;
+
+      &--value {
+        font-size: 0.7rem;
+        width: auto;
+        color: $color-text-secondary;
+        font-family: $font-heading;
+        font-weight: 400;
+      }
+
+      #delivery {
+        width: 35%;
+        text-align: right;
+      }
+
+      &--title {
+        padding: 0;
+        margin: 0;
+        color: $color-heading;
+        font-size: 0.7rem;
+        font-weight: 500;
+        font-family: $font-heading;
+        letter-spacing: 0.025rem;
+      }
+    }
+  }
+  .total {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 0.7rem;
+    border-top: 0.001rem solid $color-background;
+    .totalContainer {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around;
+      margin-top: 1rem;
+      width: 100%;
+
+      &__toPay {
+        font-family: $font-heading;
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 0.25rem;
+        &--head {
+          padding: 0;
+          margin: 0;
+          font-size: 1.25rem;
+          font-weight: 500;
+          letter-spacing: 0.05rem;
+          font-family: $font-heading;
+        }
+        &--value {
+          padding: 0;
+          margin: 0;
+          font-size: 1.25rem;
+          font-weight: 500;
+          text-align: right;
+          font-family: $font-heading;
+        }
+      }
+      &__recipient {
+        margin-bottom: 1rem;
+        font-size: 0.7rem;
+        font-family: $font-heading;
+        color: $color-primary;
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+        &__receiveValue {
+          text-align: right;
+        }
+      }
+    }
+  }
+  .confirm {
+    border-top: 1px solid $color-background;
+    padding-top: 1rem;
+    display: flex;
+    justify-content: flex-end;
+    text-align: end;
+    width: 100%;
+    &__cancel {
+      color: $color-currency;
+      margin-right: 2rem;
+      border-bottom: 1px dotted;
+      width: auto;
+      align-self: center;
+    }
+    &__button {
+      display: flex;
+      padding-left: 0.75rem;
+      background-color: $color-primary;
+      img {
+        height: 1rem;
+        align-self: center;
+        position: absolute;
+        margin-left: -0.25rem;
+      }
+    }
+  }
+}
