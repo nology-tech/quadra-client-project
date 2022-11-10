@@ -2,7 +2,7 @@ import "./Transfer.scss";
 import Button from "../../components/Button/Button";
 const Transfer = ({
   fee = 0.00,
-  transferDetails = (fromCurr, fromAmt, toCurr, toAmt, fromAmt, transferRate)
+  transferDetails:{fromCurr, fromAmt, toCurr, toAmt, transferRate}
 }) => {
   return (
     <>
