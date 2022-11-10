@@ -9,21 +9,23 @@ import "./CurrencyConverter.scss";
 import ConversionResult from "../ConversionResult/ConversionResult";
 import { getCurrency } from "../../utils/apiUtils";
 
+
 const CurrencyConverter = ({
   currencyList = Object.keys(iconMap),
   amount,
   fromCurr,
-  toCurr
+  toCurr,
+  saveTransferDetails
 }) => {
   const [newAmount, setNewAmount] = useState(amount);
   const [fromCurrency, setFromCurrency] = useState(fromCurr);
   const [toCurrency, setToCurrency] = useState(toCurr);
   const [rate, setRate] = useState();
+  const [resultsShown, setResultsShown] =useState(false);
   const date = new Date();
   useEffect(() => {
     getRate();
   }, []);
-
 
   useEffect(() => {
     getRate();
@@ -60,11 +62,24 @@ const CurrencyConverter = ({
     }
     setFromCurrency(newFromCurrency);
   };
-  const handleToChange = (eventKey, event) =>
-    setToCurrency(event.target.textContent);
 
+  const handleConvert = () => {
+    setResultsShown(true);
+  }
+
+  const handleToChange = (eventKey, event) => {
+    setToCurrency(event.target.textContent);  
+  }
+
+  const handleCurrSwap= () => {
+    const tempToCurr = toCurrency;
+    const tempFromCurr = fromCurrency;
+    setToCurrency(tempFromCurr);
+    setFromCurrency(tempToCurr);
+  }
   return (
     <>
+    
     <div className="converter">
       <h3 id="converter__amount">Amount</h3>
       <h3 id="converter__from">From</h3>
@@ -89,7 +104,7 @@ const CurrencyConverter = ({
         </Dropdown>
       </div>
 
-      <div className="converter__button">
+      <div className="converter__button" onClick={handleCurrSwap}>
         <img id="converter__image" src={Convert} alt="" />
       </div>
 
@@ -106,10 +121,11 @@ const CurrencyConverter = ({
 
       <div className="converter__submitWrapper">
         <img src={altConvert} alt="convertLogo" />
-        <Button buttonClass="largeButton" buttonText={"Convert"} />
+        <Button buttonClass="largeButton" buttonText={"Convert"} handleClick={handleConvert} />
       </div>
     </div>
-      <ConversionResult amount={newAmount} fromCurrency={fromCurrency} toCurrency={toCurrency} rate={rate} date={date.getFullYear()} handleClick={handleFromChange}/>
+    {resultsShown && <ConversionResult amount={newAmount} fromCurrency={fromCurrency} toCurrency={toCurrency} rate={rate} date={date.getFullYear()} saveTransferDetails={saveTransferDetails}/>
+      }
       </>
   );
 };

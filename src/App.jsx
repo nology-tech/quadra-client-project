@@ -5,10 +5,12 @@ import "./styles/main.scss";
 import Login from "./pages/Login/Login";
 import SignUp from "./pages/SignUp/SignUp";
 import Wallet from "./pages/Wallet/Wallet";
-
+import Transfer from "./pages/Transfer/Transfer";
+import Convert from "./pages/Convert/Convert";
 const App = () => {
 
   const [user, setUser] = useState();
+  const [transferDetails, setTransferDetails] = useState();
   
   return (
     <Routes>
@@ -16,6 +18,8 @@ const App = () => {
       <Route path="/login" element={<Login saveUser={setUser}/>} />
       <Route path="/signup" element={<SignUp saveUser={setUser}/>} />
         {user && <Route path="/wallet" element={<Wallet user={user}/>} />}
+        <Route path="/converter" element={<Convert saveTransferDetails={setTransferDetails}/>}/>
+        <Route path="/transfer" element={<Transfer transferDetails={transferDetails} />}/>
     </Routes>
   );
 };
