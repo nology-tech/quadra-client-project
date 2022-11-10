@@ -15,8 +15,9 @@ const ContactContent = ({numContacts=4}) => {
 
 
     const getData = async () => {
-        const contacts = await getUserContacts();
-        setAllContacts(contacts.slice(0, Math.min(numContacts, contacts.length) ))
+        let contacts = await getUserContacts();
+        contacts = contacts.slice(0, Math.min(numContacts, contacts.length) )
+        setAllContacts(contacts)
         setUserContacts(
             contacts.map((item) => {
                 return (
