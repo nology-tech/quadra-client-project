@@ -7,8 +7,6 @@ const Home = () => {
     <Layout>
       <Landing />
     </Layout>
-    
-    
   );
 };
 

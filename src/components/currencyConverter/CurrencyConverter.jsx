@@ -27,8 +27,11 @@ const CurrencyConverter = ({
         {currency}
       </Dropdown.Item>
     ));
-
-  const handleAmountChange = (event) => setNewAmount(event.target.value);
+  const handleAmountChange = (event) => {
+    if (event.target.value >= 0) {
+        setNewAmount(event.target.value);
+    }
+}
   const handleFromChange = (eventKey, event) => {
     const newFromCurrency = event.target.textContent;
     if (toCurrency == newFromCurrency) {

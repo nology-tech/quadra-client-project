@@ -2,13 +2,14 @@ import "./ContactContent.scss";
 import BankContact from "../BankContact/BankContact";
 import {useEffect, useState} from "react";
 import { getUserContacts } from "../../utils/apiUtils";
+import creditCard from "../../assets/images/credit-card.png";
 
-const ContactContent = () => {
+const ContactContent = ({numContacts=4}) => {
     const [allContacts, setAllContacts] = useState([]);
 
     const getData = async () => {
         const contacts = await getUserContacts();
-        setAllContacts(contacts)
+        setAllContacts(contacts.slice(0, Math.min(numContacts, contacts.length) ))
     }
     useEffect(() => {
         getData();
@@ -17,7 +18,7 @@ const ContactContent = () => {
     const userContacts = allContacts.map((item) => {
         return (
             <BankContact 
-                image_url={""} 
+                image_url={creditCard} 
                 userName={item.contactName}
                 sortCode={item.sortCode} 
                 accNum={item.accountNumber} 

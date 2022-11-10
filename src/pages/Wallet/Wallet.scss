@@ -1,28 +1,41 @@
 @use "../../styles/variables" as *;
+@use "../../styles/typography" as *;
 
-.wallet-ctner {
+.wallet {
   display: flex;
   flex-direction: column;
-  margin-left: 12rem;
   height: 100vh;
-  width: 100%;
+  padding-left: 2rem;
+  margin-left: 11rem;
   &__message {
     display: flex;
-    width: 12%;
     align-items: center;
-    margin: 4rem 0 2rem 3rem;
-
+    margin: 0 0 1rem 2.5rem;
     .welcome__text {
       color: $color-heading;
-      font-size: 2rem;
+      font-size: 1.5rem;
+      font-family: $font-heading;
+      font-weight: 400;
+      width: auto;
     }
     img {
       height: 2rem;
       aspect-ratio: 1 / 1;
+      margin-left: 1rem;
     }
   }
 
   &__funds {
-    margin: 0 0 5rem 3rem;
+    margin: 0 0 5rem 2rem;
+  }
+
+  &__user {
+    display: flex;
+    justify-content: flex-end;
+    margin-bottom: -1.5rem;
+  }
+
+  &__contacts {
+    margin-left: 1rem;
   }
 }
