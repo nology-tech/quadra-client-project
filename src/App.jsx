@@ -5,19 +5,20 @@ import "./styles/main.scss";
 import Login from "./pages/Login/Login";
 import SignUp from "./pages/SignUp/SignUp";
 import Wallet from "./pages/Wallet/Wallet";
-import Nav from "./pages/Nav/Nav";
-import Convert from "./pages/Convert/Convert";
-import LiveRates from "./pages/LiveRates/LiveRates";
 import Transfer from "./pages/Transfer/Transfer";
+import Convert from "./pages/Convert/Convert";
+import Nav from "./pages/Nav/Nav";
+import LiveRates from "./pages/LiveRates/LiveRates";
 import ContactList from "./pages/ContactList/ContactList";
 const App = () => {
   const [user, setUser] = useState();
-
+  const [transferDetails, setTransferDetails] = useState();
+  
   return (
     <Routes>
-      <Route path="*" element={<Home />} />
-      <Route path="/login" element={<Login saveUser={setUser} />} />
-      <Route path="/signup" element={<SignUp saveUser={setUser} />} />
+      <Route path="*" element={<Home/>} />
+      <Route path="/login" element={<Login saveUser={setUser}/>} />
+      <Route path="/signup" element={<SignUp saveUser={setUser}/>} />
       {user && (
         <>
           <Route
@@ -34,7 +35,7 @@ const App = () => {
             element={
               <>
                 <Nav clearUser={setUser} />
-                <Convert />
+                <Convert saveTransferDetails={setTransferDetails} />
               </>
             }
           />
@@ -52,7 +53,7 @@ const App = () => {
             element={
               <>
                 <Nav clearUser={setUser} />
-                <Transfer />
+                <Transfer transferDetails={transferDetails} />
               </>
             }
           />
@@ -67,8 +68,9 @@ const App = () => {
           />
         </>
       )}
+
     </Routes>
   );
-};
+}
 
 export default App;
