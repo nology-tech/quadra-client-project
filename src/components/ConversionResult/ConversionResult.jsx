@@ -1,5 +1,8 @@
 import "./ConversionResult.scss";
 import Button from "../Button/Button";
+import { Link } from "react-router-dom";
+import { useEffect } from "react";
+
 
 /**
  * Props for Conversion Result (Scroll down in the rollover to see all).
@@ -15,31 +18,48 @@ import Button from "../Button/Button";
 const ConversionResult = ({
   amount,
   fromCurrency,
-  fromCode,
   toCurrency,
-  toCode,
   rate,
   date,
   handleClick,
-}) => {
+  saveTransferDetails}) => {
+
+  const toAmount = amount * rate;
+  const transferDetails = {fromCurr:fromCurrency,
+    fromAmt:amount,
+    toCurr:toCurrency,
+    toAmt:toAmount,
+    transferRate:rate
+  }
+
+  useEffect(() => {
+    saveTransferDetails.saveTransferDetails(transferDetails);
+  }, []);
+  
+  useEffect(() => {
+    saveTransferDetails.saveTransferDetails(transferDetails);
+  }, [ amount,fromCurrency,toCurrency,rate]);
+
   return (
     <div className="currencies">
       <div className="currencies__display">
         <h5 className="currencies__source">{`${amount} ${fromCurrency} =`}</h5>
         <h2 className="currencies__target">{`${
-          amount * rate
+          toAmount
         } ${toCurrency}`}</h2>
-        <p className="currencies__code">{`1 ${fromCode} = ${rate} ${toCode}`}</p>
-        <p className="currencies__code">{`1 ${toCode} = ${
+        <p className="currencies__code">{`1 ${fromCurrency} = ${rate} ${toCurrency}`}</p>
+        <p className="currencies__code">{`1 ${toCurrency} = ${
           1 / rate
-        } ${fromCode}`}</p>
+        } ${fromCurrency}`}</p>
       </div>
       <div className="currencies__makeTransfer">
+      <Link to={`/transfer`}>
         <Button
           buttonClass="invertedButton"
           buttonText="Make Transfer"
           handleClick={handleClick}
         />
+        </Link>
         <p className="currencies__updateTransfer">{`${fromCurrency} to ${toCurrency} conversion -- Last Updated ${date}`}</p>
       </div>
     </div>
