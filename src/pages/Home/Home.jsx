@@ -1,15 +1,12 @@
 import Layout from "../../components/Layout/Layout";
-import TransferConfirm from "../TransferConfirm/TransferConfirm.jsx";
-
+import Landing from "../../pages/Landing/Landing";
 
 const Home = () => {
   return (
     <Layout>
-      <TransferConfirm />
+      <Landing />
     </Layout>
   );
 };
 
 export default Home;
-
-
