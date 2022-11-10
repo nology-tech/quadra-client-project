@@ -1,32 +1,27 @@
 import "./BankInfoSquare.scss";
 
-
-
-const BankInfoSqaure = ({firstName,lastName,img,sortCode,accNum,iban}) => {
-  firstName="erik";lastName="drew";img="test";sortCode="2728729";accNum="929292929929292";iban="7478489383838838"
+const BankInfoSquare = ({firstName, lastName, img, sortCode, accNum, iban}) => {
 
   return(
-    <>
-      <div className = "container">
-        <div className="row" id="row-one">
-          <div className="inner-left-row"><p>{firstName} {lastName}</p></div>
-          <p className="heading">{img}</p>
+      <div className = "bankContainer">
+        <div className="bankContainer__row" id="row-one">
+          <div className="bankContainer__leftRow"><p>{firstName} {lastName}</p></div>
+          <p className="bankContainer__heading">{img}</p>
         </div>
-        <div className="row">
-          <p className="heading">Sort Code</p>
-          <p>{sortCode}</p>
+        <div className="bankContainer__row">
+          <p className="bankContainer__heading">Sort Code</p>
+          <p className="bankContainer__data">{sortCode}</p>
         </div>
-        <div className="row">
-          <p className="heading">Account No</p>
-          <p>{accNum}</p>
+        <div className="bankContainer__row">
+          <p className="bankContainer__heading">Account No</p>
+          <p className="bankContainer__data">{accNum}</p>
         </div>
-        <div className="row">
-          <p className="heading">IBAN</p>
-          <p>{iban}</p>
+        <div className="bankContainer__row">
+          <p className="bankContainer__heading">IBAN</p>
+          <p className="bankContainer__data">{iban}</p>
         </div>
       </div>
-    </>
   )
 }
 
-export default BankInfoSqaure;
+export default BankInfoSquare;

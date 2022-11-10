@@ -1,7 +1,7 @@
 @use "../../styles/_typography.scss" as *;
 @use "../../styles/_variables.scss" as *;
 
-.accountWrapper {
+.account {
     padding-left: 4rem;
     display: flex;
     flex-direction: column;
@@ -23,7 +23,7 @@
         height: 2.5rem;
         color: $color-heading;
     }
-        &__info{
+        &__infoWrapper{
             display: grid;
             grid-template-columns: 30% 70%;
             grid-template-rows: 80% 20%;
@@ -32,43 +32,40 @@
                 "transfer transactions";
             grid-gap: 1rem;
             justify-items: center;
+    }
 
-        .accountWrapper__transferRow {
-            display: flex;
-            flex-direction: row;
-            width: 100%;
-            height: 100%;
-            padding: 1rem 2rem;
-            background-color: $color-currency-background;
-            grid-area: transfer;
+    &__transferRow {
+        display: flex;
+        flex-direction: row;
+        width: 100%;
+        height: 100%;
+        padding: 1rem 2rem;
+        background-color: $color-currency-background;
+        grid-area: transfer;
             p { 
             color: $color-heading;
             }
-        }
+    }
 
-        .accountWrapper__singleContact {
-            grid-area: contact;
-            width: 100%;
-            height: 100%;
-        }
+    &__singleContact {
+        grid-area: contact;
+        width: 100%;
+        height: 100%;
+    }
 
-        .accountWrapper__recentTransaction{
-            grid-area: transactions;
-            width: 100%;
-            height: 100%;
-        }
+    &__transactions{
+        grid-area: transactions;
+        width: 100%;
+        height: 100%;
+    }
+
+    &__loggedIn {
+        display: flex;
+        justify-content: flex-end;
     }
 }
-.changeColor{
-            
+.changeColor{     
     color: skyblue;
-}
-.topnav {
-    margin-left: 20%;
-}
-
-.sidenav {
-    margin-top: 0;
 }
 
 p {
@@ -77,17 +74,4 @@ p {
     font-size: 1rem;
     line-height: 1rem;
     color: $color-input-text;
-}
-
-.contactsList {
-    font-family: $font-heading;
-    font-size: 24px;
-    font-weight: 400;
-    color: $color-heading;
-
-} 
-
-.loggedIn {
-    display: flex;
-    justify-content: flex-end;
 }
