@@ -2,7 +2,7 @@ import "./Nav.scss";
 import Logo from "../../components/Logo/Logo";
 import Contacts from "../../assets/images/non-focus-contacts.png";
 import Wallet from "../../assets/images/non-focus-wallet.png";
-import LiveRate from "../../assets/images/non-focus-graph.png";
+import LiveRate from "../../assets/images/graph-focus.svg";
 import Convert from "../../assets/images/non-focus-convert.png";
 import Transfer from "../../assets/images/transfer-focus.png";
 import Logout from "../../assets/images/logout.svg";
