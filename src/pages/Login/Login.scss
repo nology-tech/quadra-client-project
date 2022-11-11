@@ -7,7 +7,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 45rem;
+    margin-top: 9rem;
   }
   &__logo {
     margin-left: -0.7rem;
@@ -42,19 +42,29 @@
   }
   &__options {
     color: $color-text-secondary;
-    font-size: 0.75rem;
+    font-size: 0.7rem;
     display: flex;
-    justify-content: space-between;
-    width: 100%;
-    padding: 0 0.1rem 0 0rem;
-    .signIn__options--forgot {
-      display: flex;
-      justify-content: flex-end;
-    }
+    align-items: center;
   }
-  &__link {
+  &__forgot {
+    width: 20rem;
+    display: flex;
+    justify-content: flex-end;
     color: $color-primary;
     text-decoration: underline dotted;
+  }
+  &__account {
+    width: 15rem;
+  }
+  &__link {
+    display: flex;
+    justify-content: flex-start;
+    color: $color-primary;
+    text-decoration: underline dotted;
+    font-size: 0.7rem;
+    width: 9rem;
+    padding: 0;
+    margin: 0;
   }
   &__line {
     height: 1px;

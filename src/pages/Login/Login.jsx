@@ -96,15 +96,11 @@ const Login = ({ saveUser }) => {
             onChange={handlePassword}
           />
           <div className="signIn__options">
-            <p>
-              Don&apos;t have an account?{" "}
-              <Link to={"/signup"} className="signIn__link">
-                Sign Up
-              </Link>
-            </p>
-            <p className="signIn__options--forgot">
-              <a className="signIn__link">Forgotten Password?</a>
-            </p>
+            <p className="signIn__account">Don&apos;t have an account? </p>
+            <Link to={"/signup"} className="signIn__link">
+              Sign Up
+            </Link>
+            <p className="signIn__forgot">Forgotten Password?</p>
           </div>
           <div className="signIn__line"></div>
           <div className="signIn__submit">
