@@ -9,7 +9,7 @@ const ContactList = ({userId}) => {
             <div className="logged-in-container">
                 <LoggedIn/>
             </div>
-            <ContactContent numContacts={10} userId={userId} />
+            <ContactContent numContacts={10} isWallet={false} userId={userId} />
         </div>
     )
 }

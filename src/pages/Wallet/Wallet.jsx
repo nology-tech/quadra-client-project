@@ -17,7 +17,7 @@ const Wallet = ({ amount = "0", user}) => {
           <Funds amount={amount} isManage={true} />
         </div>
         <div className="wallet__contacts">
-          <ContactContent userId={user.uid}/>
+          <ContactContent isWallet={true} userId={user.uid}/>
         </div>
     </div>
   );

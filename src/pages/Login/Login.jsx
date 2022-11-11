@@ -5,7 +5,7 @@ import Logo from "../../components/Logo/Logo";
 import AuthNav from "../../components/AuthNav/AuthNav";
 import Button from "../../components/Button/Button";
 import { useState, useEffect } from "react";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, Link } from "react-router-dom";
 import app from "../../firebase.js";
 import { getAuth, signInWithEmailAndPassword } from "firebase/auth";
 
@@ -38,8 +38,10 @@ const Login = ({ saveUser }) => {
     } else {
       setInvalidEmail("");
     }
+    if (email == "") {
+      setInvalidEmail("");
+    }
   };
-
   const handleLogin = async () => {
     const userData = await loginAuth();
     if (userData != undefined) {
@@ -70,7 +72,9 @@ const Login = ({ saveUser }) => {
       <AuthNav isLogin={false} />
       <div className="signIn__form">
         <div className="signIn__contents">
-          <Logo isTextDark={isTextDark} />
+          <div className="signIn__logo">
+            <Logo isTextDark={isTextDark} />
+          </div>
           <div className="signIn__welcome">
             <p className="signIn__message">Welcome Back!</p>
             <img className="signIn__img" src={hand} alt="welcome"></img>
@@ -93,13 +97,11 @@ const Login = ({ saveUser }) => {
             onChange={handlePassword}
           />
           <div className="signIn__options">
-            <p>
-              Don&apos;t have an account?{" "}
-              <a className="signIn__link">Sign Up</a>
-            </p>
-            <p>
-              <a>Forgotten Password?</a>
-            </p>
+            <p className="signIn__account">Don&apos;t have an account? </p>
+            <Link to={"/signup"} className="signIn__link">
+              Sign Up
+            </Link>
+            <p className="signIn__forgot">Forgotten Password?</p>
           </div>
           <div className="signIn__line"></div>
           <div className="signIn__submit">
