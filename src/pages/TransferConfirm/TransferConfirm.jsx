@@ -1,6 +1,7 @@
 import "./TransferConfirm.scss";
 import Button from "../../components/Button/Button";
 import arrow from "../../assets/images/transfer-focus-inverted.png";
+import LoggedIn from "../../components/LoggedIn/LoggedIn";
 
 const TransferConfirm = ({
   sendAmount,
@@ -17,6 +18,9 @@ const TransferConfirm = ({
 }) => {
   return (
     <>
+      <div className="logged-in-container">
+        <LoggedIn />
+      </div>
       <div className="transfer-info">
         <h1 className="transfer-info__transfer"> Transfer </h1>
         <h1 className="transfer-info__heading"> Make Transfer </h1>

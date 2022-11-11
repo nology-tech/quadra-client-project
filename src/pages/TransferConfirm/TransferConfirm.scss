@@ -3,6 +3,8 @@
 
 .transfer-info {
   width: 40%;
+  margin: -2rem 0 2rem 15rem;
+
   &__transfer {
     font-size: 0.7rem;
     color: $color-primary;
@@ -30,6 +32,7 @@
   width: 40rem;
   height: 38rem;
   padding: 0.5rem 4rem 1rem 4rem;
+  margin-left: 15rem;
 
   .transferForm {
     margin-top: 0.5rem;
@@ -224,7 +227,6 @@
     &__cancel {
       color: $color-currency;
       margin-right: 2rem;
-      border-bottom: 1px dotted;
       width: auto;
       align-self: center;
     }
