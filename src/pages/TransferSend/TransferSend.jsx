@@ -1,5 +1,5 @@
 import "./TransferSend.scss";
-// import LoggedIn from "../../components/LoggedIn/LoggedIn";
+import LoggedIn from "../../components/LoggedIn/LoggedIn";
 import Button from "../../components/Button/Button";
 import Plus from "../../assets/images/plus.png";
 const TransferSend = ({
@@ -18,6 +18,9 @@ const TransferSend = ({
 
   return (
     <>
+      <div className="wallet__user">
+        <LoggedIn />
+      </div>
       <div className="info">
         <h1 className="info__transfer"> Transfer </h1>
         <h1 className="info__heading"> View Latest Rates </h1>
