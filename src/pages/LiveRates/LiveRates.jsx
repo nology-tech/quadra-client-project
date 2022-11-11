@@ -5,6 +5,7 @@ import { getCurrencyGBP } from "../../utils/apiUtils";
 import iconMap from "../../utils/currencyIcons";
 import { Dropdown } from "rsuite";
 import Button from "../../components/Button/Button";
+import LoggedIn from "../../components/LoggedIn/LoggedIn";
 
 const LiveRates = () => {
   const [currRates, setCurrRates] = useState({});
@@ -64,7 +65,10 @@ const LiveRates = () => {
   });
 
   return (
-    <>
+    <div className="live-rates-main">
+      <div className="logged-in-container">
+      <LoggedIn/>
+      </div>
       <div className="info">
         <h1 className="info__transfer"> Transfer </h1>
         <h1 className="info__heading"> View Latest Rates </h1>
@@ -103,7 +107,7 @@ const LiveRates = () => {
           />
         </div>
       </div>
-    </>
+    </div>
   );
 };
 
