@@ -3,19 +3,20 @@
 
 .info {
   width: 40%;
-  padding-left: 1rem;
-  margin: 1rem 0 2rem 1rem;
+  margin: 0 0 5rem 18rem;
+  padding: 0;
   &__transfer {
     font-size: 0.7rem;
     color: $color-primary;
     letter-spacing: 0.05rem;
-    width: 100rem;
     font-family: $font-heading;
+    padding: 0;
   }
   &__heading {
     font-family: $font-heading;
     font-weight: 400;
     font-size: 1.5rem;
+    padding: 0;
   }
   &__content {
     font-family: $font-main;
@@ -29,9 +30,9 @@
 .transferForm {
   display: flex;
   flex-direction: column;
-  width: 45%;
+  width: 35rem;
   padding: 2rem 3.5rem;
-  margin: 1rem 2rem;
+  margin: 1rem 2rem 0 18rem;
   background-color: $color-input-background;
 
   &__head {
@@ -42,14 +43,14 @@
   }
 
   &__inner {
-    border-radius: 1rem;
-    margin-top: 1rem;
+    border-radius: 0.5rem;
     width: 95%;
     padding: 1rem 2rem;
     background-color: $line-divider;
   }
 
   &__user {
+    padding: 0;
     color: $color-primary;
     font-family: $font-main;
     font-size: 1rem;
@@ -58,7 +59,7 @@
 
   &__infoWrapper {
     display: flex;
-    height: 1.5rem;
+    height: 1rem;
   }
 
   &__infoName {
@@ -78,7 +79,7 @@
     border-top: 0.005rem solid $color-menu-unselected;
     margin-top: 1rem;
   }
-  
+
   &__totalWrapper {
     display: flex;
     align-items: center;
@@ -93,23 +94,30 @@
 
     &--amount {
       text-align: end;
+      color: black;
     }
   }
-  
+
   &__remainderWrapper {
+    padding: 0;
+    margin: 0;
     display: flex;
     align-items: center;
     justify-content: space-between;
   }
 
   &__remainder {
+    padding: 0;
+    margin: 0;
     font-family: $font-main;
     font-weight: 400;
     font-size: 0.5rem;
     color: $color-text-secondary;
 
     &--amount {
-    text-align: end;
+      padding: 0;
+      margin: 0;
+      text-align: end;
     }
   }
 
