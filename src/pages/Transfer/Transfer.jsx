@@ -1,13 +1,16 @@
 import "./Transfer.scss";
 import Button from "../../components/Button/Button";
 import { Link } from "react-router-dom";
-
+import LoggedIn from "../../components/LoggedIn/LoggedIn";
 const Transfer = ({
   fee = 0.0,
   transferDetails: { fromCurr, fromAmt, toCurr, toAmt, transferRate },
 }) => {
   return (
     <>
+      <div className="logged-in-container">
+        <LoggedIn />
+      </div>
       <div className="transfer-info">
         <h1 className="transfer-info__transfer"> Transfer </h1>
         <h1 className="transfer-info__heading"> Make Transfer </h1>
