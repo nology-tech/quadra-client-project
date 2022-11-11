@@ -6,7 +6,7 @@ import creditCard from "../../assets/images/credit-card.png";
 import Searchbar from "../Searchbar/Searchbar";
 import Button from "../../components/Button/Button";
 
-const ContactContent = ({numContacts=4}) => {
+const ContactContent = ({numContacts=4, isWallet=false}) => {
     const [allContacts, setAllContacts] = useState([]);
     const [searchText, setSearchText] = useState("");
     const [userContacts, setUserContacts] = useState();
@@ -62,10 +62,11 @@ const ContactContent = ({numContacts=4}) => {
                 <p className="contactList__desc">
                     All your friends and family financial details in one place. Easily transfer currency internationally at the best possible rates.
                 </p>
+                {!isWallet && 
                 <div className="contactList__search-btn-container">
-                <Searchbar saveSearchText={setSearchText} />
-                <Button buttonText={"+ Add"} buttonClass={"addContact"} />
-                </div>
+                    <Searchbar saveSearchText={setSearchText} />
+                    <Button buttonText={"+ Add"} buttonClass={"addContact"} />
+                </div> }
             </div>
             <div className="contactList__options contactList__headings">
                 <h5 className="contactList__userName">Name</h5>
