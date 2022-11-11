@@ -11,7 +11,7 @@ import { useState, useEffect } from "react";
 import AuthNav from "../../components/AuthNav/AuthNav";
 import { storeUserDetails } from "../../utils/apiUtils";
 
-const SignUp = ({ login, saveUser }) => {
+const SignUp = ({ saveUser }) => {
   const [registerEmail, setRegisterEmail] = useState("");
   const [registerPassword, setRegisterPassword] = useState("");
   const [confirmPassword, setConfirmPassword] = useState("");
@@ -139,10 +139,8 @@ const SignUp = ({ login, saveUser }) => {
             <p className="signUp__text signUp__text--account">
               Already have an account?
             </p>
-            <Link to={"/login"}>
-              <a href={login} className="signUp__text signUp__text--login">
-                Login
-              </a>
+            <Link to={"/login"} className="signUp__text signUp__text--login">
+              Login
             </Link>
           </div>
 

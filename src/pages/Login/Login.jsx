@@ -96,8 +96,8 @@ const Login = ({ saveUser }) => {
           <div className="signIn__options">
             <p>
               Don&apos;t have an account?{" "}
-              <Link to={"/signup"}>
-                <a className="signIn__link">Sign Up</a>
+              <Link to={"/signup"} className="signIn__link">
+                Sign Up
               </Link>
             </p>
             <p className="signIn__options--forgot">

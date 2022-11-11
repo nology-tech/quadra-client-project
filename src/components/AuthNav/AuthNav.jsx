@@ -13,19 +13,11 @@ const AuthNav = ({ isLogin }) => {
       {isLogin ? (
         <Link to={"/login"}>
           {" "}
-          <Button
-            buttonClass="largeButton"
-            buttonText={"Login"}
-            handleClick={""}
-          />
+          <Button buttonClass="largeButton" buttonText={"Login"} />
         </Link>
       ) : (
         <Link to={"/signup"}>
-          <Button
-            buttonClass="largeButton"
-            buttonText={"Sign Up"}
-            handleClick={""}
-          />
+          <Button buttonClass="largeButton" buttonText={"Sign Up"} />
         </Link>
       )}
     </div>
