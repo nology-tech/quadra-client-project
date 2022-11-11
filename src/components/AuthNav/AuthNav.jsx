@@ -1,16 +1,25 @@
 import "./AuthNav.scss";
 import Logo from "../Logo/Logo";
 import Button from "../Button/Button";
+import { Link } from "react-router-dom";
 
 const AuthNav = ({ isLogin }) => {
   return (
     <div className="authNav">
-      <Logo isTextDark={true} />
-      <Button
-        buttonClass="largeButton"
-        buttonText={isLogin ? "Login" : "Sign Up"}
-        handleClick={""}
-      />
+      <Link to={"/"}>
+        <Logo isTextDark={true} />
+      </Link>
+
+      {isLogin ? (
+        <Link to={"/login"}>
+          {" "}
+          <Button buttonClass="largeButton" buttonText={"Login"} />
+        </Link>
+      ) : (
+        <Link to={"/signup"}>
+          <Button buttonClass="largeButton" buttonText={"Sign Up"} />
+        </Link>
+      )}
     </div>
   );
 };
