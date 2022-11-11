@@ -24,7 +24,7 @@ const Transfer = ({
         <h1 className="receipt__head">You Send</h1>
         <div className="receipt__box">
           <h2 className="receipt__currency">{fromCurr}</h2>
-          <h2 className="receipt__currency">£{fromAmt}</h2>
+          <h2 className="receipt__currency">{fromAmt}</h2>
         </div>
         <h1 className="receipt__head">Recipient gets</h1>
         <div className="receipt__box">
@@ -35,11 +35,11 @@ const Transfer = ({
         <div className="receipt__body">
           <div className="receipt__body__info">
             <h1 className="receipt__body__info--title">Rate</h1>
-            <h1 className="receipt__body__info--value">£{transferRate}</h1>
+            <h1 className="receipt__body__info--value">{transferRate}</h1>
           </div>
           <div className="receipt__body__info">
             <h1 className="receipt__body__info--title">Fee</h1>
-            <h1 className="receipt__body__info--value">£{fee}</h1>
+            <h1 className="receipt__body__info--value">{fee}</h1>
           </div>
           <div className="receipt__body__info">
             <h1 className="receipt__body__info--title">Delivery</h1>
