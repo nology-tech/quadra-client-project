@@ -60,7 +60,7 @@ const TransferSend = ({
         <>
           <ModalWindow
             toggleModal={toggleModal}
-            title="modal"
+            title="Choose Recipient"
             contacts={allContacts}
             pageFrom="transferSend"
             onclick={getContactData}

@@ -16,6 +16,13 @@
     padding: 1.25rem;
     background: $background-color;
     border-radius: 0.5rem;
+    .optional_modal_top-row {
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      border: 2px solid black;
+      padding: 0rem 1rem;
+    }
   }
   &__heading {
     font-family: $font-heading;
@@ -23,16 +30,59 @@
     font-size: 2rem;
     color: $color-heading;
   }
+  &__condtional_image {
+    border: 2px solid purple;
+    height: 2rem;
+    width: auto;
+  }
   &__image {
     position: absolute;
     left: 93%;
     top: 30%;
   }
+
   .contact-row {
     overflow-y: scroll;
+    .optional-form-container {
+      margin-top: 2rem;
+
+      display: flex;
+      flex-direction: column;
+      border: 2px solid orange;
+      p {
+        padding-left: 1rem;
+      }
+      input {
+        border: none;
+        width: 30%;
+        padding-left: 1rem;
+      }
+      img {
+        height: auto;
+        width: 1rem;
+      }
+    }
+    .optional-search-container {
+      border: 2px solid blue;
+      margin-top: 1rem;
+      margin-left: 2rem;
+
+      width: auto;
+    }
     .contact-row-wrapper {
       border: 2px solid green;
       cursor: pointer;
     }
+  }
+  .match-background-color {
+    color: white;
+  }
+  .bank-contact__align {
+    margin-left: 2rem;
+    border: 2px solid blue;
+    text-align: start;
+  }
+  #align {
+    text-align: center;
   }
 }

@@ -2,28 +2,44 @@
 @use "../../styles/typography.scss" as *;
 
 .bank-contact {
-    display: grid;
-    grid-template-columns: repeat(7, 1fr);
-    color: $color-text;
-    font-weight: 400;
-    font-size: 0.7rem;
-    line-height: 1.25rem;
-    height: 3.5rem;
-    font-family: $font-heading;
-    background: $color-currency-background;
-    padding: 0 0.5rem;
-    align-items: center;
-    margin: 1rem 0;
-    &__img {
-        width: 1.8rem;
-        height: 1.8rem;
-    }
-    &__bin {
-        width: 1rem;
-        height: 1rem;
-    }
+  display: grid;
+  grid-template-areas: "img name sortCode accountNum";
+  grid-template-columns: repeat(auto-fit, 4, 1fr);
+  grid-auto-flow: column;
+
+  color: $color-text;
+  font-weight: 400;
+  font-size: 0.7rem;
+  line-height: 1.25rem;
+  height: 3.5rem;
+  font-family: $font-heading;
+  background: $color-currency-background;
+  padding: 0 0.5rem;
+  align-items: center;
+  justify-content: space-around;
+  margin: 1rem 0;
+
+  &__img {
+    width: 1.8rem;
+    height: 1.8rem;
+    grid-area: img;
+  }
+  &__bin {
+    width: 1rem;
+    height: 1rem;
+  }
+  &__name {
+    width: 3rem;
+    grid-area: name;
+  }
+  &__sortCode {
+    grid-area: sortCode;
+  }
+  &__accNum {
+    grid-area: accountNum;
+  }
 }
 
 .hide {
-    display: none;
+  display: none;
 }
