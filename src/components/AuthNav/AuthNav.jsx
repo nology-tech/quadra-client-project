@@ -6,7 +6,9 @@ import { Link } from "react-router-dom";
 const AuthNav = ({ isLogin }) => {
   return (
     <div className="authNav">
-      <Logo isTextDark={true} />
+      <Link to={"/"}>
+        <Logo isTextDark={true} />
+      </Link>
 
       {isLogin ? (
         <Link to={"/login"}>
