@@ -6,7 +6,7 @@ import LiveRate from "../../components/LiveRate/LiveRate";
 import Button from "../../components/Button/Button";
 
 
-const Convert = ({saveTransferDetails}) => {
+const Convert = (saveTransferDetails) => {
     
     return (
         <section className="convert">
