@@ -6,13 +6,14 @@ import creditCard from "../../assets/images/credit-card.png";
 import Searchbar from "../Searchbar/Searchbar";
 import Button from "../../components/Button/Button";
 
-const ContactContent = ({numContacts=4 }) => {
+const ContactContent = ({numContacts=4, userId}) => {
     const [allContacts, setAllContacts] = useState([]);
     const [searchText, setSearchText] = useState("");
     const [userContacts, setUserContacts] = useState();
 
     const getData = async () => {
-        let contacts = await getUserContacts();
+        let contacts = await getUserContacts(userId);
+        console.log(userId);
         contacts = contacts.slice(0, Math.min(numContacts, contacts.length) )
         setAllContacts(contacts)
         setUserContacts(

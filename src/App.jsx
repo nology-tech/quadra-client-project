@@ -25,7 +25,7 @@ const App = () => {
             element={
               <>
                 <Nav clearUser={setUser} />
-                <Wallet user={user} amount={1000} />
+                <Wallet user={user} amount={1000}/>
               </>
             }
           />{" "}
@@ -61,7 +61,7 @@ const App = () => {
             element={
               <>
                 <Nav clearUser={setUser} />
-                <ContactList userID ={user.uid} />
+                <ContactList userId ={user.uid} />
               </>
             }
           />
