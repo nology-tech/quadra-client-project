@@ -50,7 +50,7 @@ const SignUp = ({ saveUser }) => {
     }
     if (!passRegex.test(registerPassword)) {
       setPassword1Error(
-        "Error - password must contain at least 6 characters, 1 number, 1 uppercase letter, and 1 symbol"
+        "Password must contain at least 6 characters, 1 number, 1 uppercase letter, and 1 symbol"
       );
       result = false;
     }
