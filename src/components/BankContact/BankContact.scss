@@ -3,7 +3,7 @@
 
 .bank-contact {
     display: grid;
-    grid-template-columns: repeat(7, 0.12fr);
+    grid-template-columns: repeat(7, 1fr);
     color: $color-text;
     font-weight: 400;
     font-size: 0.7rem;

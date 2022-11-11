@@ -1,11 +1,9 @@
 .contactList {
     display: flex;
-    width: 100vw;
-    height: 100vh;
-    overflow-y: hidden;
     overflow-x: hidden;
-    padding-left: 7rem;
-    padding-right: 8rem;
-    margin-right: 8rem;
+    padding-left: 14rem;
 }
-// height padding border
+.logged-in-container{
+    display: flex;
+    justify-content: end;
+  }
