@@ -7,7 +7,11 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 93vh;
+    height: 45vh;
+    margin-top: 9rem;
+  }
+  &__logo {
+    margin-left: -0.7rem;
   }
   &__contents {
     display: flex;
@@ -19,7 +23,6 @@
   }
   &__welcome {
     display: flex;
-    width: 100%;
     align-items: center;
     margin-bottom: -0.5rem;
   }
@@ -40,15 +43,29 @@
   }
   &__options {
     color: $color-text-secondary;
-    font-size: 0.8rem;
+    font-size: 0.7rem;
     display: flex;
-    justify-content: space-between;
-    width: 140%;
-    margin-top: 2rem;
+    align-items: center;
   }
-  &__link {
+  &__forgot {
+    width: 20rem;
+    display: flex;
+    justify-content: flex-end;
     color: $color-primary;
     text-decoration: underline dotted;
+  }
+  &__account {
+    width: 14rem;
+  }
+  &__link {
+    display: flex;
+    justify-content: flex-start;
+    color: $color-primary;
+    text-decoration: underline dotted;
+    font-size: 0.7rem;
+    width: 9rem;
+    padding: 0;
+    margin: 0;
   }
   &__line {
     height: 1px;
@@ -64,4 +81,8 @@
     display: flex;
     justify-content: flex-end;
   }
+}
+
+a {
+  text-decoration: none;
 }
