@@ -29,7 +29,7 @@ const Transfer = ({
         <h1 className="receipt__head">Recipient gets</h1>
         <div className="receipt__box">
           <h2 className="receipt__currency">{toCurr}</h2>
-          <h2 className="receipt__currency">£{toAmt}</h2>
+          <h2 className="receipt__currency">{toAmt}</h2>
         </div>
 
         <div className="receipt__body">
