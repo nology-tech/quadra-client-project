@@ -68,7 +68,7 @@ const ContactContent = ({numContacts=4, isWallet=false}) => {
                     <Button buttonText={"+ Add"} buttonClass={"addContact"} />
                 </div> }
             </div>
-            <div className="contactList__options contactList__headings">
+            <div className="contactList__options contactList__options--headings">
                 <h5 className="contactList__userName">Name</h5>
                 <h5 className="contactList__sortCode">Sort Code</h5>
                 <h5 className="contactList__accNum">Account No</h5>
