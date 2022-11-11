@@ -56,14 +56,16 @@ const ContactContent = ({numContacts=4}) => {
     },[searchText])
 
     return (
-        <div className="contactList">
+        <>
             <h3 className="contactList__title">Contact List</h3>
             <div className="contactList__options">
                 <p className="contactList__desc">
                     All your friends and family financial details in one place. Easily transfer currency internationally at the best possible rates.
                 </p>
+                <div className="contactList__search-btn-container">
                 <Searchbar saveSearchText={setSearchText} />
                 <Button buttonText={"+ Add"} buttonClass={"addContact"} />
+                </div>
             </div>
             <div className="contactList__options contactList__headings">
                 <h5 className="contactList__userName">Name</h5>
@@ -75,7 +77,7 @@ const ContactContent = ({numContacts=4}) => {
             <div className="contactList__list">
                 <div>{userContacts}</div>
             </div>
-        </div>
+        </>
     )
 }
 
