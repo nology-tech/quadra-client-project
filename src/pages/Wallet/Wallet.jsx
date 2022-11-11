@@ -6,9 +6,10 @@ import ContactContent from "../../components/ContactContent/ContactContent";
 import { getUserHoldings } from "../../utils/apiUtils";
 import { storeUserHoldings } from "../../utils/apiUtils";
 
-const Wallet = ({ amount = "0", user}) => {
+const Wallet = ({user}) => {
 
-  storeUserHoldings(user.uid, currencyName="British Pound Sterling", amount=Math.random())
+  storeUserHoldings(user.uid, "British Pound Sterling", Math.floor(Math.random() * 10000), "GBP", "£");
+  const amount = getUserHoldings(user.uid); 
 
   return (
     <div className="wallet">
