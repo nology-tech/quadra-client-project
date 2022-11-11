@@ -123,9 +123,18 @@ const CurrencyConverter = ({
         <img src={altConvert} alt="convertLogo" />
         <Button buttonClass="largeButton" buttonText={"Convert"} handleClick={handleConvert} />
       </div>
+        <div className="converter__result">
+          {resultsShown && <div className="converter__line"></div>}
+        {resultsShown && <ConversionResult 
+      amount={newAmount} 
+      fromCurrency={fromCurrency} 
+      toCurrency={toCurrency} 
+      rate={rate} 
+      date={date.getFullYear()} 
+      saveTransferDetails={saveTransferDetails}/>
+        }
+        </div>
     </div>
-    {resultsShown && <ConversionResult amount={newAmount} fromCurrency={fromCurrency} toCurrency={toCurrency} rate={rate} date={date.getFullYear()} saveTransferDetails={saveTransferDetails}/>
-      }
       </>
   );
 };

@@ -1,14 +1,10 @@
 import "./Nav.scss";
+import "../../styles/_variables.scss";
 import Logo from "../../components/Logo/Logo";
-import Contacts from "../../assets/images/non-focus-contacts.png";
-import Wallet from "../../assets/images/non-focus-wallet.png";
-import LiveRate from "../../assets/images/graph-focus.svg";
-import Convert from "../../assets/images/non-focus-convert.png";
-import Transfer from "../../assets/images/transfer-focus.png";
 import Logout from "../../assets/images/logout.svg";
 import Button from "../../components/Button/Button";
 import { getAuth, signOut } from "firebase/auth";
-import { Link, useNavigate } from "react-router-dom";
+import { NavLink, useNavigate } from "react-router-dom";
 
 const Nav = ({ clearUser }) => {
   const logoutUser = () => {
@@ -27,42 +23,45 @@ const Nav = ({ clearUser }) => {
 
   return (
     <div className="nav">
-      <div className="nav__logo">
-        <Logo isTextDark={true} />
-      </div>
-
+      <NavLink to={"/wallet"}>
+        <div className="nav__logo">
+          <Logo isTextDark={true} />
+        </div>
+      </NavLink>
       <div className="nav__menu">
         <h3>Menu</h3>
-        <Link to={"/wallet"}>
-          <div className={"nav__button"}>
-            <img src={Wallet} alt="wallet"></img>
-            <p>Wallet</p>
-          </div>
-        </Link>
-        <Link to={"/liverates"}>
-          <div className="nav__button">
-            <img src={LiveRate} alt="graph"></img>
-            <p>Live rates</p>
-          </div>
-        </Link>
-        <Link to={`/convert`}>
-          <div className="nav__button">
-            <img src={Convert} alt="convert"></img>
-            <p>Convert</p>
-          </div>{" "}
-        </Link>
-        <Link to={`/transfer`}>
-          <div className="nav__button">
-            <img src={Transfer} alt="transfer"></img>
-            <p>Transfer</p>
-          </div>
-        </Link>
-        <Link to={`/contacts`}>
-          <div className="nav__button">
-            <img src={Contacts} alt="contacts"></img>
-            <p>Contacts</p>
-          </div>
-        </Link>
+        <NavLink
+          className={({ isActive }) =>
+            isActive ? "walletActive" : "walletInactive"
+          }
+          to={"/wallet"}
+        >
+          Wallet
+        </NavLink>
+        <NavLink
+          to={"/liverates"}
+          className={({ isActive }) =>
+            isActive ? "rateActive" : "rateInactive"
+          }
+        >
+          Live rates
+        </NavLink>
+        <NavLink
+          to={`/convert`}
+          className={({ isActive }) =>
+            isActive ? "convertActive" : "convertInactive"
+          }
+        >
+          Convert
+        </NavLink>
+        <NavLink
+          to={`/contacts`}
+          className={({ isActive }) =>
+            isActive ? "contactActive" : "contactInactive"
+          }
+        >
+          Contacts
+        </NavLink>
       </div>
       <div className="nav__logoutWrapper">
         <Button

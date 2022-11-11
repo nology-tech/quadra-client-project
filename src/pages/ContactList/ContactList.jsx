@@ -1,11 +1,15 @@
 import "./ContactList.scss";
 import ContactContent from "../../components/ContactContent/ContactContent";
+import LoggedIn from "../../components/LoggedIn/LoggedIn";
 
 const ContactList = () => {
 
     return (
         <div className="contactList">
-            <ContactContent numContacts={10} />
+            <div className="logged-in-container">
+                <LoggedIn/>
+            </div>
+            <ContactContent numContacts={10} isWallet={false} />
         </div>
     )
 }

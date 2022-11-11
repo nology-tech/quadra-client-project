@@ -9,19 +9,33 @@ h3 {
 }
 
 .converter {
-    width: 56rem;
-    height: 20rem;
+    width: 100%;
+    height: 100%;
     margin: auto;
-    margin-top: 20rem;
-    padding: 3rem;
+    padding: 1.5rem;
     background-color: $color-currency-background;
     display: grid;
     grid-template-columns: 6fr 6fr 2fr 6fr;
-    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-rows: 0.5fr 0.5fr 1fr;
     grid-template-areas:
         "Amount From . To"
         "AmountBox FromBox ConvertBox ToBox"
-        "Convert . . ."
+        "Convert Convert Convert Convert"
+        "Result Result Result Result "
+}
+
+.converter__result {
+    grid-area: Result;
+    padding-top: 1rem;
+    margin-top: 1rem;
+}
+
+.converter__line {
+    border-top: 2px solid $color-background;
+    height: 1px;
+    width: 98%;
+    align-self: center;
+    padding-bottom: 1rem;
 }
 
 #converter__amount {

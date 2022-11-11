@@ -40,15 +40,15 @@
 .addCurrency {
   border: 1px dashed $color-text-secondary;
   border-radius: 0.5rem ;
-  padding: 0.6rem 1.2rem;
   color: $color-text-secondary;
   background-color: white;
   font-family: $font-main;
   font-weight: 600;
-  font-size: 1rem;
   text-align: center;
   font-style: normal;
   cursor: pointer;
+  font-size: 0.9rem;
+  padding: 0.18rem 1rem;
 }
 
 .whiteBorderButton {
