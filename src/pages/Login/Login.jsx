@@ -69,7 +69,9 @@ const Login = ({ saveUser }) => {
       <AuthNav isLogin={false} />
       <div className="signIn__form">
         <div className="signIn__contents">
-          <Logo isTextDark={isTextDark} />
+          <div className="signIn__logo">
+            <Logo isTextDark={isTextDark} />
+          </div>
           <div className="signIn__welcome">
             <p className="signIn__message">Welcome Back!</p>
             <img className="signIn__img" src={hand} alt="welcome"></img>
@@ -98,8 +100,8 @@ const Login = ({ saveUser }) => {
                 <a className="signIn__link">Sign Up</a>
               </Link>
             </p>
-            <p>
-              <a>Forgotten Password?</a>
+            <p className="signIn__options--forgot">
+              <a className="signIn__link">Forgotten Password?</a>
             </p>
           </div>
           <div className="signIn__line"></div>

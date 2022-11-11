@@ -7,7 +7,10 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 93vh;
+    height: 45rem;
+  }
+  &__logo {
+    margin-left: -0.7rem;
   }
   &__contents {
     display: flex;
@@ -19,7 +22,6 @@
   }
   &__welcome {
     display: flex;
-    width: 100%;
     align-items: center;
     margin-bottom: -0.5rem;
   }
@@ -40,11 +42,15 @@
   }
   &__options {
     color: $color-text-secondary;
-    font-size: 0.8rem;
+    font-size: 0.65rem;
     display: flex;
     justify-content: space-between;
-    width: 140%;
-    margin-top: 2rem;
+    width: 100%;
+    padding: 0 0.1rem 0 0.3rem;
+    .signIn__options--forgot {
+      display: flex;
+      justify-content: flex-end;
+    }
   }
   &__link {
     color: $color-primary;
