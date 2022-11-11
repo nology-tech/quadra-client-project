@@ -147,7 +147,7 @@ const SignUp = ({ saveUser }) => {
           <div className="signUp__continue">
             <Button
               buttonClass="largeButton"
-              buttonText="Continue >"
+              buttonText="Continue  >"
               handleClick={register}
             />
           </div>

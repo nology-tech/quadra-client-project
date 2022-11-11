@@ -1,7 +1,6 @@
 @use "../../styles/variables" as *;
 @use "../../styles/typography" as *;
 
-
 .signUp {
   background-color: $color-background;
   height: 100vh;
@@ -9,12 +8,14 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 93vh;
+    margin-top: 5rem;
   }
-
+  &__company {
+    margin-left: -0.7rem;
+  }
   &__contents {
-    padding: 0.5rem 2rem;
-    width: 32rem;
+    padding: 0.5rem 2.5rem;
+    width: 30rem;
     background-color: $background-color;
   }
 
@@ -22,10 +23,9 @@
     color: $color-heading;
     font-family: $font-heading;
     font-weight: 500;
-    font-size: 1rem;
-    line-height: 1.5rem;
+    font-size: 1.25rem;
     font-style: normal;
-    margin-top: 0.6rem;
+    margin-top: -1rem;
     margin-bottom: -2rem;
   }
 
@@ -34,31 +34,35 @@
     color: $color-text;
     font-weight: 400;
     font-size: 0.7rem;
-    line-height: 1.18rem;
   }
 
   &__text {
     font-family: $font-login-text;
     color: $color-text;
     display: flex;
+
+    &--account {
+      font-size: 0.8rem;
+      width: 9rem;
+      color: $color-text-secondary;
+    }
     &--login {
-      padding-top: 0.5rem;
+      display: flex;
+      justify-content: flex-start;
       color: $color-primary;
-      border-bottom: 0.2rem dotted;
-      margin-right: 14rem;
+      border-bottom: 0.15rem dotted;
+      align-self: center;
+      font-size: 0.8rem;
     }
   }
 
   &__continue {
-    width: 10rem;
-    margin: 1.3rem 0 0.5rem 21rem;
+    display: flex;
+    justify-content: flex-end;
+    padding: 1rem 0 1rem 0;
   }
 
-&__input{
-  width: 26rem;
-}
-&__input--password{
+  &__input--password {
     height: 50rem;
-}
-
+  }
 }
