@@ -63,8 +63,6 @@ export const getUserHoldings = async (userID) => {
   let totalDeposit=0;
   json.forEach(deposit => {
     totalDeposit += deposit.amount;
-    console.log(typeof(totalDeposit));
   })
-  console.log(totalDeposit);
   return totalDeposit;
 }
