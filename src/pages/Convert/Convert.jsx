@@ -6,7 +6,7 @@ import LiveRate from "../../components/LiveRate/LiveRate";
 import Button from "../../components/Button/Button";
 
 
-const Convert = () => {
+const Convert = ({saveTransferDetails}) => {
     
     return (
         <section className="convert">
@@ -22,13 +22,10 @@ const Convert = () => {
                 </div>
                 <div className="convert__converterBox">
                     <CurrencyConverter 
-                        currencyList={["Pound","Euro"]}
-                        amount={1250}
-                        fromCurrency={"£"}
-                        toCurrency={"€"}
-                        setNewAmount={3123}
-                        setFromCurrency={"£"}
-                        setToCurrency={"€"}
+                        amount={10} 
+                        toCurr={"USD"} 
+                        fromCurr={"GBP"} 
+                        saveTransferDetails={saveTransferDetails}
                     />
                 </div>
             </div>
