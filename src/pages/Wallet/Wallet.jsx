@@ -3,8 +3,13 @@ import hand from "../../assets/images/hello.svg";
 import "./Wallet.scss";
 import LoggedIn from "../../components/LoggedIn/LoggedIn";
 import ContactContent from "../../components/ContactContent/ContactContent";
+import { getUserHoldings } from "../../utils/apiUtils";
+import { storeUserHoldings } from "../../utils/apiUtils";
 
 const Wallet = ({ amount = "0", user}) => {
+
+  storeUserHoldings(user.uid, currencyName="British Pound Sterling", amount=Math.random())
+
   return (
     <div className="wallet">
         <div className="wallet__user">

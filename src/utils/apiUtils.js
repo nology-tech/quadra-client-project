@@ -60,5 +60,6 @@ export const getUserHoldings = async (userID) => {
   const url= `https://money-app-api-oi3xuie5la-nw.a.run.app//quadra-money/v1/user-holding/${userID}`;
   const res = await fetch(url);
   const json = await res.json();
+  console.log(json);
   return json;
 }
