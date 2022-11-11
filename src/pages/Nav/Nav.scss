@@ -20,8 +20,9 @@
     h3 {
       color: $color-logo-header;
       font-family: $font-main;
-      font-size: 0.7rem;
+      font-size: 1rem;
       font-weight: 400;
+      margin-bottom: 1rem;
     }
   }
 
@@ -38,13 +39,6 @@
       margin-top: 0.5rem;
       margin-right: 0.7rem;
     }
-
-    p {
-      color: $color-menu-unselected;
-      font-size: 0.7rem;
-      font-weight: 400;
-      font-family: $font-main;
-    }
   }
 
   &__logoutWrapper {
@@ -55,11 +49,89 @@
     width: 8.5rem;
     background-color: $color-primary;
     border-radius: 0.3rem;
-    margin: 14rem 0 2rem 1.5rem;
+    margin: 25rem 0 2rem 1.5rem;
     img {
       width: 1.5rem;
       height: 1.5rem;
       margin-left: -0.5rem;
     }
   }
+}
+
+a {
+  text-decoration: none;
+  margin-top: 1rem;
+  padding: 0 0 0.1rem 2rem;
+  font-size: 0.8rem;
+  font-weight: 400;
+  font-family: $font-main;
+  color: $color-menu-unselected;
+}
+
+.walletActive {
+  background-image: url("../../assets/images/wallet-focus.svg");
+  background-repeat: no-repeat;
+  padding: 0 0 0.1rem 2rem;
+  font-size: 0.8rem;
+  font-weight: 400;
+  font-family: $font-main;
+  color: $color-primary;
+  border-right: 0.2rem solid $color-primary;
+  margin-right: -0.2rem;
+}
+
+.walletInactive {
+  background-image: url("../../assets/images/wallet-nonfocus.svg");
+  background-repeat: no-repeat;
+}
+
+.rateActive {
+  background-image: url("../../assets/images/graph-focus.svg");
+  background-repeat: no-repeat;
+  padding: 0 0 0.1rem 2rem;
+  font-size: 0.8rem;
+  font-weight: 400;
+  font-family: $font-main;
+  color: $color-primary;
+  border-right: 0.2rem solid $color-primary;
+  margin-right: -0.2rem;
+}
+
+.rateInactive {
+  background-image: url("../../assets/images/graph-nonfocus.svg");
+  background-repeat: no-repeat;
+}
+
+.convertActive {
+  background-image: url("../../assets/images/convert-focus.svg");
+  background-repeat: no-repeat;
+  padding: 0 0 0.1rem 2rem;
+  font-size: 0.8rem;
+  font-weight: 400;
+  font-family: $font-main;
+  color: $color-primary;
+  border-right: 0.2rem solid $color-primary;
+  margin-right: -0.2rem;
+}
+
+.convertInactive {
+  background-image: url("../../assets/images/convert-nonfocus.svg");
+  background-repeat: no-repeat;
+}
+
+.contactActive {
+  background-image: url("../../assets/images/contact-focus.svg");
+  background-repeat: no-repeat;
+  padding: 0 0 0.1rem 2rem;
+  font-size: 0.7rem;
+  font-weight: 400;
+  font-family: $font-main;
+  color: $color-primary;
+  border-right: 0.2rem solid $color-primary;
+  margin-right: -0.2rem;
+}
+
+.contactInactive {
+  background-image: url("../../assets/images/contact-nonfocus.svg");
+  background-repeat: no-repeat;
 }
