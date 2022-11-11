@@ -42,11 +42,11 @@
   }
   &__options {
     color: $color-text-secondary;
-    font-size: 0.65rem;
+    font-size: 0.75rem;
     display: flex;
     justify-content: space-between;
     width: 100%;
-    padding: 0 0.1rem 0 0.3rem;
+    padding: 0 0.1rem 0 0rem;
     .signIn__options--forgot {
       display: flex;
       justify-content: flex-end;
