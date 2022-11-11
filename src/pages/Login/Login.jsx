@@ -38,8 +38,10 @@ const Login = ({ saveUser }) => {
     } else {
       setInvalidEmail("");
     }
+    if (email == "") {
+      setInvalidEmail("");
+    }
   };
-  //ok you can do stuff now
   const handleLogin = async () => {
     const userData = await loginAuth();
     if (userData != undefined) {
