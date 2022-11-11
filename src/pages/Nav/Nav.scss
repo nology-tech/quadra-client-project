@@ -119,23 +119,6 @@ a {
   background-repeat: no-repeat;
 }
 
-.transferActive {
-  background-image: url("../../assets/images/transfer-focus.svg");
-  background-repeat: no-repeat;
-  padding: 0 0 0.1rem 2rem;
-  font-size: 0.8rem;
-  font-weight: 400;
-  font-family: $font-main;
-  color: $color-primary;
-  border-right: 0.2rem solid $color-primary;
-  margin-right: -0.2rem;
-}
-
-.transferInactive {
-  background-image: url("../../assets/images/transfer-nonfocus.svg");
-  background-repeat: no-repeat;
-}
-
 .contactActive {
   background-image: url("../../assets/images/contact-focus.svg");
   background-repeat: no-repeat;

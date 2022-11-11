@@ -53,14 +53,6 @@ const Nav = ({ clearUser }) => {
           Convert
         </NavLink>
         <NavLink
-          to={`/transfer`}
-          className={({ isActive }) =>
-            isActive ? "transferActive" : "transferInactive"
-          }
-        >
-          Transfer
-        </NavLink>
-        <NavLink
           to={`/contacts`}
           className={({ isActive }) =>
             isActive ? "contactActive" : "contactInactive"
