@@ -2,7 +2,7 @@
 @use "../../styles/variables" as *;
 
 .modal {
-  position: fixed;
+  // position: fixed;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -11,7 +11,7 @@
   background-color: hwb(0 0% 100% / 0.2);
 
   &__content {
-    position: fixed;
+    // position: fixed;
     width: 60vw;
     top: 11.9rem;
     padding: 1.25rem;
