@@ -42,6 +42,7 @@
   }
 
   &__logoutWrapper {
+    position: absolute;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -49,7 +50,8 @@
     width: 8.5rem;
     background-color: $color-primary;
     border-radius: 0.3rem;
-    margin: 25rem 0 2rem 1.5rem;
+    right: 2.5vw;
+    bottom: 7vh;
     img {
       width: 1.5rem;
       height: 1.5rem;
@@ -123,7 +125,7 @@ a {
   background-image: url("../../assets/images/contact-focus.svg");
   background-repeat: no-repeat;
   padding: 0 0 0.1rem 2rem;
-  font-size: 0.7rem;
+  font-size: 0.8rem;
   font-weight: 400;
   font-family: $font-main;
   color: $color-primary;

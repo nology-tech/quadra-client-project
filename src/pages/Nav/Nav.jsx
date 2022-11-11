@@ -23,9 +23,11 @@ const Nav = ({ clearUser }) => {
 
   return (
     <div className="nav">
-      <div className="nav__logo">
-        <Logo isTextDark={true} />
-      </div>
+      <NavLink to={"/wallet"}>
+        <div className="nav__logo">
+          <Logo isTextDark={true} />
+        </div>
+      </NavLink>
       <div className="nav__menu">
         <h3>Menu</h3>
         <NavLink
