@@ -1,11 +1,15 @@
 import "./Transfer.scss";
 import Button from "../../components/Button/Button";
+import LoggedIn from "../../components/LoggedIn/LoggedIn";
 const Transfer = ({
-  fee = 0.00,
-  transferDetails:{fromCurr, fromAmt, toCurr, toAmt, transferRate}
+  fee = 0.0,
+  transferDetails: { fromCurr, fromAmt, toCurr, toAmt, transferRate },
 }) => {
   return (
     <>
+      <div className="logged-in-container">
+        <LoggedIn />
+      </div>
       <div className="transfer-info">
         <h1 className="transfer-info__transfer"> Transfer </h1>
         <h1 className="transfer-info__heading"> Make Transfer </h1>
@@ -47,7 +51,9 @@ const Transfer = ({
         <div className="receipt__bottom">
           <div className="receipt__bottom__box">
             <h1 className="receipt__bottom__box--info">Total</h1>
-            <h1 className="receipt__bottom__box--end">{Number(fromAmt) + Number(fee)}</h1>
+            <h1 className="receipt__bottom__box--end">
+              £{Number(fromAmt) + Number(fee)}
+            </h1>
           </div>
           <div className="receipt__button">
             <Button buttonClass="largeButton" buttonText={"Continue"} />
