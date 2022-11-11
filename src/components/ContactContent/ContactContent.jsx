@@ -6,7 +6,7 @@ import creditCard from "../../assets/images/credit-card.png";
 import Searchbar from "../Searchbar/Searchbar";
 import Button from "../../components/Button/Button";
 
-const ContactContent = ({numContacts=4}) => {
+const ContactContent = ({numContacts=4 }) => {
     const [allContacts, setAllContacts] = useState([]);
     const [searchText, setSearchText] = useState("");
     const [userContacts, setUserContacts] = useState();

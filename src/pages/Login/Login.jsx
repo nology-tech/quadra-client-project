@@ -44,6 +44,7 @@ const Login = ({ saveUser }) => {
     const userData = await loginAuth();
     if (userData != undefined) {
       saveUser(userData);
+      console.log(userData.uid);
       setInvalidPassword("");
       setInvalidEmail("");
       navigate("/wallet");

@@ -13,7 +13,6 @@ import ContactList from "./pages/ContactList/ContactList";
 const App = () => {
   const [user, setUser] = useState();
   const [transferDetails, setTransferDetails] = useState();
-  
   return (
     <Routes>
       <Route path="*" element={<Home/>} />
@@ -62,7 +61,7 @@ const App = () => {
             element={
               <>
                 <Nav clearUser={setUser} />
-                <ContactList />
+                <ContactList userID ={user.uid} />
               </>
             }
           />
