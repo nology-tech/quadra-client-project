@@ -1,7 +1,7 @@
 import "./Convert.scss";
 import LoggedIn from "../../components/LoggedIn/LoggedIn";
 import Funds from "../../components/Funds/Funds";
-import CurrencyConverter from "../../components/currencyConverter/CurrencyConverter";
+import CurrencyConverter from "../../components/CurrencyConverter/CurrencyConverter";
 import LiveRate from "../../components/LiveRate/LiveRate";
 import Button from "../../components/Button/Button";
 
