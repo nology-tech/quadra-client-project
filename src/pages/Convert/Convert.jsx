@@ -5,8 +5,9 @@ import CurrencyConverter from "../../components/currencyConverter/CurrencyConver
 import LiveRate from "../../components/LiveRate/LiveRate";
 import Button from "../../components/Button/Button";
 
-const Convert = () => {
 
+const Convert = (saveTransferDetails) => {
+    
     return (
         <section className="convert">
             <div className="convert__user">
