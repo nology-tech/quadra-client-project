@@ -13,7 +13,6 @@ const ContactContent = ({numContacts=4, isWallet=false, userId}) => {
 
     const getData = async () => {
         let contacts = await getUserContacts(userId);
-        console.log(userId);
         contacts = contacts.slice(0, Math.min(numContacts, contacts.length) )
         setAllContacts(contacts)
         setUserContacts(
