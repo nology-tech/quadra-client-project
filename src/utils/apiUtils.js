@@ -37,3 +37,32 @@ export const storeUserDetails = async (userID, name) => {
   const json = await res.json();
   return json;
 }
+
+export const storeUserHoldings = async (userID, currencyName, amount, currencyCode, currencySymbol) => {
+  const url= "https://money-app-api-oi3xuie5la-nw.a.run.app//quadra-money/v1/holding";
+  const res = await fetch(url, {
+    method: 'POST',
+    headers: { 'Accept': 'application/json',
+      'Content-Type': 'application/json', },
+    body: JSON.stringify({ 
+      userID: userID,
+      currencyName: currencyName,
+      amount: amount ,
+      currencyCode: currencyCode,
+      currencySymbol: currencySymbol,
+  })
+  });
+  const json = await res.json();
+  return json;
+}
+
+export const getUserHoldings = async (userID) => {
+  const url= `https://money-app-api-oi3xuie5la-nw.a.run.app//quadra-money/v1/user-holding/${userID}`;
+  const res = await fetch(url);
+  const json = await res.json();
+  let totalDeposit=0;
+  json.forEach(deposit => {
+    totalDeposit += deposit.amount;
+  })
+  return totalDeposit;
+}
