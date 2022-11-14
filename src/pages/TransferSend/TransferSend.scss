@@ -5,6 +5,7 @@
   width: 40%;
   padding-left: 1rem;
   margin: 1rem 0 2rem 1rem;
+  border: 2px solid red;
   &__transfer {
     font-size: 0.7rem;
     color: $color-primary;
@@ -78,7 +79,7 @@
     border-top: 0.005rem solid $color-menu-unselected;
     margin-top: 1rem;
   }
-  
+
   &__totalWrapper {
     display: flex;
     align-items: center;
@@ -95,7 +96,7 @@
       text-align: end;
     }
   }
-  
+
   &__remainderWrapper {
     display: flex;
     align-items: center;
@@ -109,7 +110,7 @@
     color: $color-text-secondary;
 
     &--amount {
-    text-align: end;
+      text-align: end;
     }
   }
 

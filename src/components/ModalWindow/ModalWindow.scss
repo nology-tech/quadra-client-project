@@ -7,12 +7,22 @@
   justify-content: center;
   align-items: center;
   width: 100vw;
-  height: 100vh;
-  background-color: hwb(0 0% 100% / 0.2);
+  height: 50vh;
 
+  visibility: hidden;
+  opacity: 0;
+  transform: scale(0.8);
+  transition: opacity 0.5s, visibility 0.5s, transform 0.5s;
+
+  &.__active {
+    transform: scale(1);
+    visibility: visible;
+    opacity: 1;
+    z-index: 1;
+  }
   &__content {
     position: fixed;
-    width: 60vw;
+    width: 35vw;
     top: 11.9rem;
     padding: 1.25rem;
     background: $background-color;
@@ -21,7 +31,7 @@
       display: flex;
       justify-content: space-around;
       align-items: center;
-      border: 2px solid black;
+      // border: 2px solid black;
       padding: 0rem 1rem;
     }
   }
@@ -32,9 +42,10 @@
     color: $color-heading;
   }
   &__condtional_image {
-    border: 2px solid purple;
+    // border: 2px solid purple;
     height: 2rem;
     width: auto;
+    cursor: pointer;
   }
   &__image {
     position: absolute;
@@ -50,7 +61,7 @@
 
       display: flex;
       flex-direction: column;
-      border: 2px solid orange;
+      // border: 2px solid orange;
       p {
         padding-left: 1rem;
       }
@@ -65,14 +76,14 @@
       }
     }
     .optional-search-container {
-      border: 2px solid blue;
+      // border: 2px solid blue;
       margin-top: 1rem;
       margin-left: 2rem;
 
       width: auto;
     }
     .contact-row-wrapper {
-      border: 2px solid green;
+      // border: 2px solid green;
       cursor: pointer;
     }
   }
@@ -81,10 +92,38 @@
   }
   .bank-contact__align {
     margin-left: 2rem;
-    border: 2px solid blue;
+    // border: 2px solid blue;
     text-align: start;
   }
   #align {
     text-align: center;
+  }
+  /* Underline From Left */
+  .hvr-underline-from-left {
+    // display: inline-block;
+    // vertical-align: middle;
+    -webkit-transform: perspective(1px) translateZ(0);
+    transform: perspective(1px) translateZ(0);
+    box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+    position: relative;
+    overflow: hidden;
+  }
+  .hvr-underline-from-left:before {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    left: 0;
+    right: 100%;
+    bottom: 0;
+    background: #2098d1;
+    height: 4px;
+    transition-property: right;
+    transition-duration: 0.5s;
+    transition-timing-function: ease-out;
+  }
+  .hvr-underline-from-left:hover:before,
+  .hvr-underline-from-left:focus:before,
+  .hvr-underline-from-left:active:before {
+    right: 0;
   }
 }
