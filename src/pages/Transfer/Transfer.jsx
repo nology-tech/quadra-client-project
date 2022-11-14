@@ -21,42 +21,44 @@ const Transfer = ({
           reiciendis dignissimos iste.
         </p>
       </div>
-      <div className="receiptone">
-        <h1 className="receiptone__head">You Send</h1>
-        <div className="receiptone__box">
-          <h2 className="receiptone__currency">{fromCurr}</h2>
-          <h2 className="receiptone__currency">{fromAmt}</h2>
+      <div className="transferReceipt">
+        <h1 className="transferReceipt__head">You Send</h1>
+        <div className="transferReceipt__box">
+          <h2 className="transferReceipt__currency">{fromCurr}</h2>
+          <h2 className="transferReceipt__currency">{fromAmt}</h2>
         </div>
-        <h1 className="receiptone__head">Recipient gets</h1>
-        <div className="receiptone__box">
-          <h2 className="receiptone__currency">{toCurr}</h2>
-          <h2 className="receiptone__currency">{toAmt}</h2>
+        <h1 className="transferReceipt__head">Recipient gets</h1>
+        <div className="transferReceipt__box">
+          <h2 className="transferReceipt__currency">{toCurr}</h2>
+          <h2 className="transferReceipt__currency">{toAmt}</h2>
         </div>
 
-        <div className="receiptone__body">
-          <div className="receiptone__body__info">
-            <h1 className="receiptone__body__info--title">Rate</h1>
-            <h1 className="receiptone__body__info--value">{transferRate}</h1>
+        <div className="transferReceipt__body">
+          <div className="transferReceipt__body__info">
+            <h1 className="transferReceipt__body__info--title">Rate</h1>
+            <h1 className="transferReceipt__body__info--value">
+              {transferRate}
+            </h1>
           </div>
-          <div className="receiptone__body__info">
-            <h1 className="receiptone__body__info--title">Fee</h1>
-            <h1 className="receiptone__body__info--value">{fee}</h1>
+          <div className="transferReceipt__body__info">
+            <h1 className="transferReceipt__body__info--title">Fee</h1>
+            <h1 className="transferReceipt__body__info--value">{fee}</h1>
           </div>
-          <div className="receiptone__body__info">
-            <h1 className="receiptone__body__info--title">Delivery</h1>
-            <h1 className="receiptone__body__info--value" id="delivery">
+          <div className="transferReceipt__body__info">
+            <h1 className="transferReceipt__body__info--title">Delivery</h1>
+            <h1 className="transferReceipt__body__info--value" id="delivery">
               Typically same day
             </h1>
           </div>
         </div>
-        <div className="receiptone__bottom">
-          <div className="receiptone__bottom__box">
-            <h1 className="receiptone__bottom__box--info">Total</h1>
-            <h1 className="receiptone__bottom__box--end">
+        <div className="transferReceipt__bottom">
+          <div className="transferReceipt__bottom__box">
+            <h1 className="transferReceipt__bottom__box--info">Total</h1>
+            <h1 className="transferReceipt__bottom__box--end">
               {Number(fromAmt) + Number(fee)}
             </h1>
           </div>
-          <div className="receiptone__button">
+          <div className="transferReceipt__button">
             <Link to={"/transfer/recipient"}>
               {" "}
               <Button buttonClass="largeButton" buttonText={"Continue"} />

@@ -28,13 +28,13 @@
   }
 }
 
-.receiptone {
+.transferReceipt {
   background-color: $color-currency-background;
   width: 30rem;
   padding: 2.5rem 3rem 2rem 3rem;
   margin: 2rem 0 2rem 15rem;
 
-  .receiptone__head {
+  .transferReceipt__head {
     font-size: 1rem;
     font-family: $font-heading;
     color: $color-heading;
@@ -42,7 +42,7 @@
     letter-spacing: 0.05rem;
   }
 
-  .receiptone__box {
+  .transferReceipt__box {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -51,7 +51,7 @@
     background-color: white;
     padding: 1% 4% 1% 4%;
     margin-bottom: 5%;
-    .receiptone__currency {
+    .transferReceipt__currency {
       font-size: 0.7rem;
       width: auto;
       font-family: $font-main;
@@ -60,11 +60,11 @@
     }
   }
 
-  .receiptone__body {
+  .transferReceipt__body {
     margin-top: 2rem;
     border-top: 0.001rem solid $color-currency;
   }
-  .receiptone__body__info {
+  .transferReceipt__body__info {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -73,7 +73,7 @@
     margin: 0;
     padding: 0;
 
-    .receiptone__body__info--value {
+    .transferReceipt__body__info--value {
       font-size: 0.7rem;
       width: auto;
       color: $color-text;
@@ -89,7 +89,7 @@
       text-align: right;
     }
 
-    .receiptone__body__info--title {
+    .transferReceipt__body__info--title {
       color: $color-heading;
       font-size: 0.7rem;
       font-family: $font-heading;
@@ -99,31 +99,31 @@
       margin-top: 1rem;
     }
   }
-  .receiptone__bottom {
+  .transferReceipt__bottom {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
     margin-top: 1rem;
     border-top: 0.001rem solid $color-currency;
-    .receiptone__bottom__box {
+    .transferReceipt__bottom__box {
       display: flex;
       flex-direction: column;
       justify-content: space-around;
       margin-top: 1rem;
 
-      .receiptone__bottom__box--info {
+      .transferReceipt__bottom__box--info {
         font-size: 0.7rem;
         font-family: $font-heading;
       }
-      .receiptone__bottom__box--end {
+      .transferReceipt__bottom__box--end {
         font-size: 0.7rem;
         margin-top: -1rem;
         font-family: $font-heading;
         color: $color-text-secondary;
       }
     }
-    .receiptone__button {
+    .transferReceipt__button {
       margin-top: 1rem;
       width: auto;
     }
