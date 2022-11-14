@@ -14,8 +14,8 @@ export const getCurrencyGBP = async () => {
   return data.rates;
 };
 
-export const getUserContacts = async () => {
-  const url = "https://money-app-api-oi3xuie5la-nw.a.run.app//quadra-money/v1/contacts";
+export const getUserContacts = async (userId) => {
+    const url = `https://money-app-api-oi3xuie5la-nw.a.run.app/quadra-money/v1/user-contacts/${userId}`;
     const res = await fetch(url);
     const data = await res.json();
     return data;

@@ -85,7 +85,16 @@ const App = () => {
             element={
               <>
                 <Nav clearUser={setUser} />
-                <ContactList />
+                <ContactList userId ={user.uid} />
+              </>
+            }
+          />
+          <Route
+            path="/contacts/details"
+            element={
+              <>
+                <Nav clearUser={setUser} />
+                <AccountPage />
               </>
             }
           />
