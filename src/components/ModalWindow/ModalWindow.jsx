@@ -44,15 +44,9 @@ const ModalWindow = ({
 
     // only input a-z
     return setInputName(cleanInput.toLowerCase());
-
-    // setInputName(cleanInput.toLowerCase());
   };
 
   console.log(filterArray);
-
-  // console.log("this is modal visivle", modalVisible);
-  // console.log("this is contacts", contacts);
-  // console.log("this is filter array", filterArray.length);
 
   const showArray = (arr) => {
     return arr
@@ -98,7 +92,6 @@ const ModalWindow = ({
     setFilterArray(
       contacts.filter((contact) => {
         if (contact.contactName.toLowerCase().includes(inputName) === true) {
-          console.log("SIUUUUUU", contact.contactName);
           return contact.contactName.toLowerCase();
         }
         return null;
@@ -107,15 +100,10 @@ const ModalWindow = ({
   };
   useEffect(() => {
     filterContacts();
-    // console.log("this is filter array ", filterArray);
   }, [inputName]);
-
-  // console.log("this is filter array", test);
 
   ////////////////
 
-  //   console.log(contacts);
-  //   console.log("this is func ", onclick);
   return (
     <div className={`modal ${modalVisible ? `__active` : ""}`}>
       <div className="modal__content">
