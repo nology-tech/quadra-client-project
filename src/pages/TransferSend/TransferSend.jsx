@@ -21,10 +21,10 @@ const TransferSend = ({
       <div className="wallet__user">
         <LoggedIn />
       </div>
-      <div className="info">
-        <h1 className="info__transfer"> Transfer </h1>
-        <h1 className="info__heading"> View Latest Rates </h1>
-        <p className="info__content">
+      <div className="latestRates">
+        <h1 className="latestRates__transfer"> Transfer </h1>
+        <h1 className="latestRates__heading"> View Latest Rates </h1>
+        <p className="latestRates__content">
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim nam
           inventore deserunt id? Rem minima dolorem asperiores perferendis sed
           aspernatur. Dolorem nostrum voluptatibus dolore odit provident minima
