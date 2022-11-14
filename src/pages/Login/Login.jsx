@@ -8,8 +8,9 @@ import { useState, useEffect } from "react";
 import { useNavigate, Link } from "react-router-dom";
 import app from "../../firebase.js";
 import { getAuth, signInWithEmailAndPassword } from "firebase/auth";
+import { getUserHoldings } from "../../utils/apiUtils";
 
-const Login = ({ saveUser }) => {
+const Login = ({ saveUser, setDeposit }) => {
   const [password, setPassword] = useState();
   const [email, setEmail] = useState();
   const [invalidEmail, setInvalidEmail] = useState();
@@ -45,7 +46,9 @@ const Login = ({ saveUser }) => {
   const handleLogin = async () => {
     const userData = await loginAuth();
     if (userData != undefined) {
+      const totalDeposit = await getUserHoldings(userData.uid);
       saveUser(userData);
+      setDeposit(totalDeposit);
       setInvalidPassword("");
       setInvalidEmail("");
       navigate("/wallet");
