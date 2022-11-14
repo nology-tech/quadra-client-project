@@ -33,14 +33,14 @@ const Login = ({ saveUser }) => {
   };
 
   const validateEmail = () => {
-    if (!emailRegex.test(email)) {
+    if (email == "") {
+      setInvalidEmail("");
+    } else if (!emailRegex.test(email)) {
       setInvalidEmail("Please enter a valid email");
     } else {
       setInvalidEmail("");
     }
-    if (email == "") {
-      setInvalidEmail("");
-    }
+    
   };
   const handleLogin = async () => {
     const userData = await loginAuth();
