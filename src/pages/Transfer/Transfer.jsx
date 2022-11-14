@@ -1,5 +1,6 @@
 import "./Transfer.scss";
 import Button from "../../components/Button/Button";
+import { Link } from "react-router-dom";
 import LoggedIn from "../../components/LoggedIn/LoggedIn";
 const Transfer = ({
   fee = 0.0,
@@ -52,11 +53,14 @@ const Transfer = ({
           <div className="receipt__bottom__box">
             <h1 className="receipt__bottom__box--info">Total</h1>
             <h1 className="receipt__bottom__box--end">
-              £{Number(fromAmt) + Number(fee)}
+              {Number(fromAmt) + Number(fee)}
             </h1>
           </div>
           <div className="receipt__button">
-            <Button buttonClass="largeButton" buttonText={"Continue"} />
+            <Link to={"/transfer/recipient"}>
+              {" "}
+              <Button buttonClass="largeButton" buttonText={"Continue"} />
+            </Link>
           </div>
         </div>
       </div>

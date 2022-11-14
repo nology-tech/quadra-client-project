@@ -10,14 +10,19 @@ import Convert from "./pages/Convert/Convert";
 import Nav from "./pages/Nav/Nav";
 import LiveRates from "./pages/LiveRates/LiveRates";
 import ContactList from "./pages/ContactList/ContactList";
+import TransferSend from "./pages/TransferSend/TransferSend";
+import TransferConfirm from "./pages/TransferConfirm/TransferConfirm";
+import AccountPage from "./pages/AccountPage/AccountPage";
+
 const App = () => {
   const [user, setUser] = useState();
   const [transferDetails, setTransferDetails] = useState();
+
   return (
     <Routes>
-      <Route path="*" element={<Home/>} />
-      <Route path="/login" element={<Login saveUser={setUser}/>} />
-      <Route path="/signup" element={<SignUp saveUser={setUser}/>} />
+      <Route path="*" element={<Home />} />
+      <Route path="/login" element={<Login saveUser={setUser} />} />
+      <Route path="/signup" element={<SignUp saveUser={setUser} />} />
       {user && (
         <>
           <Route
@@ -57,6 +62,24 @@ const App = () => {
             }
           />
           <Route
+            path="/transfer/recipient"
+            element={
+              <>
+                <Nav clearUser={setUser} />
+                <TransferSend transferDetails={transferDetails} />
+              </>
+            }
+          />
+          <Route
+            path="/transfer/confirm"
+            element={
+              <>
+                <Nav clearUser={setUser} />
+                <TransferConfirm transferDetails={transferDetails} />
+              </>
+            }
+          />
+          <Route
             path="/contacts"
             element={
               <>
@@ -65,11 +88,28 @@ const App = () => {
               </>
             }
           />
+          <Route
+            path="/contacts/details"
+            element={
+              <>
+                <Nav clearUser={setUser} />
+                <AccountPage />
+              </>
+            }
+          />
+          <Route
+            path="/contacts/details"
+            element={
+              <>
+                <Nav clearUser={setUser} />
+                <AccountPage />
+              </>
+            }
+          />
         </>
-      
       )}
     </Routes>
   );
-}
+};
 
 export default App;
