@@ -12,8 +12,8 @@ import { getUserHoldings } from "../../utils/apiUtils";
 
 const Login = ({ saveUser, setDeposit }) => {
   const [password, setPassword] = useState();
-  const [email, setEmail] = useState();
-  const [invalidEmail, setInvalidEmail] = useState();
+  const [email, setEmail] = useState("");
+  const [invalidEmail, setInvalidEmail] = useState("");
   const [invalidPassword, setInvalidPassword] = useState();
   const navigate = useNavigate();
   const isTextDark = true;
