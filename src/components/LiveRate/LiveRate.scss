@@ -4,10 +4,10 @@
 .live-rate {
   display: grid;
   grid-template-columns: 3em 1fr 1fr 1fr 1fr 3em;
-  
+  align-items: center;
   background-color: $color-input-background;
   color: $color-text-secondary;
-  &__icon{
+  &__icon {
     grid-column-start: 1;
     grid-column-end: 2;
     padding: 0.5em;
@@ -41,7 +41,7 @@
     grid-column-end: 6;
     padding: 0.5em;
     display: flex;
-    justify-content: end;
+    justify-content: flex-end;
   }
 }
 
@@ -50,7 +50,7 @@
   color: $background-color;
   border-radius: 0.5rem 0.5rem 0 0;
 }
-.flag{
-    width: 1.7rem;
-    height: 1.3rem;
+.flag {
+  width: 1.7rem;
+  height: 1.3rem;
 }

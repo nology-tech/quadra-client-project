@@ -1,6 +1,16 @@
 @use "../../styles/_variables.scss" as *;
 @use "../../styles/_typography.scss" as *;
 
+.live-rates-main {
+  padding-left: 2rem;
+  margin-left: 11rem;
+}
+
+.logged-in-container {
+  display: flex;
+  justify-content: flex-end;
+}
+
 .info {
   width: 40%;
   padding-left: 1rem;
@@ -9,7 +19,6 @@
     font-size: 0.7rem;
     color: $color-primary;
     letter-spacing: 0.05rem;
-    width: 100rem;
     font-family: $font-heading;
   }
   &__heading {
@@ -36,26 +45,27 @@
   }
   &__head {
     font-size: 0.8rem;
-    &--currency{
+    &--currency {
       grid-column-start: 2;
       grid-column-end: 3;
     }
-    &--amount{
+    &--amount {
       grid-column-start: 3;
       grid-column-end: 4;
     }
-    &--rate{
+    &--rate {
       grid-column-start: 4;
       grid-column-end: 6;
     }
   }
 }
 
-.dropdown-container{
+.dropdown-container {
   display: flex;
   padding-left: 1rem;
   margin: 2rem 0 2rem 1rem;
-  &__dropdown-item{
+  align-items: center;
+  &__dropdown-item {
     list-style: none;
     padding: 0.3em 1em;
     margin: 0.1em;
@@ -63,8 +73,7 @@
     background-color: $color-input-background;
     color: $color-text-secondary;
   }
-  &__button{
+  &__button {
     padding: 1em;
   }
-
 }

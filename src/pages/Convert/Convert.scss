@@ -1,4 +1,87 @@
 @use "../../styles/typography.scss" as *;
 @use "../../styles/variables.scss" as *;
 
+.convert {
+    display: flex;
+    flex-direction: column;
+    margin-left: 14rem;
+    margin-right: 1rem;
+
+    &__user {
+        align-self: flex-end;
+    }
+
+    &__small{
+        color:$color-input-text;
+        font-size: 0.75rem;
+        margin-bottom: 0rem;
+    }
+
+    &__title{
+        color:$color-heading;
+        font-size: 2rem;
+        font-family: $font-heading;
+        font-weight: 400;
+        line-height: 2.5;
+        margin-top: 0rem;
+
+    }
+
+    &__intro {
+        color:$color-input-text;
+        font-size: 1rem;
+        width: 40%;
+        margin-bottom: 3rem;
+    }
+
+    &__wrapper {
+        display:grid;
+        grid-template-columns: 20% 80%;
+        grid-template-areas: "funds converter";
+        width: 100%;
+        margin-bottom: 2rem;
+        
+    }
+
+    &__funds {
+        grid-area: funds;
+        width: 100%;
+    }
+
+    &__converterBox {
+        grid-area: converter;
+        width: 90%;
+    }
+
+    &__liveRateHeading {
+        font-family: $font-heading;
+        font-size: 1rem;
+        font-weight: 500;
+        line-height: 1.2rem;
+        color: $color-text;
+        display: grid;
+        width: 100%;
+        grid-template-areas: "currency amount rates empty";
+        grid-template-columns: 20% 20% 20% 40%;
+        text-align: center;
+    }
+
+    &__currency {
+        grid-area: currency;
+    }
+    
+    &__amount {
+        grid-area: amount;
+    }
+    &__rate {
+        grid-area: rates;
+    }
+
+    &__addCurrency {
+        width: 9rem;
+        margin-top: 1rem;
+        margin-left: 3rem;
+    }
+}
+
 

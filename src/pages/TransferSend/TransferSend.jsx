@@ -1,5 +1,5 @@
 import "./TransferSend.scss";
-
+import LoggedIn from "../../components/LoggedIn/LoggedIn";
 import Button from "../../components/Button/Button";
 import Plus from "../../assets/images/plus.png";
 import ModalWindow from "../../components/ModalWindow/ModalWindow";
@@ -14,29 +14,21 @@ const TransferSend = ({
   total = "£100.00",
   fundsRem = "£1",
 }) => {
-  /*
-    { name, accNum, code, total, fundsRem }
-  */
   const buttonPress = () => {
     alert("button has been pressed");
   };
-  // console.log(user);
 
   const [modalVisible, setModalVisible] = useState(false);
   const [allContacts, setAllContacts] = useState([]);
   const [individualContact, setIndividualContact] = useState([]);
 
   const toggleModal = () => {
-    // console.log("modal toggle has been pressed");
     setModalVisible(!modalVisible);
   };
 
   const getData = async () => {
     const contacts = await getUserContacts();
     await setAllContacts(contacts);
-    // console.log("this is all contacts 1", contacts);
-
-    // console.log("this is all contacts", allContacts);
   };
   useEffect(() => {
     getData();
@@ -45,16 +37,8 @@ const TransferSend = ({
 
   const getContactData = (contact) => {
     return setIndividualContact(contact);
-
-    // return console.log(
-    //   "get contact data has been pressed",
-    //   individualContact.contactName
-    // );
   };
 
-  // console.log("ignore", getContactData);
-
-  // console.log("this is length ", individualContact.length);
   console.log("page load all contacts", allContacts);
   return (
     <>
@@ -79,6 +63,9 @@ const TransferSend = ({
             : null
         }
       >
+        <div className="wallet__user">
+          <LoggedIn />
+        </div>
         <div className="info">
           <h1 className="info__transfer"> Transfer </h1>
           <h1 className="info__heading"> View Latest Rates </h1>
