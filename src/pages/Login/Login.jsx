@@ -12,8 +12,8 @@ import { getUserHoldings } from "../../utils/apiUtils";
 
 const Login = ({ saveUser, setDeposit }) => {
   const [password, setPassword] = useState();
-  const [email, setEmail] = useState();
-  const [invalidEmail, setInvalidEmail] = useState();
+  const [email, setEmail] = useState("");
+  const [invalidEmail, setInvalidEmail] = useState("");
   const [invalidPassword, setInvalidPassword] = useState();
   const navigate = useNavigate();
   const isTextDark = true;
@@ -34,14 +34,14 @@ const Login = ({ saveUser, setDeposit }) => {
   };
 
   const validateEmail = () => {
-    if (!emailRegex.test(email)) {
+    if (email == "") {
+      setInvalidEmail("");
+    } else if (!emailRegex.test(email)) {
       setInvalidEmail("Please enter a valid email");
     } else {
       setInvalidEmail("");
     }
-    if (email == "") {
-      setInvalidEmail("");
-    }
+    
   };
   const handleLogin = async () => {
     const userData = await loginAuth();
