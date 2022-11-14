@@ -2,7 +2,6 @@
 @use "../../styles/typography" as *;
 
 .currencies {
-    width: 100%;
     height: 10rem;
     display: flex;
     justify-content: space-between;
@@ -27,17 +26,16 @@
         font-size: 0.75rem;
         color: $color-text-secondary;
     }
-    &__display{
-        width: 65%;
-    }
     &__makeTransfer {
         display: flex;
         flex-direction: column;
         align-items: flex-end;
-        padding-right: 10%;
-        width: 35%;
+        width: 50%;
     }
     &__updateTransfer {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
         font-weight: 400;
         font-family: $font-main;
         font-size: 0.6rem;
