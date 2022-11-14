@@ -17,12 +17,13 @@ import AccountPage from "./pages/AccountPage/AccountPage";
 const App = () => {
   const [user, setUser] = useState();
   const [transferDetails, setTransferDetails] = useState();
-
+  const [totalDeposit, setTotalDeposit] = useState (0);
+  
   return (
     <Routes>
-      <Route path="*" element={<Home />} />
-      <Route path="/login" element={<Login saveUser={setUser} />} />
-      <Route path="/signup" element={<SignUp saveUser={setUser} />} />
+      <Route path="*" element={<Home/>} />
+      <Route path="/login" element={<Login saveUser={setUser} setDeposit={setTotalDeposit}/>} />
+      <Route path="/signup" element={<SignUp saveUser={setUser}/>} />
       {user && (
         <>
           <Route
@@ -30,7 +31,7 @@ const App = () => {
             element={
               <>
                 <Nav clearUser={setUser} />
-                <Wallet user={user} amount={1000} />
+                <Wallet user={user} amount={totalDeposit} />
               </>
             }
           />{" "}

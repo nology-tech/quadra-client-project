@@ -4,7 +4,8 @@ import "./Wallet.scss";
 import LoggedIn from "../../components/LoggedIn/LoggedIn";
 import ContactContent from "../../components/ContactContent/ContactContent";
 
-const Wallet = ({ amount = "0", user}) => {
+const Wallet = ({user, amount}) => {
+
   return (
     <div className="wallet">
         <div className="wallet__user">
